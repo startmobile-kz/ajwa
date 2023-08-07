@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078888962A8178DD006E0FE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 078888952A8178DD006E0FE0 /* Alamofire */; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
+				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,7 @@
 			name = ajwa;
 			packageProductDependencies = (
 				9FBC53B02A8100C300CE8ED7 /* SnapKit */,
+				078888952A8178DD006E0FE0 /* Alamofire */,
 			);
 			productName = ajwa;
 			productReference = 9FBC53792A80F9CE00CE8ED7 /* ajwa.app */;
@@ -225,6 +228,7 @@
 			mainGroup = 9FBC53702A80F9CE00CE8ED7;
 			packageReferences = (
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -616,6 +620,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -627,6 +639,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		078888952A8178DD006E0FE0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		9FBC53B02A8100C300CE8ED7 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */;
