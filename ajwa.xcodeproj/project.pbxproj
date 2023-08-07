@@ -17,6 +17,7 @@
 		9FBC53972A80F9D100CE8ED7 /* ajwaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53962A80F9D100CE8ED7 /* ajwaTests.swift */; };
 		9FBC53A12A80F9D100CE8ED7 /* ajwaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */; };
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
+		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,9 @@
 			dependencies = (
 			);
 			name = ajwa;
+			packageProductDependencies = (
+				9FBC53B02A8100C300CE8ED7 /* SnapKit */,
+			);
 			productName = ajwa;
 			productReference = 9FBC53792A80F9CE00CE8ED7 /* ajwa.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 9FBC53702A80F9CE00CE8ED7;
+			packageReferences = (
+				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -606,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FBC53B02A8100C300CE8ED7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */ = {
