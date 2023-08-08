@@ -19,6 +19,7 @@
 		9FBC53A12A80F9D100CE8ED7 /* ajwaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */; };
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
+		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,11 @@
 		9FBC539C2A80F9D100CE8ED7 /* ajwaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ajwaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITests.swift; sourceTree = "<group>"; };
 		9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C81BE46D2A815E4A00E77EEC /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		C81BE46E2A815E4A00E77EEC /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Medium.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		C81BE46F2A815E4A00E77EEC /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		C81BE4702A815E4A00E77EEC /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		9FBC537B2A80F9CE00CE8ED7 /* ajwa */ = {
 			isa = PBXGroup;
 			children = (
+				C81BE46A2A815CB300E77EEC /* Helpers */,
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
 				9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */,
@@ -132,6 +139,34 @@
 				9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */,
 			);
 			path = ajwaUITests;
+			sourceTree = "<group>";
+		};
+		C81BE46A2A815CB300E77EEC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C81BE46B2A815CB900E77EEC /* Resourses */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C81BE46B2A815CB900E77EEC /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				C81BE46C2A815CD200E77EEC /* Fonts */,
+				C81BE4712A81600400E77EEC /* AppFont.swift */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		C81BE46C2A815CD200E77EEC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C81BE4702A815E4A00E77EEC /* SF-Pro-Display-Bold.otf */,
+				C81BE46E2A815E4A00E77EEC /* SF-Pro-Display-Medium.otf */,
+				C81BE46F2A815E4A00E77EEC /* SF-Pro-Display-Regular.otf */,
+				C81BE46D2A815E4A00E77EEC /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
+				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
