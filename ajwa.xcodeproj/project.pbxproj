@@ -20,6 +20,7 @@
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
+		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F176142A8269300022628A /* Wormholy in Frameworks */,
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
 			);
@@ -188,6 +190,7 @@
 			packageProductDependencies = (
 				9FBC53B02A8100C300CE8ED7 /* SnapKit */,
 				078888952A8178DD006E0FE0 /* Alamofire */,
+				E4F176132A8269300022628A /* Wormholy */,
 			);
 			productName = ajwa;
 			productReference = 9FBC53792A80F9CE00CE8ED7 /* ajwa.app */;
@@ -264,6 +267,7 @@
 			packageReferences = (
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -672,6 +676,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadelv/Wormholy";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -684,6 +696,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		E4F176132A8269300022628A /* Wormholy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */;
+			productName = Wormholy;
 		};
 /* End XCSwiftPackageProductDependency section */
 
