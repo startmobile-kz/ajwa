@@ -19,6 +19,7 @@
 		9FBC53A12A80F9D100CE8ED7 /* ajwaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */; };
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
+		B2187AF82A83E65400C0FB82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B2187AF72A83E65400C0FB82 /* Kingfisher */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2187AF82A83E65400C0FB82 /* Kingfisher in Frameworks */,
 				E4F176142A8269300022628A /* Wormholy in Frameworks */,
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
@@ -191,6 +193,7 @@
 				9FBC53B02A8100C300CE8ED7 /* SnapKit */,
 				078888952A8178DD006E0FE0 /* Alamofire */,
 				E4F176132A8269300022628A /* Wormholy */,
+				B2187AF72A83E65400C0FB82 /* Kingfisher */,
 			);
 			productName = ajwa;
 			productReference = 9FBC53792A80F9CE00CE8ED7 /* ajwa.app */;
@@ -268,6 +271,7 @@
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */,
+				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -676,6 +680,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tadelv/Wormholy";
@@ -696,6 +708,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		B2187AF72A83E65400C0FB82 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		E4F176132A8269300022628A /* Wormholy */ = {
 			isa = XCSwiftPackageProductDependency;
