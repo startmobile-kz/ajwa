@@ -17,6 +17,15 @@
         "revision" : "f222cbdf325885926566172f6f5f06af95473158",
         "version" : "5.6.0"
       }
+    },
+    {
+      "identity" : "wormholy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tadelv/Wormholy",
+      "state" : {
+        "revision" : "fe5eb3045ddbef5116b94b5af80367aa005e02b2",
+        "version" : "1.6.5"
+      }
     }
   ],
   "version" : 2
