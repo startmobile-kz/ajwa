@@ -6,6 +6,7 @@ target 'ajwa' do
   use_frameworks!
 
   # Pods for ajwa
+  pod 'SwiftLint'
 
   target 'ajwaTests' do
     inherit! :search_paths
