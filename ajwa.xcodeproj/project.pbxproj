@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		078888962A8178DD006E0FE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 078888952A8178DD006E0FE0 /* Alamofire */; };
+		17A1C0440D0E4712C66B54C8 /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603274F7242DBC9432231EFA /* Pods_ajwa_ajwaUITests.framework */; };
+		8F753E6638B8F91CDECBF923 /* Pods_ajwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EEE4D59F34325BC67A1648 /* Pods_ajwa.framework */; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
@@ -21,11 +23,15 @@
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 		B2187AF82A83E65400C0FB82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B2187AF72A83E65400C0FB82 /* Kingfisher */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
-		C84511F32A83ECD700FAA6E1 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C84511EF2A83ECD700FAA6E1 /* SF-Pro-Display-Bold.otf */; };
-		C84511F42A83ECD700FAA6E1 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C84511F02A83ECD700FAA6E1 /* SF-Pro-Display-Semibold.otf */; };
-		C84511F52A83ECD700FAA6E1 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C84511F12A83ECD700FAA6E1 /* SF-Pro-Display-Regular.otf */; };
-		C84511F62A83ECD700FAA6E1 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C84511F22A83ECD700FAA6E1 /* SF-Pro-Display-Medium.otf */; };
+		C8BDB09C2A86851B009B9D5D /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB0982A86851B009B9D5D /* SF-Pro-Display-Regular.otf */; };
+		C8BDB09D2A86851B009B9D5D /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB0992A86851B009B9D5D /* SF-Pro-Display-Medium.otf */; };
+		C8BDB09E2A86851B009B9D5D /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB09A2A86851B009B9D5D /* SF-Pro-Display-Bold.otf */; };
+		C8BDB09F2A86851B009B9D5D /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB09B2A86851B009B9D5D /* SF-Pro-Display-Semibold.otf */; };
+		C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BDB0A02A868559009B9D5D /* AppImage.swift */; };
+		C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BDB0A22A8685BB009B9D5D /* AppColor.swift */; };
+		C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB0A52A868692009B9D5D /* Colors.xcassets */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
+		F671F64DFA16A54BEBB4CFC6 /* Pods_ajwaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532B87BFA9247EF48051385D /* Pods_ajwaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04EEE4D59F34325BC67A1648 /* Pods_ajwa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		235F07DCAA42B5BD3326ADDF /* Pods-ajwa-ajwaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.release.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		258F4DF41F907A740A31CBE0 /* Pods-ajwaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.release.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.release.xcconfig"; sourceTree = "<group>"; };
+		501FD36E568B0C74F34C3C57 /* Pods-ajwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.release.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.release.xcconfig"; sourceTree = "<group>"; };
+		532B87BFA9247EF48051385D /* Pods_ajwaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603274F7242DBC9432231EFA /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC53792A80F9CE00CE8ED7 /* ajwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ajwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +73,16 @@
 		9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITests.swift; sourceTree = "<group>"; };
 		9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		C84511EF2A83ECD700FAA6E1 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../../Downloads/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
-		C84511F02A83ECD700FAA6E1 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../../Downloads/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
-		C84511F12A83ECD700FAA6E1 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../Downloads/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
-		C84511F22A83ECD700FAA6E1 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Medium.otf"; path = "../../../../../../../Downloads/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		C8BDB0982A86851B009B9D5D /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		C8BDB0992A86851B009B9D5D /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		C8BDB09A2A86851B009B9D5D /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		C8BDB09B2A86851B009B9D5D /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		C8BDB0A02A868559009B9D5D /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		C8BDB0A22A8685BB009B9D5D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		C8BDB0A52A868692009B9D5D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D3F9579726FD126FB505194B /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0A12C1D36D3A817EF36ABC /* Pods-ajwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.debug.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.debug.xcconfig"; sourceTree = "<group>"; };
+		ECD2EE9510CC29B9B6402C9B /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,7 @@
 				E4F176142A8269300022628A /* Wormholy in Frameworks */,
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
+				8F753E6638B8F91CDECBF923 /* Pods_ajwa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F671F64DFA16A54BEBB4CFC6 /* Pods_ajwaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +110,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A1C0440D0E4712C66B54C8 /* Pods_ajwa_ajwaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BDE5DC87257C1440180D3E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A12C1D36D3A817EF36ABC /* Pods-ajwa.debug.xcconfig */,
+				501FD36E568B0C74F34C3C57 /* Pods-ajwa.release.xcconfig */,
+				ECD2EE9510CC29B9B6402C9B /* Pods-ajwa-ajwaUITests.debug.xcconfig */,
+				235F07DCAA42B5BD3326ADDF /* Pods-ajwa-ajwaUITests.release.xcconfig */,
+				D3F9579726FD126FB505194B /* Pods-ajwaTests.debug.xcconfig */,
+				258F4DF41F907A740A31CBE0 /* Pods-ajwaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A9174EC0E6D685EAD52E0A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04EEE4D59F34325BC67A1648 /* Pods_ajwa.framework */,
+				603274F7242DBC9432231EFA /* Pods_ajwa_ajwaUITests.framework */,
+				532B87BFA9247EF48051385D /* Pods_ajwaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FBC53702A80F9CE00CE8ED7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +147,8 @@
 				9FBC53952A80F9D100CE8ED7 /* ajwaTests */,
 				9FBC539F2A80F9D100CE8ED7 /* ajwaUITests */,
 				9FBC537A2A80F9CE00CE8ED7 /* Products */,
+				2BDE5DC87257C1440180D3E5 /* Pods */,
+				3A9174EC0E6D685EAD52E0A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,12 +165,12 @@
 		9FBC537B2A80F9CE00CE8ED7 /* ajwa */ = {
 			isa = PBXGroup;
 			children = (
+				C8BDB0A42A868673009B9D5D /* Resources */,
 				C81BE46A2A815CB300E77EEC /* Helpers */,
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
 				9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */,
 				9FBC53822A80F9CE00CE8ED7 /* Main.storyboard */,
-				9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */,
 				9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */,
 				9FBC538D2A80F9D100CE8ED7 /* Info.plist */,
 				9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */,
@@ -162,6 +208,8 @@
 			children = (
 				C84511EE2A83ECC500FAA6E1 /* Fonts */,
 				C81BE4712A81600400E77EEC /* AppFont.swift */,
+				C8BDB0A02A868559009B9D5D /* AppImage.swift */,
+				C8BDB0A22A8685BB009B9D5D /* AppColor.swift */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -169,12 +217,21 @@
 		C84511EE2A83ECC500FAA6E1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C84511EF2A83ECD700FAA6E1 /* SF-Pro-Display-Bold.otf */,
-				C84511F22A83ECD700FAA6E1 /* SF-Pro-Display-Medium.otf */,
-				C84511F12A83ECD700FAA6E1 /* SF-Pro-Display-Regular.otf */,
-				C84511F02A83ECD700FAA6E1 /* SF-Pro-Display-Semibold.otf */,
+				C8BDB09A2A86851B009B9D5D /* SF-Pro-Display-Bold.otf */,
+				C8BDB0992A86851B009B9D5D /* SF-Pro-Display-Medium.otf */,
+				C8BDB0982A86851B009B9D5D /* SF-Pro-Display-Regular.otf */,
+				C8BDB09B2A86851B009B9D5D /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C8BDB0A42A868673009B9D5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */,
+				C8BDB0A52A868692009B9D5D /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FBC53A62A80F9D100CE8ED7 /* Build configuration list for PBXNativeTarget "ajwa" */;
 			buildPhases = (
+				716B4514B776AA82B43BFA16 /* [CP] Check Pods Manifest.lock */,
 				9FBC53752A80F9CE00CE8ED7 /* Sources */,
 				9FBC53762A80F9CE00CE8ED7 /* Frameworks */,
 				9FBC53772A80F9CE00CE8ED7 /* Resources */,
@@ -207,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FBC53A92A80F9D100CE8ED7 /* Build configuration list for PBXNativeTarget "ajwaTests" */;
 			buildPhases = (
+				1518472624B3858F7AC4EFCA /* [CP] Check Pods Manifest.lock */,
 				9FBC538E2A80F9D100CE8ED7 /* Sources */,
 				9FBC538F2A80F9D100CE8ED7 /* Frameworks */,
 				9FBC53902A80F9D100CE8ED7 /* Resources */,
@@ -225,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FBC53AC2A80F9D100CE8ED7 /* Build configuration list for PBXNativeTarget "ajwaUITests" */;
 			buildPhases = (
+				A67A7811C5FD7C895B0DCAE0 /* [CP] Check Pods Manifest.lock */,
 				9FBC53982A80F9D100CE8ED7 /* Sources */,
 				9FBC53992A80F9D100CE8ED7 /* Frameworks */,
 				9FBC539A2A80F9D100CE8ED7 /* Resources */,
@@ -295,11 +355,12 @@
 			files = (
 				9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */,
 				9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */,
-				C84511F42A83ECD700FAA6E1 /* SF-Pro-Display-Semibold.otf in Resources */,
-				C84511F32A83ECD700FAA6E1 /* SF-Pro-Display-Bold.otf in Resources */,
-				C84511F52A83ECD700FAA6E1 /* SF-Pro-Display-Regular.otf in Resources */,
+				C8BDB09E2A86851B009B9D5D /* SF-Pro-Display-Bold.otf in Resources */,
+				C8BDB09F2A86851B009B9D5D /* SF-Pro-Display-Semibold.otf in Resources */,
+				C8BDB09C2A86851B009B9D5D /* SF-Pro-Display-Regular.otf in Resources */,
+				C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */,
 				9FBC53842A80F9CE00CE8ED7 /* Main.storyboard in Resources */,
-				C84511F62A83ECD700FAA6E1 /* SF-Pro-Display-Medium.otf in Resources */,
+				C8BDB09D2A86851B009B9D5D /* SF-Pro-Display-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +380,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1518472624B3858F7AC4EFCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajwaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		716B4514B776AA82B43BFA16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajwa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67A7811C5FD7C895B0DCAE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajwa-ajwaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FBC53752A80F9CE00CE8ED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -327,8 +457,10 @@
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
+				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
+				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +632,7 @@
 		};
 		9FBC53A72A80F9D100CE8ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE0A12C1D36D3A817EF36ABC /* Pods-ajwa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -528,6 +661,7 @@
 		};
 		9FBC53A82A80F9D100CE8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501FD36E568B0C74F34C3C57 /* Pods-ajwa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +690,7 @@
 		};
 		9FBC53AA2A80F9D100CE8ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F9579726FD126FB505194B /* Pods-ajwaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +711,7 @@
 		};
 		9FBC53AB2A80F9D100CE8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 258F4DF41F907A740A31CBE0 /* Pods-ajwaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +732,7 @@
 		};
 		9FBC53AD2A80F9D100CE8ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD2EE9510CC29B9B6402C9B /* Pods-ajwa-ajwaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -614,6 +751,7 @@
 		};
 		9FBC53AE2A80F9D100CE8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 235F07DCAA42B5BD3326ADDF /* Pods-ajwa-ajwaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
