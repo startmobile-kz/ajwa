@@ -35,3 +35,4 @@ fastlane
 fastlane/report.xml
 .generated.swift
 *.xcuserstate
+ajwa.xcodeproj/xcuserdata
