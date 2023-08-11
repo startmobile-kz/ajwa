@@ -18,8 +18,9 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     
     private lazy var textLable: UILabel = {
         let lable = UILabel()
-        lable.font = AppFont.semibold.s20()
-        lable.numberOfLines = 0
+        lable.font = UIFont.systemFont(ofSize: 14)
+        lable.textColor = .black
+        lable.numberOfLines = 2
         return lable
     }()
     
@@ -43,10 +44,15 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     
     private func setupLayout() {
         textLable.snp.makeConstraints {
-            $0.width.equalTo(211)
-            $0.height.equalTo(48)
-            $0.top.equalTo(contentView).offset(136)
-            $0.leading.equalTo(contentView).offset(59.5)
+            $0.centerX.equalTo(contentView.snp.centerX)
+            $0.centerY.equalTo(contentView.snp.centerY)
         }
     }
+    
+    //    MARK: - Public methods
+    
+    public func setupData(dhikr: String) {
+        textLable.text = dhikr
+    }
+    
 }

@@ -18,7 +18,7 @@ final class DhikrDetailsSectionHeader: UICollectionReusableView {
     private lazy var label: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = .label
-        label.font = AppFont.regular.s14()
+        label.font = UIFont.systemFont(ofSize: 14)
         label.sizeToFit()
         return label
     }()
