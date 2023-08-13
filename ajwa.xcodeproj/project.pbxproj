@@ -20,6 +20,21 @@
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
+		E429E2A32A84E3F100C5F913 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2A22A84E3F100C5F913 /* SettingsViewController.swift */; };
+		E429E2A52A84E40500C5F913 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2A42A84E40500C5F913 /* Model.swift */; };
+		E429E2A72A84E41B00C5F913 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2A62A84E41B00C5F913 /* Extension.swift */; };
+		E429E2A92A84E43200C5F913 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2A82A84E43200C5F913 /* ProfileCell.swift */; };
+		E429E2AB2A85148C00C5F913 /* ShareAndRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2AA2A85148C00C5F913 /* ShareAndRateCell.swift */; };
+		E429E2AD2A8521CF00C5F913 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2AC2A8521CF00C5F913 /* LocationCell.swift */; };
+		E429E2AF2A852D6900C5F913 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429E2AE2A852D6900C5F913 /* HeaderCell.swift */; };
+		E442C0CC2A8653AC0052F1BB /* FooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0CB2A8653AC0052F1BB /* FooterCell.swift */; };
+		E442C0CE2A8665090052F1BB /* PrayTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0CD2A8665090052F1BB /* PrayTimeCell.swift */; };
+		E442C0D02A87A7D10052F1BB /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0CF2A87A7D10052F1BB /* LanguageCell.swift */; };
+		E442C0D22A87A9630052F1BB /* FontSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0D12A87A9630052F1BB /* FontSizeCell.swift */; };
+		E442C0D42A87AA090052F1BB /* NotificationAndSoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0D32A87AA090052F1BB /* NotificationAndSoundCell.swift */; };
+		E442C0DD2A88B15D0052F1BB /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0DC2A88B15D0052F1BB /* SettingsPresenter.swift */; };
+		E442C0DF2A88B2810052F1BB /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0DE2A88B2810052F1BB /* SettingsInteractor.swift */; };
+		E442C0E32A88D4370052F1BB /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C0E22A88D4370052F1BB /* SettingsRouter.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +75,21 @@
 		C81BE46F2A815E4A00E77EEC /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		C81BE4702A815E4A00E77EEC /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		E429E2A22A84E3F100C5F913 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E429E2A42A84E40500C5F913 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E429E2A62A84E41B00C5F913 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E429E2A82A84E43200C5F913 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		E429E2AA2A85148C00C5F913 /* ShareAndRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAndRateCell.swift; sourceTree = "<group>"; };
+		E429E2AC2A8521CF00C5F913 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		E429E2AE2A852D6900C5F913 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		E442C0CB2A8653AC0052F1BB /* FooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCell.swift; sourceTree = "<group>"; };
+		E442C0CD2A8665090052F1BB /* PrayTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayTimeCell.swift; sourceTree = "<group>"; };
+		E442C0CF2A87A7D10052F1BB /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		E442C0D12A87A9630052F1BB /* FontSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCell.swift; sourceTree = "<group>"; };
+		E442C0D32A87AA090052F1BB /* NotificationAndSoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAndSoundCell.swift; sourceTree = "<group>"; };
+		E442C0DC2A88B15D0052F1BB /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		E442C0DE2A88B2810052F1BB /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		E442C0E22A88D4370052F1BB /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +143,7 @@
 		9FBC537B2A80F9CE00CE8ED7 /* ajwa */ = {
 			isa = PBXGroup;
 			children = (
+				E429E2A12A84E34C00C5F913 /* Settings Scene */,
 				C81BE46A2A815CB300E77EEC /* Helpers */,
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
@@ -169,6 +200,84 @@
 				C81BE46D2A815E4A00E77EEC /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E429E2A12A84E34C00C5F913 /* Settings Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E442C0DA2A87D5670052F1BB /* Router */,
+				E442C0D92A87D5500052F1BB /* Worker */,
+				E442C0D82A87D5410052F1BB /* Models */,
+				E442C0D72A87D51D0052F1BB /* Presenter */,
+				E442C0D62A87D5040052F1BB /* Interactor */,
+				E442C0D52A87D3AD0052F1BB /* ViewController */,
+			);
+			path = "Settings Scene";
+			sourceTree = "<group>";
+		};
+		E442C0D52A87D3AD0052F1BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E429E2A22A84E3F100C5F913 /* SettingsViewController.swift */,
+				E429E2A62A84E41B00C5F913 /* Extension.swift */,
+				E442C0DB2A88AFC30052F1BB /* Settings Cells */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E442C0D62A87D5040052F1BB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E442C0DE2A88B2810052F1BB /* SettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E442C0D72A87D51D0052F1BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E442C0DC2A88B15D0052F1BB /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E442C0D82A87D5410052F1BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E429E2A42A84E40500C5F913 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E442C0D92A87D5500052F1BB /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		E442C0DA2A87D5670052F1BB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E442C0E22A88D4370052F1BB /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E442C0DB2A88AFC30052F1BB /* Settings Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E429E2A82A84E43200C5F913 /* ProfileCell.swift */,
+				E429E2AA2A85148C00C5F913 /* ShareAndRateCell.swift */,
+				E429E2AC2A8521CF00C5F913 /* LocationCell.swift */,
+				E429E2AE2A852D6900C5F913 /* HeaderCell.swift */,
+				E442C0CB2A8653AC0052F1BB /* FooterCell.swift */,
+				E442C0CD2A8665090052F1BB /* PrayTimeCell.swift */,
+				E442C0CF2A87A7D10052F1BB /* LanguageCell.swift */,
+				E442C0D12A87A9630052F1BB /* FontSizeCell.swift */,
+				E442C0D32A87AA090052F1BB /* NotificationAndSoundCell.swift */,
+			);
+			path = "Settings Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,11 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E442C0CE2A8665090052F1BB /* PrayTimeCell.swift in Sources */,
+				E429E2A52A84E40500C5F913 /* Model.swift in Sources */,
+				E429E2AB2A85148C00C5F913 /* ShareAndRateCell.swift in Sources */,
+				E442C0D02A87A7D10052F1BB /* LanguageCell.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
+				E442C0DD2A88B15D0052F1BB /* SettingsPresenter.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
+				E442C0DF2A88B2810052F1BB /* SettingsInteractor.swift in Sources */,
+				E442C0E32A88D4370052F1BB /* SettingsRouter.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				E442C0CC2A8653AC0052F1BB /* FooterCell.swift in Sources */,
+				E429E2AD2A8521CF00C5F913 /* LocationCell.swift in Sources */,
+				E429E2AF2A852D6900C5F913 /* HeaderCell.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
+				E442C0D42A87AA090052F1BB /* NotificationAndSoundCell.swift in Sources */,
+				E429E2A92A84E43200C5F913 /* ProfileCell.swift in Sources */,
+				E429E2A32A84E3F100C5F913 /* SettingsViewController.swift in Sources */,
+				E429E2A72A84E41B00C5F913 /* Extension.swift in Sources */,
+				E442C0D22A87A9630052F1BB /* FontSizeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
