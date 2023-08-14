@@ -11,18 +11,12 @@ protocol SettingsRoutingLogic: AnyObject {
     func navigateToDetails(settingsId: Int)
 }
 
-class SettingsRouter{
-    
-    
+class SettingsRouter {
     weak var viewController: UIViewController?
 }
 
-
-extension SettingsRouter: SettingsRoutingLogic{
+extension SettingsRouter: SettingsRoutingLogic {
     func navigateToDetails(settingsId: Int) {
-//        Navigation to other screens
+//MARK:  Navigation to other screens
     }
-    
-    
-    
 }

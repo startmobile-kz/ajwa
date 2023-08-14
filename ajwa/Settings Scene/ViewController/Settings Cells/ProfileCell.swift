@@ -14,12 +14,7 @@ let iconContainerColor = UIColor(red: 231/255, green: 243/255, blue: 242/255, al
 let iconLabelColor = UIColor(red: 62/255, green: 175/255, blue: 167/255, alpha: 1)
 let buttonColor = UIColor(red: 0/255, green: 157/255, blue: 191/255, alpha: 1)
 
-
-//background: rgba(0, 157, 191, 1);
-
-//let color1 = CIC
-
-class ProfileCell: UITableViewCell {
+final class ProfileCell: UITableViewCell {
     
     static let identifier = "ProfileCell"
     
@@ -72,7 +67,6 @@ class ProfileCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
     }
     
     required init?(coder: NSCoder) {
@@ -80,9 +74,9 @@ class ProfileCell: UITableViewCell {
     }
     
     public func configure(with model: ProfileCellSettings) {
-        userNameLabel.text = model.title
-        iconLabel.text = model.iconText
-        userMobileNumberLabel.text = model.subTitle
+        userNameLabel.text = model.name
+        iconLabel.text = model.initials
+        userMobileNumberLabel.text = model.phoneNumber
     }
     
     private func setupHierarchy() {
@@ -117,11 +111,7 @@ class ProfileCell: UITableViewCell {
             make.trailing.equalToSuperview().offset(-12)
             make.centerY.equalToSuperview()
             make.height.width.equalTo(40)
-
-            
         }
-        
-        
     }
 }
 

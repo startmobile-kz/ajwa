@@ -8,15 +8,9 @@
 import UIKit
 import SnapKit
 
-
 let cellContainerColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
 
-class LocationCell: UITableViewCell {
-    
-
-    
-//background: rgba(249, 249, 249, 1);
-
+final class LocationCell: UITableViewCell {
     static let identifier = "LocationCell"
     
     private let cellContainer: UIView = {
@@ -45,13 +39,10 @@ class LocationCell: UITableViewCell {
         return imageView
     }()
     
-   
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
     }
     
     required init?(coder: NSCoder) {
@@ -65,18 +56,15 @@ class LocationCell: UITableViewCell {
     }
     
     private func setupHierarchy() {
-     
         contentView.addSubview(cellContainer)
         cellContainer.addSubview(locationLabel)
         cellContainer.addSubview(utcTimeLabel)
         cellContainer.addSubview(disclosureImageView)
 
-
         contentView.clipsToBounds = true
     }
     
     private func setupLayout() {
-    
         cellContainer.snp.makeConstraints {make in
             make.leading.trailing.equalToSuperview().inset(12)
             make.height.equalTo(55)
@@ -98,7 +86,5 @@ class LocationCell: UITableViewCell {
             make.trailing.equalTo(disclosureImageView.snp.leading).offset(-12)
             make.centerY.equalToSuperview()
         }
-        
     }
 }
-

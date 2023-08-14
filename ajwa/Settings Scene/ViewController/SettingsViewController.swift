@@ -9,11 +9,10 @@ import UIKit
 import SnapKit
 
 protocol SettingsDisplayLogic: AnyObject {
-
-    func displayData(data: [Settings])
+    func display(_ data: [Settings])
 }
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
  
     // MARK: - Outlets
     
@@ -58,7 +57,7 @@ class SettingsViewController: UIViewController {
         setup()
     }
     
-    private func setup(){
+    private func setup() {
         let viewController = self
         let presenter = SettingsPresenter()
         let interactor = SettingsInteractor()
@@ -72,10 +71,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor?.fetchSettings()
         title = "Настройки"
         setupHierarchy()
         setupHLayout()
+        interactor?.fetchSettings()
     }
     
     private func setupHierarchy() {
@@ -87,12 +86,11 @@ class SettingsViewController: UIViewController {
             make.edges.equalTo(view)
         }
     }
-    
 }
 
 //MARK: - Display logic implementation
-extension SettingsViewController: SettingsDisplayLogic{
-    func displayData(data: [Settings]) {
+extension SettingsViewController: SettingsDisplayLogic {
+    func display(_ data: [Settings]) {
         settings.append(contentsOf: data)
         tableView.reloadData()
     }

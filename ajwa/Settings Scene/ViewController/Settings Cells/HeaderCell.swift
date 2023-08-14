@@ -70,8 +70,6 @@ final class HeaderCell: UITableViewCell {
         label.snp.makeConstraints{ make in
             make.leading.equalTo(iconContainer.snp.trailing).offset(12)
             make.centerY.equalToSuperview()
-            
         }
     }
 }
-

@@ -10,7 +10,6 @@ import SnapKit
 
 final class NotificationAndSoundCell: UITableViewCell {
     static let identifier = "NotificationAndSoundCell"
-
     
     private let cellContainer: UIView = {
         let view = UIView()
@@ -18,7 +17,6 @@ final class NotificationAndSoundCell: UITableViewCell {
         view.backgroundColor = cellContainerColor
         return view
     }()
-    
     
     private let mySwitch: UISwitch = {
         let mySwitch = UISwitch()
@@ -33,8 +31,6 @@ final class NotificationAndSoundCell: UITableViewCell {
         return label
     }()
     
-   
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
@@ -50,7 +46,6 @@ final class NotificationAndSoundCell: UITableViewCell {
     }
 
     private func setupHierarchy() {
-        
         contentView.addSubview(cellContainer)
         cellContainer.addSubview(label)
         cellContainer.addSubview(mySwitch)
@@ -58,8 +53,6 @@ final class NotificationAndSoundCell: UITableViewCell {
     }
 
     private func setupLayout() {
-        
-        
         
         cellContainer.snp.makeConstraints {make in
             make.leading.trailing.equalToSuperview().inset(12)
@@ -71,17 +64,12 @@ final class NotificationAndSoundCell: UITableViewCell {
         label.snp.makeConstraints{ make in
             make.leading.equalToSuperview().offset(12)
             make.centerY.equalToSuperview()
-
         }
-        
         
         mySwitch.snp.makeConstraints {make in
             make.trailing.equalToSuperview().offset(-12)
             make.centerY.equalToSuperview()
         }
-
-
-        
     }
 }
 

@@ -8,10 +8,7 @@
 import UIKit
 import SnapKit
 
-
-//let cellContainerColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-
-class LanguageCell: UITableViewCell {
+final class LanguageCell: UITableViewCell {
     
     static let identifier = "LanguageCell"
     
@@ -21,7 +18,6 @@ class LanguageCell: UITableViewCell {
         view.backgroundColor = cellContainerColor
         return view
     }()
-
     
     private let languageTitleLabel: UILabel = {
         let label = UILabel()
@@ -42,13 +38,10 @@ class LanguageCell: UITableViewCell {
         return imageView
     }()
     
-   
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
     }
     
     required init?(coder: NSCoder) {
@@ -62,7 +55,6 @@ class LanguageCell: UITableViewCell {
     }
     
     private func setupHierarchy() {
-     
         contentView.addSubview(cellContainer)
         cellContainer.addSubview(languageTitleLabel)
         cellContainer.addSubview(languageSubtitleLabel)
@@ -71,7 +63,6 @@ class LanguageCell: UITableViewCell {
     }
     
     private func setupLayout() {
-    
         cellContainer.snp.makeConstraints {make in
             make.leading.trailing.equalToSuperview().inset(12)
             make.height.equalTo(55)
@@ -93,7 +84,5 @@ class LanguageCell: UITableViewCell {
             make.trailing.equalTo(disclosureImageView.snp.leading).offset(-12)
             make.centerY.equalToSuperview()
         }
-        
     }
 }
-

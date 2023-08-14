@@ -8,29 +8,17 @@
 import Foundation
 
 protocol SettingsPresentationLogic {
-    func presentData(data: [Settings])
+    func present(_ data: [Settings])
 }
 
-
-class SettingsPresenter{
-    
-    
+class SettingsPresenter {
     // MARK: - External vars
     weak var viewController: SettingsDisplayLogic?
 }
 
-
 // MARK: Presentation Logic
 extension SettingsPresenter: SettingsPresentationLogic {
-    
-  
-    func presentData(data: [Settings]) {
-        let viewModel = data
-                
-        viewController?.displayData(data: viewModel)
+    func present(_ data: [Settings]) {
+        viewController?.display(data)
     }
-    
-    
-    
-    
 }

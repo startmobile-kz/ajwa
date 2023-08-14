@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ShareAndRateCell: UITableViewCell {
+final class ShareAndRateCell: UITableViewCell {
     
     static let identifier = "ShareAndRateCell"
     
@@ -25,7 +25,6 @@ class ShareAndRateCell: UITableViewCell {
         return imageView
     }()
    
-    
     private let label: UILabel = {
         let label = UILabel()
         label.font = label.font.withSize(14)
@@ -38,14 +37,10 @@ class ShareAndRateCell: UITableViewCell {
         return imageView
     }()
     
-   
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
-        
     }
     
     required init?(coder: NSCoder) {
@@ -91,4 +86,3 @@ class ShareAndRateCell: UITableViewCell {
         }
     }
 }
-

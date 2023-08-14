@@ -21,13 +21,35 @@ enum SettingsCellType {
     case languageCell(model: RegularCellSettings)
     case notificationAndSoundCell(model: SwitchCellSettings)
     case fontSizeCell(model: RegularCellSettings)
-
+    
+    var height: CGFloat {
+        switch self {
+        case .headerCell:
+            return 50
+        case .footerCell:
+            return 48
+        case .profileCell:
+            return 76
+        case .locationCell:
+            return 60
+        case .shareAndRateCell:
+            return 54
+        case .prayTimeCell:
+            return 60
+        case .languageCell:
+            return 60
+        case .fontSizeCell:
+            return 60
+        case .notificationAndSoundCell:
+            return 60
+        }
+    }
 }
 
 struct ProfileCellSettings {
-    let title: String
-    let subTitle: String
-    let iconText: String
+    let name: String
+    let phoneNumber: String
+    let initials: String
 }
 
 struct RegularCellSettings {
@@ -45,4 +67,3 @@ struct HeaderCellSettings {
 struct SwitchCellSettings {
     let title : String
 }
-

@@ -8,10 +8,7 @@
 import UIKit
 import SnapKit
 
-
-//let cellContainerColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-
-class FontSizeCell: UITableViewCell {
+final class FontSizeCell: UITableViewCell {
     
     static let identifier = "FontSizeCell"
     
@@ -22,7 +19,6 @@ class FontSizeCell: UITableViewCell {
         return view
     }()
 
-    
     private let fontSizeTitleLabel: UILabel = {
         let label = UILabel()
         label.font = label.font.withSize(14)
@@ -42,13 +38,10 @@ class FontSizeCell: UITableViewCell {
         return imageView
     }()
     
-   
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
     }
     
     required init?(coder: NSCoder) {
@@ -62,7 +55,6 @@ class FontSizeCell: UITableViewCell {
     }
     
     private func setupHierarchy() {
-     
         contentView.addSubview(cellContainer)
         cellContainer.addSubview(fontSizeTitleLabel)
         cellContainer.addSubview(fontSizeSubtitleLabel)
@@ -72,29 +64,26 @@ class FontSizeCell: UITableViewCell {
     
     private func setupLayout() {
     
-        cellContainer.snp.makeConstraints {make in
+        cellContainer.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(12)
             make.height.equalTo(55)
             make.width.equalTo(324)
             make.centerY.equalToSuperview()
         }
         
-        fontSizeTitleLabel.snp.makeConstraints{ make in
+        fontSizeTitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(12)
             make.centerY.equalToSuperview()
         }
         
-        disclosureImageView.snp.makeConstraints{ make in
+        disclosureImageView.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
         }
         
-        fontSizeSubtitleLabel.snp.makeConstraints{ make in
+        fontSizeSubtitleLabel.snp.makeConstraints { make in
             make.trailing.equalTo(disclosureImageView.snp.leading).offset(-12)
             make.centerY.equalToSuperview()
         }
-        
     }
 }
-
-

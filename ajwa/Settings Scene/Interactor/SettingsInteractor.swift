@@ -8,11 +8,10 @@
 import UIKit
 
 protocol SettingsBusinessLogic {
-        func fetchSettings()
+    func fetchSettings()
 }
 
-
-class SettingsInteractor{
+final class SettingsInteractor {
     
     //MARK: - External vars
     var presenter: SettingsPresentationLogic?
@@ -20,21 +19,19 @@ class SettingsInteractor{
 
 //MARK: - Business logic
 
-extension SettingsInteractor: SettingsBusinessLogic{
+extension SettingsInteractor: SettingsBusinessLogic {
     func fetchSettings() {
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
             var settings = [Settings]()
             
             settings.append(Settings(options: [
-                .profileCell(model: ProfileCellSettings(title: " Инсар Е.", subTitle: "+7777777777", iconText: "И"))
+                .profileCell(model: ProfileCellSettings(name: "Инсар Е.", phoneNumber: "+7777777777", initials: "И"))
             ]))
             
             settings.append(Settings(options: [
                 .headerCell(model: HeaderCellSettings(title: "Местоположение", icon: UIImage(named: "LocationImage"))),
                 .locationCell(model: RegularCellSettings(title: "Казахстан, г.Алматы", subTitle: "UTC +6:00")),
                 .footerCell(model: SwitchCellSettings(title: "Исламский календарь"))
-
             ]))
             
             settings.append(Settings(options: [
@@ -53,8 +50,7 @@ extension SettingsInteractor: SettingsBusinessLogic{
                 .shareAndRateCell(model: HeaderCellSettings(title: "Оцените приложение", icon: UIImage(named: "RateImage")))
             ]))
             
-
-            self.presenter?.presentData(data: settings)
+            self.presenter?.present(settings)
         }
     }
 }

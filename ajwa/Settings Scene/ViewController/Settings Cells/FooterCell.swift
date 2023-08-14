@@ -10,15 +10,11 @@ import SnapKit
 
 final class FooterCell: UITableViewCell {
     static let identifier = "FooterCell"
-
     
     private let switchContainer: UIView = {
         let view = UIView()
-//        view.layer.cornerRadius = 12
-//        view.backgroundColor = buttonColor
         return view
     }()
-    
     
     private let mySwitch: UISwitch = {
         let mySwitch = UISwitch()
@@ -34,7 +30,6 @@ final class FooterCell: UITableViewCell {
 
         return label
     }()
-
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -67,19 +62,14 @@ final class FooterCell: UITableViewCell {
             make.centerY.equalToSuperview()
         }
         
-        
         mySwitch.snp.makeConstraints {make in
             make.leading.equalToSuperview()
-//            make.height.equalTo(16)
-//            make.width.equalTo(28)
             make.centerY.equalToSuperview()
         }
-
 
         label.snp.makeConstraints{ make in
             make.leading.equalTo(mySwitch.snp.trailing).offset(12)
             make.centerY.equalToSuperview()
-
         }
     }
 }

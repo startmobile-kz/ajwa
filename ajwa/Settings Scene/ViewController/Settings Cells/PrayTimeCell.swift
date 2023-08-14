@@ -8,9 +8,7 @@
 import UIKit
 import SnapKit
 
-
-
-class PrayTimeCell: UITableViewCell {
+final class PrayTimeCell: UITableViewCell {
     
     static let identifier = "PrayTimeCell"
     
@@ -20,7 +18,6 @@ class PrayTimeCell: UITableViewCell {
         view.backgroundColor = cellContainerColor
         return view
     }()
-
        
     private let prayTimeLabel: UILabel = {
         let label = UILabel()
@@ -28,15 +25,11 @@ class PrayTimeCell: UITableViewCell {
         return label
     }()
     
-    
-    
     private let disclosureImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.tintColor = .black
         return imageView
     }()
-    
-   
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,11 +44,9 @@ class PrayTimeCell: UITableViewCell {
     public func configure(with model: RegularCellSettings) {
         prayTimeLabel.text = model.title
         disclosureImageView.image = model.disclosureImage
-        
     }
     
     private func setupHierarchy() {
-     
         contentView.addSubview(cellContainer)
         cellContainer.addSubview(prayTimeLabel)
         cellContainer.addSubview(disclosureImageView)
@@ -80,8 +71,5 @@ class PrayTimeCell: UITableViewCell {
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
         }
-        
-        
     }
 }
-
