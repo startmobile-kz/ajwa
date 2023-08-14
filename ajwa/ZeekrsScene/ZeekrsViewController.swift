@@ -52,7 +52,7 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
         textField.leftViewMode = .always
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "searchTextField")
+        imageView.image = UIImage(named: "searchTextFieldIcon")
         textField.rightView = imageView
         textField.delegate = self
         textField.layer.cornerRadius = 16
@@ -75,11 +75,25 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupViews()
+        setupConstraints()
+        
+        names = ["adlet","beka","daulet","islam","bauka","temir","tilek","aisaule","kuka"]
+        
+        
+        interactor?.fetchArticles()
+    }
+    
+    private func setupViews() {
         title = "Зикры"
         view.backgroundColor = #colorLiteral(red: 0.9764706492, green: 0.9764706492, blue: 0.9764706492, alpha: 1)
         view.addSubview(searchTextField)
         view.addSubview(tableView)
-        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setupConstraints() {
         searchTextField.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(10)
             make.leading.equalTo(view.snp.leading).offset(20)
@@ -93,12 +107,6 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        
-        names = ["adlet","beka","daulet","islam","bauka","temir","tilek","aisaule","kuka"]
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
-        
-        interactor?.fetchArticles()
     }
 }
 
