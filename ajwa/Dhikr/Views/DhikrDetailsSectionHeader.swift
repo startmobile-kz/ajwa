@@ -17,8 +17,8 @@ final class DhikrDetailsSectionHeader: UICollectionReusableView {
     
     private lazy var label: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = .label
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor(red: 0.642, green: 0.642, blue: 0.642, alpha: 1)
+        label.font = AppFont.regular.s14()
         label.sizeToFit()
         return label
     }()
@@ -45,8 +45,8 @@ final class DhikrDetailsSectionHeader: UICollectionReusableView {
     
     private func setupLayout() {
         label.snp.makeConstraints {
-            $0.top.equalTo(self.snp.top)
-            $0.leading.equalTo(self.snp.leading)
+            $0.top.equalTo(self.snp.top).inset(10)
+            $0.leading.equalTo(self.snp.leading).inset(7)
         }
     }
     

@@ -22,6 +22,13 @@
 		C8A450992A82A30400C0B8D2 /* DhikrDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A450982A82A30400C0B8D2 /* DhikrDetailsViewController.swift */; };
 		C8A4509B2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4509A2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift */; };
 		C8A4509D2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4509C2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift */; };
+		C8B48CE32A88992400EDBCB6 /* GroupLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48CE02A88992400EDBCB6 /* GroupLanguages.swift */; };
+		C8B48CE42A88992400EDBCB6 /* DhikrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48CE12A88992400EDBCB6 /* DhikrModel.swift */; };
+		C8B48CE52A88992400EDBCB6 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48CE22A88992400EDBCB6 /* ListItem.swift */; };
+		C8B48CF22A891A6B00EDBCB6 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48CEE2A891A6B00EDBCB6 /* SFProDisplay-Semibold.ttf */; };
+		C8B48CF32A891A6B00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48CEF2A891A6B00EDBCB6 /* SFProDisplay-Bold.ttf */; };
+		C8B48CF42A891A6B00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48CF02A891A6B00EDBCB6 /* SFProDisplay-Regular.ttf */; };
+		C8B48CF52A891A6B00EDBCB6 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48CF12A891A6B00EDBCB6 /* SFProDisplay-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +62,17 @@
 		9FBC539C2A80F9D100CE8ED7 /* ajwaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ajwaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITests.swift; sourceTree = "<group>"; };
 		9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C81BE46D2A815E4A00E77EEC /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
-		C81BE46E2A815E4A00E77EEC /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Medium.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
-		C81BE46F2A815E4A00E77EEC /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
-		C81BE4702A815E4A00E77EEC /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		C8A450982A82A30400C0B8D2 /* DhikrDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsViewController.swift; sourceTree = "<group>"; };
 		C8A4509A2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A4509C2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsSectionHeader.swift; sourceTree = "<group>"; };
+		C8B48CE02A88992400EDBCB6 /* GroupLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupLanguages.swift; sourceTree = "<group>"; };
+		C8B48CE12A88992400EDBCB6 /* DhikrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DhikrModel.swift; sourceTree = "<group>"; };
+		C8B48CE22A88992400EDBCB6 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		C8B48CEE2A891A6B00EDBCB6 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		C8B48CEF2A891A6B00EDBCB6 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		C8B48CF02A891A6B00EDBCB6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		C8B48CF12A891A6B00EDBCB6 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +175,10 @@
 		C81BE46C2A815CD200E77EEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C81BE4702A815E4A00E77EEC /* SF-Pro-Display-Bold.otf */,
-				C81BE46E2A815E4A00E77EEC /* SF-Pro-Display-Medium.otf */,
-				C81BE46F2A815E4A00E77EEC /* SF-Pro-Display-Regular.otf */,
-				C81BE46D2A815E4A00E77EEC /* SF-Pro-Display-Semibold.otf */,
+				C8B48CEF2A891A6B00EDBCB6 /* SFProDisplay-Bold.ttf */,
+				C8B48CF12A891A6B00EDBCB6 /* SFProDisplay-Medium.ttf */,
+				C8B48CF02A891A6B00EDBCB6 /* SFProDisplay-Regular.ttf */,
+				C8B48CEE2A891A6B00EDBCB6 /* SFProDisplay-Semibold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -195,6 +205,9 @@
 		C8A450972A82A2E000C0B8D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8B48CE12A88992400EDBCB6 /* DhikrModel.swift */,
+				C8B48CE02A88992400EDBCB6 /* GroupLanguages.swift */,
+				C8B48CE22A88992400EDBCB6 /* ListItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,7 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */,
+				C8B48CF22A891A6B00EDBCB6 /* SFProDisplay-Semibold.ttf in Resources */,
 				9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */,
+				C8B48CF42A891A6B00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */,
+				C8B48CF32A891A6B00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */,
+				C8B48CF52A891A6B00EDBCB6 /* SFProDisplay-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +355,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A4509D2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift in Sources */,
+				C8B48CE32A88992400EDBCB6 /* GroupLanguages.swift in Sources */,
 				C8A450992A82A30400C0B8D2 /* DhikrDetailsViewController.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
+				C8B48CE52A88992400EDBCB6 /* ListItem.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				C8A4509B2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				C8B48CE42A88992400EDBCB6 /* DhikrModel.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,8 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     
     private lazy var textLable: UILabel = {
         let lable = UILabel()
-        lable.font = UIFont.systemFont(ofSize: 14)
-        lable.textColor = .black
+        lable.font = AppFont.regular.s14()
+        lable.textColor = UIColor(red: 0.642, green: 0.642, blue: 0.642, alpha: 1)
         lable.numberOfLines = 2
         return lable
     }()
@@ -37,7 +37,9 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     //    MARK: - SetupView
     
     private func setupViews() {
-        contentView.addSubview(textLable)
+        contentView.layer.cornerRadius = 16
+        contentView.backgroundColor = UIColor(red: 0.975, green: 0.975, blue: 0.975, alpha: 1)
+        addSubview(textLable)
     }
     
     //    MARK: - SetupLayout

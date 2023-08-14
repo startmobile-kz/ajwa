@@ -20,7 +20,8 @@ final class DhikrDetailsViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
+        collectionView.layer.cornerRadius = 16
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(DhikrDetailsCollectionViewCell.self,
@@ -35,7 +36,6 @@ final class DhikrDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
         setupViews()
         setupLayout()
     }
@@ -44,6 +44,7 @@ final class DhikrDetailsViewController: UIViewController {
     
     private func setupViews() {
         view.addSubview(collectionView)
+        view.backgroundColor = UIColor(red: 0.975, green: 0.975, blue: 0.975, alpha: 1)
     }
     
     //    MARK: - SetupLayout
@@ -85,7 +86,6 @@ final class DhikrDetailsViewController: UIViewController {
             layoutSize: groupSize,
             subitems: [layoutItem]
         )
-        
         layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 136,
                                                             leading: 59.5,
                                                             bottom: 136,
@@ -100,7 +100,6 @@ final class DhikrDetailsViewController: UIViewController {
             bottom: 0,
             trailing: 0
         )
-        
         section.orthogonalScrollingBehavior = .groupPagingCentered
         
         // Header
@@ -133,8 +132,8 @@ extension DhikrDetailsViewController: UICollectionViewDataSource {
         ) as? DhikrDetailsCollectionViewCell else {
             fatalError("Could not cast to CategoryCollectionViewCell")
         }
-        cell.setupData(dhikr: "dsffds")
-        cell.backgroundColor = .lightGray
+        cell.setupData(dhikr: "Dhikr in arabic language")
+        cell.backgroundColor = UIColor(red: 0.975, green: 0.975, blue: 0.975, alpha: 1)
         return cell
     }
     
@@ -150,9 +149,6 @@ extension DhikrDetailsViewController: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
     }
-    
-    
-    
 }
 
 //    MARK: - UICollectionView Delegate methods
