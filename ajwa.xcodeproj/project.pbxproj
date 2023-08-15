@@ -17,9 +17,6 @@
 		9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */; };
 		9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */; };
 		9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */; };
-		9FBC53972A80F9D100CE8ED7 /* ajwaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53962A80F9D100CE8ED7 /* ajwaTests.swift */; };
-		9FBC53A12A80F9D100CE8ED7 /* ajwaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */; };
-		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 		B2187AF82A83E65400C0FB82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B2187AF72A83E65400C0FB82 /* Kingfisher */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
@@ -68,10 +65,7 @@
 		9FBC538B2A80F9D100CE8ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FBC538D2A80F9D100CE8ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FBC53922A80F9D100CE8ED7 /* ajwaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ajwaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FBC53962A80F9D100CE8ED7 /* ajwaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaTests.swift; sourceTree = "<group>"; };
 		9FBC539C2A80F9D100CE8ED7 /* ajwaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ajwaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITests.swift; sourceTree = "<group>"; };
-		9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ajwaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		C8B48CF82A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		C8B48CF92A8A567C00EDBCB6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -144,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				9FBC537B2A80F9CE00CE8ED7 /* ajwa */,
-				9FBC53952A80F9D100CE8ED7 /* ajwaTests */,
-				9FBC539F2A80F9D100CE8ED7 /* ajwaUITests */,
 				9FBC537A2A80F9CE00CE8ED7 /* Products */,
 				2BDE5DC87257C1440180D3E5 /* Pods */,
 				3A9174EC0E6D685EAD52E0A9 /* Frameworks */,
@@ -176,23 +168,6 @@
 				9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */,
 			);
 			path = ajwa;
-			sourceTree = "<group>";
-		};
-		9FBC53952A80F9D100CE8ED7 /* ajwaTests */ = {
-			isa = PBXGroup;
-			children = (
-				9FBC53962A80F9D100CE8ED7 /* ajwaTests.swift */,
-			);
-			path = ajwaTests;
-			sourceTree = "<group>";
-		};
-		9FBC539F2A80F9D100CE8ED7 /* ajwaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9FBC53A02A80F9D100CE8ED7 /* ajwaUITests.swift */,
-				9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */,
-			);
-			path = ajwaUITests;
 			sourceTree = "<group>";
 		};
 		C81BE46A2A815CB300E77EEC /* Helpers */ = {
@@ -468,7 +443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FBC53972A80F9D100CE8ED7 /* ajwaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +450,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FBC53A12A80F9D100CE8ED7 /* ajwaUITests.swift in Sources */,
-				9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
