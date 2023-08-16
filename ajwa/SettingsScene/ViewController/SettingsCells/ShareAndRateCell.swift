@@ -27,7 +27,7 @@ final class ShareAndRateCell: UITableViewCell {
    
     private let label: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(14)
+        label.font = AppFont.medium.s14()
         return label
     }()
     
@@ -58,7 +58,6 @@ final class ShareAndRateCell: UITableViewCell {
         iconContainer.addSubview(iconImageView)
         contentView.addSubview(label)
         contentView.addSubview(disclosureImageView)
-
         contentView.clipsToBounds = true
     }
     
@@ -77,7 +76,6 @@ final class ShareAndRateCell: UITableViewCell {
         label.snp.makeConstraints{ make in
             make.leading.equalTo(iconContainer.snp.trailing).offset(12)
             make.centerY.equalToSuperview()
-            
         }
         
         disclosureImageView.snp.makeConstraints{ make in

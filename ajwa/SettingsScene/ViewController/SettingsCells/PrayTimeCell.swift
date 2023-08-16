@@ -15,14 +15,13 @@ final class PrayTimeCell: UITableViewCell {
     private let cellContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = cellContainerColor
+        view.backgroundColor = AppColor.lightgray.uiColor
         return view
     }()
 
-       
     private let prayTimeLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(14)
+        label.font = AppFont.regular.s14()
         return label
     }()
     
@@ -31,8 +30,6 @@ final class PrayTimeCell: UITableViewCell {
         imageView.tintColor = .black
         return imageView
     }()
-    
-   
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,7 +44,6 @@ final class PrayTimeCell: UITableViewCell {
     public func configure(with model: RegularCellSettings) {
         prayTimeLabel.text = model.title
         disclosureImageView.image = model.disclosureImage
-        
     }
     
     private func setupHierarchy() {

@@ -31,4 +31,10 @@ extension AppImageProtocol {
 
 enum AppImage: String, AppImageProtocol {
     case picture
+    case Disclosure
+    case Edit
+    case Location
+    case Rate
+    case Settings
+    case Share
 }

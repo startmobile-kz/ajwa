@@ -30,7 +30,6 @@ final class SettingsViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.sectionFooterHeight = 0
         tableView.sectionHeaderHeight = 10
-
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -86,7 +85,6 @@ final class SettingsViewController: UIViewController {
             make.edges.equalTo(view)
         }
     }
-    
 }
 
 //MARK: - Display logic implementation

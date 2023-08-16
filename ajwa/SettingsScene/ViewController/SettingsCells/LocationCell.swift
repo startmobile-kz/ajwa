@@ -8,27 +8,25 @@
 import UIKit
 import SnapKit
 
-let cellContainerColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-
 final class LocationCell: UITableViewCell {
     static let identifier = "LocationCell"
     
     private let cellContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = UIColor(named: "gray")
+        view.backgroundColor = AppColor.lightgray.uiColor
         return view
     }()
     
     private let locationLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(14)
+        label.font = AppFont.regular.s14()
         return label
     }()
     
     private let utcTimeLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(12)
+        label.font = AppFont.regular.s12()
         label.textColor = .gray
         return label
     }()

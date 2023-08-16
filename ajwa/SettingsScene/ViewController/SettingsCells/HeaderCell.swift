@@ -27,7 +27,7 @@ final class HeaderCell: UITableViewCell {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(16)
+        label.font = AppFont.medium.s16()
         return label
     }()
    

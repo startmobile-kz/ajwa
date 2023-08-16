@@ -14,7 +14,7 @@ final class NotificationAndSoundCell: UITableViewCell {
     private let cellContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = cellContainerColor
+        view.backgroundColor = AppColor.lightgray.uiColor
         return view
     }()
     
@@ -27,7 +27,7 @@ final class NotificationAndSoundCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(14)
+        label.font = AppFont.regular.s14()
         return label
     }()
     

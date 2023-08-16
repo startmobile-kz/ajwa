@@ -55,13 +55,13 @@ struct ProfileCellSettings {
 struct RegularCellSettings {
     let title : String
     let subTitle: String
-    let disclosureImage = UIImage(named: "DisclosureImage")
+    let disclosureImage = AppImage.Disclosure.uiImage
 }
 
 struct HeaderCellSettings {
     let title: String
     let icon: UIImage?
-    let disclosureImage = UIImage(named: "DisclosureImage")
+    let disclosureImage = AppImage.Disclosure.uiImage
 }
 
 struct SwitchCellSettings {

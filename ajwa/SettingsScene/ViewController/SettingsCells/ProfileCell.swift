@@ -8,10 +8,6 @@
 import UIKit
 import SnapKit
 
-
-let iconContainerColor = UIColor(red: 231/255, green: 243/255, blue: 242/255, alpha: 1)
-let iconLabelColor = UIColor(red: 62/255, green: 175/255, blue: 167/255, alpha: 1)
-
 protocol SettingsCell {
     
 }
@@ -23,26 +19,26 @@ final class ProfileCell: UITableViewCell {
     private let iconContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 12
-        view.backgroundColor = iconContainerColor
+        view.backgroundColor = AppColor.lightgreen.uiColor
         return view
     }()
     
     private let iconLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(24)
-        label.textColor = iconLabelColor
+        label.font = AppFont.medium.s24()
+        label.textColor = AppColor.darkgreen.uiColor
         return label
     }()
     
     private let userNameLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(16)
+        label.font = AppFont.medium.s16()
         return label
     }()
     
     private let userMobileNumberLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(12)
+        label.font = AppFont.medium.s12()
         label.textColor = .gray
         return label
     }()
@@ -59,7 +55,7 @@ final class ProfileCell: UITableViewCell {
         let button = UIButton(type: .roundedRect)
         button.backgroundColor = AppColor.blue.uiColor
         button.layer.cornerRadius = 20
-        let buttonImage = UIImage(named: "EditImage")?.withTintColor(.white).withRenderingMode(.alwaysOriginal)
+        let buttonImage = AppImage.Edit.uiImage?.withTintColor(.white).withRenderingMode(.alwaysOriginal)
         button.setImage(buttonImage, for: .normal)
         button.contentHorizontalAlignment = .center
         return button
@@ -69,7 +65,6 @@ final class ProfileCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayout()
-//        accessoryType = .disclosureIndicator
     }
     
     required init?(coder: NSCoder) {
@@ -114,11 +109,7 @@ final class ProfileCell: UITableViewCell {
             make.trailing.equalToSuperview().offset(-12)
             make.centerY.equalToSuperview()
             make.height.width.equalTo(40)
-
-            
         }
-        
-        
     }
 }
 

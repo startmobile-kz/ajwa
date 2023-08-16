@@ -29,13 +29,13 @@ extension SettingsInteractor: SettingsBusinessLogic {
             ]))
             
             settings.append(Settings(options: [
-                .headerCell(model: HeaderCellSettings(title: "Местоположение", icon: UIImage(named: "LocationImage"))),
+                .headerCell(model: HeaderCellSettings(title: "Местоположение", icon: AppImage.Location.uiImage)),
                 .locationCell(model: RegularCellSettings(title: "Казахстан, г.Алматы", subTitle: "UTC +6:00")),
                 .footerCell(model: SwitchCellSettings(title: "Исламский календарь"))
             ]))
             
             settings.append(Settings(options: [
-                .headerCell(model: HeaderCellSettings(title: "Настройки", icon: UIImage(named: "SettingsImage"))),
+                .headerCell(model: HeaderCellSettings(title: "Настройки", icon: AppImage.Settings.uiImage)),
                 .prayTimeCell(model: RegularCellSettings(title: "Время молитв", subTitle: "")),
                 .languageCell(model: RegularCellSettings(title: "Язык", subTitle: "Русский")),
                 .notificationAndSoundCell(model: SwitchCellSettings(title: "Уведомление и Звук")),
@@ -43,11 +43,11 @@ extension SettingsInteractor: SettingsBusinessLogic {
             ]))
 
             settings.append(Settings(options: [
-                .shareAndRateCell(model: HeaderCellSettings(title: "Поделиться", icon: UIImage(named: "ShareImage")))
+                .shareAndRateCell(model: HeaderCellSettings(title: "Поделиться", icon: AppImage.Share.uiImage))
             ]))
             
             settings.append(Settings(options: [
-                .shareAndRateCell(model: HeaderCellSettings(title: "Оцените приложение", icon: UIImage(named: "RateImage")))
+                .shareAndRateCell(model: HeaderCellSettings(title: "Оцените приложение", icon: AppImage.Rate.uiImage))
             ]))
             
             self.presenter?.present(settings)

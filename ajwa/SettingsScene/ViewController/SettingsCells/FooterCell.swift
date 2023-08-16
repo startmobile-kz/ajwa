@@ -11,7 +11,6 @@ import SnapKit
 final class FooterCell: UITableViewCell {
     static let identifier = "FooterCell"
 
-    
     private let switchContainer: UIView = {
         let view = UIView()
         return view
@@ -27,7 +26,7 @@ final class FooterCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(12)
+        label.font = AppFont.regular.s12()
         label.textColor = .gray
 
         return label

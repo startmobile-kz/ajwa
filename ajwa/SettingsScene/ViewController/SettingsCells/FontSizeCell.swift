@@ -15,19 +15,19 @@ final class FontSizeCell: UITableViewCell {
     private let cellContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = cellContainerColor
+        view.backgroundColor = AppColor.lightgray.uiColor
         return view
     }()
     
     private let fontSizeTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(14)
+        label.font = AppFont.regular.s14()
         return label
     }()
     
     private let fontSizeSubtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = label.font.withSize(12)
+        label.font = AppFont.regular.s12()
         label.textColor = .gray
         return label
     }()
