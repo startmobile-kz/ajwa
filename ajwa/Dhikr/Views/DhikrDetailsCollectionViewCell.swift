@@ -19,7 +19,7 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     private lazy var textLable: UILabel = {
         let lable = UILabel()
         lable.font = AppFont.regular.s14()
-        lable.textColor = UIColor(red: 0.642, green: 0.642, blue: 0.642, alpha: 1)
+        lable.textColor = .black
         lable.numberOfLines = 2
         return lable
     }()
@@ -28,6 +28,8 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupViews()
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -37,24 +39,27 @@ final class DhikrDetailsCollectionViewCell: UICollectionViewCell {
     //    MARK: - SetupView
     
     private func setupViews() {
-        contentView.layer.cornerRadius = 16
         contentView.backgroundColor = UIColor(red: 0.975, green: 0.975, blue: 0.975, alpha: 1)
-        addSubview(textLable)
+        contentView.layer.cornerRadius = 16
+        contentView.addSubview(textLable)
     }
     
     //    MARK: - SetupLayout
     
     private func setupLayout() {
         textLable.snp.makeConstraints {
-            $0.centerX.equalTo(contentView.snp.centerX)
-            $0.centerY.equalTo(contentView.snp.centerY)
+            $0.top.equalTo(contentView).inset(136)
+            $0.leading.equalTo(contentView).inset(59.5)
         }
+    }
+    
+    override func prepareForReuse() {
+        self.textLable.text = nil
     }
     
     //    MARK: - Public methods
     
     public func setupData(dhikr: String) {
-        textLable.text = dhikr
+        return textLable.text = dhikr
     }
-    
 }
