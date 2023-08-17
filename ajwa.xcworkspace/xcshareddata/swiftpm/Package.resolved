@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "chiotpfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChiliLabs/CHIOTPField",
+      "state" : {
+        "revision" : "a18c00e08af660338832c60e6a3789c9c2f4e11b",
+        "version" : "0.1.0"
+      }
+    },
+    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
