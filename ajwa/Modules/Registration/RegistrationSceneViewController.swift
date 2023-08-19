@@ -122,6 +122,9 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
         
         setupUI()
         setupConstraints()
+        
+        phoneNumberTextField.delegate = self
+        
     }
     
     // MARK: - UI Setup
@@ -185,5 +188,32 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
     }
     
     func displaySomething(viewModel: RegistrationScene.Something.ViewModel) {
+    }
+}
+
+// MARK: Custom Mask for Phone
+extension RegistrationSceneViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
+        updatedText = updatedText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        
+        if updatedText.count <= 10 {
+            var formattedText = ""
+            
+            for (index, char) in updatedText.enumerated() {
+                if index == 0 {
+                    formattedText += "("
+                } else if index == 3 {
+                    formattedText += ") "
+                } else if index == 6 || index == 8 {
+                    formattedText += "-"
+                }
+                formattedText += String(char)
+            }
+            textField.text = formattedText
+        }
+        return false
     }
 }
