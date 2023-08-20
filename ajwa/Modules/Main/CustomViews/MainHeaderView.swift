@@ -90,4 +90,8 @@ final class MainHeaderView: UIView {
             make.trailing.equalToSuperview()
         }
     }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 350, height: 44)
+    }
 }

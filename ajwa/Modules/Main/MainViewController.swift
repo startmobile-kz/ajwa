@@ -23,7 +23,10 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     // MARK: - UI
     
-    
+    private lazy var headerView: MainHeaderView = {
+        let view = MainHeaderView()
+        return view
+    }()
     
     // MARK: - Lifecycle
     
@@ -38,12 +41,21 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
+        
+        [headerView].forEach {
+            view.addSubview($0)
+        }
     }
     
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
-        
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.height.equalTo(44)
+        }
     }
     
     // MARK: Do something
