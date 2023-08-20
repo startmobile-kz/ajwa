@@ -21,11 +21,27 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     var interactor: MainBusinessLogic?
     var router: (NSObjectProtocol & MainRoutingLogic & MainDataPassing)?
     
-    // MARK: View lifecycle
+    // MARK: - UI
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        
+        setupViews()
+        setupConstraints()
+    }
+    
+    // MARK: - SetupViews
+    
+    private func setupViews() {
+        view.backgroundColor = AppColor.background.uiColor
+    }
+    
+    // MARK: - SetupConstraints
+    
+    private func setupConstraints() {
+        
     }
     
     // MARK: Do something
