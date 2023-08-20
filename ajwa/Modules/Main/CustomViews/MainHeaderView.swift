@@ -29,7 +29,7 @@ final class MainHeaderView: UIView {
     
     private lazy var cityNameLabel: UILabel = {
         let label = UILabel()
-        label.font = AppFont.regular.s15()
+        label.font = AppFont.semibold.s15()
         label.textColor = AppColor.gray20.uiColor
         label.text = "Алматы"
         return label

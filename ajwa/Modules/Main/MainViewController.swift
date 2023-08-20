@@ -40,6 +40,8 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         return imageView
     }()
     
+    private lazy var particularNamazView = ParticularNamazView()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -54,7 +56,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView].forEach {
             view.addSubview($0)
         }
     }
@@ -81,6 +83,11 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.trailing.equalTo(headerView)
             make.width.equalTo(141.28)
             make.height.equalTo(124.47)
+        }
+        
+        particularNamazView.snp.makeConstraints { make in
+            make.top.equalTo(firstMosqueImageView).offset(113.65)
+            make.leading.equalTo(headerView)
         }
     }
     
