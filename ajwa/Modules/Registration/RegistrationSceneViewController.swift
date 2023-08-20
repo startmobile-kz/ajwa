@@ -16,7 +16,7 @@ protocol RegistrationSceneDisplayLogic: AnyObject {
     func displaySomething(viewModel: RegistrationScene.Something.ViewModel)
 }
 
-class RegistrationSceneViewController: UIViewController, RegistrationSceneDisplayLogic {
+final class RegistrationSceneViewController: UIViewController, RegistrationSceneDisplayLogic {
     
     var interactor: RegistrationSceneBusinessLogic?
     var router: (NSObjectProtocol & RegistrationSceneRoutingLogic & RegistrationSceneDataPassing)?
@@ -31,17 +31,27 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
     private lazy var welcomeMessageLabel: UILabel = {
         let label = UILabel()
         
-        let attributedTitle = NSMutableAttributedString(string: "Добро пожаловать в ",
-                                                        attributes:
-                                                            [NSAttributedString.Key.font: AppFont.regular.s20(),
-                                                             NSAttributedString.Key.foregroundColor: AppColor.blue.uiColor])
+        let inputString = "Добро пожаловать в Namaz"
         
-        attributedTitle.append(NSAttributedString(string: "Namaz",
-                                                  attributes:
-                                                    [NSAttributedString.Key.font: AppFont.semibold.s20(),
-                                                     NSAttributedString.Key.foregroundColor: AppColor.blue.uiColor]))
+        label.textColor = AppColor.blue.uiColor
+        
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: inputString)
+        
+        attributedString.addAttribute(.font, value: AppFont.regular.s20(), range: NSRange(location: 0, length: inputString.count))
+        
+        if let range = inputString.range(of: "Namaz") {
+            let startIndex = range.lowerBound
+            let endIndex = range.upperBound
+            
+            attributedString.addAttribute(
+                .font,
+                value: AppFont.semibold.s20(),
+                range: NSRange(startIndex..<endIndex, in: inputString)
+            )
+        }
+        
+        label.attributedText = attributedString
         label.textAlignment = .center
-        label.attributedText = attributedTitle
         return label
     }()
     
