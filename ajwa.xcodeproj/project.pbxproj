@@ -208,7 +208,6 @@
 				C81BE46A2A815CB300E77EEC /* Helpers */,
 				B2E133852A88AED5008A46E0 /* Modules */,
 				B2E9F0712A89F88D00E33F51 /* Extensions */,
-				681ECDBE2A91E93D00382F1B /* Main */,
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
 				9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */,
@@ -250,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E133882A88AF10008A46E0 /* RegisterVerification */,
+				681ECDBE2A91E93D00382F1B /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";

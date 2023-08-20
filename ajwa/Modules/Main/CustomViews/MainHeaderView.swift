@@ -12,6 +12,22 @@ final class MainHeaderView: UIView {
     
     // MARK: - UI
     
+    private lazy var cityLabel: UILabel = {
+        let label = UILabel()
+        label.font = AppFont.regular.s12()
+        label.textColor = AppColor.gray60.uiColor
+        label.text = "Город"
+        return label
+    }()
+    
+    private lazy var cityNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = AppFont.regular.s15()
+        label.textColor = AppColor.gray20.uiColor
+        label.text = "Алматы"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
