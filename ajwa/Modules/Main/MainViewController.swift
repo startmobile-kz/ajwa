@@ -42,6 +42,8 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var particularNamazView = ParticularNamazView()
     
+    private lazy var remainingTimeView = RemainingTimeView()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -56,7 +58,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView].forEach {
             view.addSubview($0)
         }
     }
@@ -88,6 +90,15 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         particularNamazView.snp.makeConstraints { make in
             make.top.equalTo(firstMosqueImageView).offset(113.65)
             make.leading.equalTo(headerView)
+            make.width.equalTo(170)
+            make.height.equalTo(164)
+        }
+        
+        remainingTimeView.snp.makeConstraints { make in
+            make.top.equalTo(particularNamazView.snp.bottom).offset(12)
+            make.leading.equalTo(headerView)
+            make.width.equalTo(170)
+            make.height.equalTo(164)
         }
     }
     

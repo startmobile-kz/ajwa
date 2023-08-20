@@ -30,4 +30,5 @@ enum AppImage: String, AppImageProtocol {
     case mosque_1
     case mosque_2
     case mosque_icon
+    case clock
 }
