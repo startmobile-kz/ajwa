@@ -28,6 +28,12 @@ final class MainHeaderView: UIView {
         return label
     }()
     
+    private lazy var vectorImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = 
+        return imageView
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {

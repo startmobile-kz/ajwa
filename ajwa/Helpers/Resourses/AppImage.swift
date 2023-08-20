@@ -25,4 +25,5 @@ extension AppImageProtocol {
 enum AppImage: String, AppImageProtocol {
     case picture
     case edit
+    case vector_right
 }
