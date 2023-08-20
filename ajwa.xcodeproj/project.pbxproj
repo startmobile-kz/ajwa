@@ -17,6 +17,7 @@
 		681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC32A91E97E00382F1B /* MainViewController.swift */; };
 		681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC42A91E97E00382F1B /* MainInteractor.swift */; };
 		681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC52A91E97E00382F1B /* MainConfigurator.swift */; };
+		681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		681ECDC32A91E97E00382F1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		681ECDC42A91E97E00382F1B /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		681ECDC52A91E97E00382F1B /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		681ECDBE2A91E93D00382F1B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				681ECDCD2A91EAA300382F1B /* CustomViews */,
 				681ECDBF2A91E97E00382F1B /* MainPresenter.swift */,
 				681ECDC02A91E97E00382F1B /* MainWorker.swift */,
 				681ECDC12A91E97E00382F1B /* MainRouter.swift */,
@@ -168,6 +171,14 @@
 				681ECDC52A91E97E00382F1B /* MainConfigurator.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		681ECDCD2A91EAA300382F1B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		9FBC53702A80F9CE00CE8ED7 = {
@@ -526,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
 				B2E133932A88BC9A008A46E0 /* Int+Extension.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,

@@ -13,7 +13,7 @@
 import UIKit
 
 final class MainWorker {
-  func doSomeWork() {
-      
-  }
+    func doSomeWork() {
+        
+    }
 }

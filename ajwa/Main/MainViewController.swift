@@ -13,31 +13,31 @@
 import UIKit
 
 protocol MainDisplayLogic: AnyObject {
-  func displaySomething(viewModel: Main.Something.ViewModel)
+    func displaySomething(viewModel: Main.Something.ViewModel)
 }
 
 final class MainViewController: UIViewController, MainDisplayLogic {
     
-  var interactor: MainBusinessLogic?
-  var router: (NSObjectProtocol & MainRoutingLogic & MainDataPassing)?
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething() {
-    let request = Main.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Main.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
+    var interactor: MainBusinessLogic?
+    var router: (NSObjectProtocol & MainRoutingLogic & MainDataPassing)?
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doSomething()
+    }
+    
+    // MARK: Do something
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
+    func doSomething() {
+        let request = Main.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Main.Something.ViewModel) {
+        //nameTextField.text = viewModel.name
+    }
 }
