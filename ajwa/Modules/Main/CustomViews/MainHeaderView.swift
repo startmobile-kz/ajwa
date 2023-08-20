@@ -61,6 +61,12 @@ final class MainHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rightButton.layer.cornerRadius = rightButton.frame.height / 2
+        applyShadowToButton()
+    }
+    
     // MARK: - SetupViews
     
     private func setupViews() {
@@ -93,12 +99,15 @@ final class MainHeaderView: UIView {
         }
     }
     
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: 350, height: 44)
+    private func applyShadowToButton() {
+        rightButton.layer.shadowPath = UIBezierPath(roundedRect: rightButton.bounds, cornerRadius: rightButton.layer.cornerRadius).cgPath
+        rightButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        rightButton.layer.shadowOpacity = 1
+        rightButton.layer.shadowRadius = 8
+        rightButton.layer.shadowOffset = CGSize(width: 4, height: 2)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        rightButton.layer.cornerRadius = rightButton.frame.height / 2
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 350, height: 44)
     }
 }
