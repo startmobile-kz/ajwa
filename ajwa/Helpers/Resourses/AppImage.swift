@@ -27,4 +27,6 @@ enum AppImage: String, AppImageProtocol {
     case edit
     case vector_right
     case solid_book_quran
+    case mosque_1
+    case mosque_2
 }
