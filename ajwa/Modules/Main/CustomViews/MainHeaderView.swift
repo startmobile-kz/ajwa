@@ -12,6 +12,13 @@ final class MainHeaderView: UIView {
     
     // MARK: - UI
     
+    private lazy var cityStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        return stackView
+    }()
+    
     private lazy var cityLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.regular.s12()
@@ -30,7 +37,13 @@ final class MainHeaderView: UIView {
     
     private lazy var vectorImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = 
+        imageView.image = AppImage.vector_right.uiImage
+        return imageView
+    }()
+    
+    private lazy var quranImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = AppImage.solid_book_quran.uiImage
         return imageView
     }()
     
@@ -50,12 +63,31 @@ final class MainHeaderView: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
+        [cityStackView, vectorImageView, quranImageView].forEach {
+            addSubview($0)
+        }
         
+        [cityLabel, cityNameLabel].forEach {
+            cityStackView.addArrangedSubview($0)
+        }
     }
     
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
+        cityStackView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview()
+        }
         
+        vectorImageView.snp.makeConstraints { make in
+            make.centerY.equalTo(cityNameLabel)
+            make.leading.equalTo(cityNameLabel.snp.trailing).offset(12)
+        }
+        
+        quranImageView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
     }
 }
