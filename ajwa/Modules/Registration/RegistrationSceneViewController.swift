@@ -109,6 +109,17 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
         return button
     }()
     
+    private lazy var continueButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.titleLabel?.font = AppFont.medium.s18()
+        button.setTitle("Продолжить", for: .normal)
+        button.backgroundColor = AppColor.blue.uiColor
+        button.setTitleColor(AppColor.white.uiColor, for: .normal)
+        button.layer.cornerRadius = 22
+        button.addTarget(self, action: #selector(continueDidTap), for: .touchUpInside)
+        return button
+    }()
+    
     
     // MARK: View lifecycle
     override func viewDidLayoutSubviews() {
@@ -135,6 +146,7 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
         phoneDetailsContainerView.addSubview(countryCodeLabel)
         phoneDetailsContainerView.addSubview(phoneNumberTextField)
         view.addSubview(alreadyHaveAccountButton)
+        view.addSubview(continueButton)
     }
     
     // MARK: - Constraints Setup
@@ -172,12 +184,22 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
             make.trailing.equalToSuperview().inset(20)
             make.top.equalTo(phoneDetailsContainerView.snp.bottom).offset(20)
         }
+        
+        continueButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(15)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().inset(10)
+            make.height.equalTo(55)
+        }
     }
     
     // MARK: - Actions
     @objc func handleShowLogin() {
     }
     
+    @objc func continueDidTap() {
+    }
+
     // MARK: Do something
     func doSomething() {
         let request = RegistrationScene.Something.Request()
