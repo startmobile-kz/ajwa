@@ -28,6 +28,18 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         return view
     }()
     
+    private lazy var firstMosqueImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = AppImage.mosque_1.uiImage
+        return imageView
+    }()
+    
+    private lazy var secondMosqueImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = AppImage.mosque_2.uiImage
+        return imageView
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -42,7 +54,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView].forEach {
             view.addSubview($0)
         }
     }
@@ -55,6 +67,20 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(44)
+        }
+        
+        firstMosqueImageView.snp.makeConstraints { make in
+            make.top.equalTo(headerView.snp.bottom).offset(11.35)
+            make.leading.equalTo(headerView)
+            make.width.equalTo(141.28)
+            make.height.equalTo(124.47)
+        }
+        
+        secondMosqueImageView.snp.makeConstraints { make in
+            make.top.equalTo(headerView.snp.bottom).offset(11.35)
+            make.trailing.equalTo(headerView)
+            make.width.equalTo(141.28)
+            make.height.equalTo(124.47)
         }
     }
     
