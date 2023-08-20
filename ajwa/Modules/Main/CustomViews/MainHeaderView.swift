@@ -41,10 +41,11 @@ final class MainHeaderView: UIView {
         return imageView
     }()
     
-    private lazy var quranImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = AppImage.solid_book_quran.uiImage
-        return imageView
+    private lazy var rightButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = AppColor.blue.uiColor
+        button.setImage(AppImage.solid_book_quran.uiImage, for: .normal)
+        return button
     }()
     
     // MARK: - Lifecycle
@@ -63,7 +64,7 @@ final class MainHeaderView: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
-        [cityStackView, vectorImageView, quranImageView].forEach {
+        [cityStackView, vectorImageView, rightButton].forEach {
             addSubview($0)
         }
         
@@ -85,13 +86,19 @@ final class MainHeaderView: UIView {
             make.leading.equalTo(cityNameLabel.snp.trailing).offset(12)
         }
         
-        quranImageView.snp.makeConstraints { make in
+        rightButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview()
+            make.size.equalTo(44)
         }
     }
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 350, height: 44)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rightButton.layer.cornerRadius = rightButton.frame.height / 2
     }
 }
