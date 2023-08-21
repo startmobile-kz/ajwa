@@ -35,7 +35,7 @@
 		E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9462A8B4FDD00D90F3B /* SettingsPresenter.swift */; };
 		E437F94A2A8B500F00D90F3B /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9492A8B500F00D90F3B /* SettingsInteractor.swift */; };
 		E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F94C2A8B504C00D90F3B /* SettingsViewController.swift */; };
-		E437F94F2A8B507800D90F3B /* SettingsViewContoller + ViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F94E2A8B507800D90F3B /* SettingsViewContoller + ViewDataSource.swift */; };
+		E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F94E2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift */; };
 		E437F9512A8B50AE00D90F3B /* SettingsViewController + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9502A8B50AE00D90F3B /* SettingsViewController + UITableView.swift */; };
 		E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9532A8B50EA00D90F3B /* ProfileCell.swift */; };
 		E437F9562A8B510A00D90F3B /* ShareAndRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9552A8B510A00D90F3B /* ShareAndRateCell.swift */; };
@@ -46,6 +46,16 @@
 		E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F95F2A8B51A200D90F3B /* LanguageCell.swift */; };
 		E437F9622A8B521F00D90F3B /* FontSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9612A8B521F00D90F3B /* FontSizeCell.swift */; };
 		E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */; };
+		E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */; };
+		E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */; };
+		E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */; };
+		E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938E2A8D14BD002274C9 /* LanguagesModels.swift */; };
+		E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938F2A8D14BD002274C9 /* LanguagesViewController.swift */; };
+		E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993902A8D14BD002274C9 /* LanguagesInteractor.swift */; };
+		E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */; };
+		E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */; };
+		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
+		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 		F671F64DFA16A54BEBB4CFC6 /* Pods_ajwaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532B87BFA9247EF48051385D /* Pods_ajwaTests.framework */; };
 /* End PBXBuildFile section */
@@ -103,7 +113,7 @@
 		E437F9462A8B4FDD00D90F3B /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		E437F9492A8B500F00D90F3B /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		E437F94C2A8B504C00D90F3B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		E437F94E2A8B507800D90F3B /* SettingsViewContoller + ViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewContoller + ViewDataSource.swift"; sourceTree = "<group>"; };
+		E437F94E2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewContoller + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E437F9502A8B50AE00D90F3B /* SettingsViewController + UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + UITableView.swift"; sourceTree = "<group>"; };
 		E437F9532A8B50EA00D90F3B /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		E437F9552A8B510A00D90F3B /* ShareAndRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAndRateCell.swift; sourceTree = "<group>"; };
@@ -114,6 +124,16 @@
 		E437F95F2A8B51A200D90F3B /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		E437F9612A8B521F00D90F3B /* FontSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCell.swift; sourceTree = "<group>"; };
 		E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAndSoundCell.swift; sourceTree = "<group>"; };
+		E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPresenter.swift; sourceTree = "<group>"; };
+		E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesWorker.swift; sourceTree = "<group>"; };
+		E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRouter.swift; sourceTree = "<group>"; };
+		E489938E2A8D14BD002274C9 /* LanguagesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesModels.swift; sourceTree = "<group>"; };
+		E489938F2A8D14BD002274C9 /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		E48993902A8D14BD002274C9 /* LanguagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesInteractor.swift; sourceTree = "<group>"; };
+		E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesConfigurator.swift; sourceTree = "<group>"; };
+		E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTypeCell.swift; sourceTree = "<group>"; };
+		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		ECD2EE9510CC29B9B6402C9B /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,12 +290,8 @@
 		E437F93D2A8B4E8900D90F3B /* SettingsScene */ = {
 			isa = PBXGroup;
 			children = (
-				E437F94B2A8B503800D90F3B /* ViewController */,
-				E437F9482A8B4FF500D90F3B /* Interactor */,
-				E437F9452A8B4FAC00D90F3B /* Presenter */,
-				E437F9422A8B4F6800D90F3B /* Models */,
-				E437F9412A8B4F5500D90F3B /* Worker */,
-				E437F93E2A8B4F1E00D90F3B /* Router */,
+				E489938A2A8D13AE002274C9 /* LanguagesScreen */,
+				E48993892A8D11C0002274C9 /* MainSettingsScreen */,
 			);
 			path = SettingsScene;
 			sourceTree = "<group>";
@@ -324,7 +340,8 @@
 			children = (
 				E437F9522A8B50CA00D90F3B /* SettingsCells */,
 				E437F94C2A8B504C00D90F3B /* SettingsViewController.swift */,
-				E437F94E2A8B507800D90F3B /* SettingsViewContoller + ViewDataSource.swift */,
+				E437F94E2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift */,
+				E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */,
 				E437F9502A8B50AE00D90F3B /* SettingsViewController + UITableView.swift */,
 			);
 			path = ViewController;
@@ -344,6 +361,35 @@
 				E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */,
 			);
 			path = SettingsCells;
+			sourceTree = "<group>";
+		};
+		E48993892A8D11C0002274C9 /* MainSettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E437F94B2A8B503800D90F3B /* ViewController */,
+				E437F9482A8B4FF500D90F3B /* Interactor */,
+				E437F9452A8B4FAC00D90F3B /* Presenter */,
+				E437F9422A8B4F6800D90F3B /* Models */,
+				E437F9412A8B4F5500D90F3B /* Worker */,
+				E437F93E2A8B4F1E00D90F3B /* Router */,
+			);
+			path = MainSettingsScreen;
+			sourceTree = "<group>";
+		};
+		E489938A2A8D13AE002274C9 /* LanguagesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */,
+				E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */,
+				E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */,
+				E489938E2A8D14BD002274C9 /* LanguagesModels.swift */,
+				E489938F2A8D14BD002274C9 /* LanguagesViewController.swift */,
+				E48993902A8D14BD002274C9 /* LanguagesInteractor.swift */,
+				E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */,
+				E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */,
+				E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */,
+			);
+			path = LanguagesScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,9 +612,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
 				E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */,
+				E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */,
 				E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */,
+				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
 				E437F95C2A8B515C00D90F3B /* FooterCell.swift in Sources */,
 				E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */,
 				E437F9562A8B510A00D90F3B /* ShareAndRateCell.swift in Sources */,
@@ -580,15 +629,22 @@
 				E437F94A2A8B500F00D90F3B /* SettingsInteractor.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
+				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
+				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
+				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */,
 				E437F9512A8B50AE00D90F3B /* SettingsViewController + UITableView.swift in Sources */,
 				E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */,
-				E437F94F2A8B507800D90F3B /* SettingsViewContoller + ViewDataSource.swift in Sources */,
+				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
+				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
+				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
+				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
