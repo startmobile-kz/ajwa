@@ -55,7 +55,7 @@ final class ProfileCell: UITableViewCell {
         let button = UIButton(type: .roundedRect)
         button.backgroundColor = AppColor.blue.uiColor
         button.layer.cornerRadius = 20
-        let buttonImage = AppImage.Edit.uiImage?.withTintColor(.white).withRenderingMode(.alwaysOriginal)
+        let buttonImage = AppImage.modify.uiImage?.withTintColor(.white).withRenderingMode(.alwaysOriginal)
         button.setImage(buttonImage, for: .normal)
         button.contentHorizontalAlignment = .center
         return button

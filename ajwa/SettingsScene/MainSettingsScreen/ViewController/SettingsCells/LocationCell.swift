@@ -14,7 +14,7 @@ final class LocationCell: UITableViewCell {
     private let cellContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = AppColor.lightgray.uiColor
+        view.backgroundColor = AppColor.brightgray.uiColor
         return view
     }()
     

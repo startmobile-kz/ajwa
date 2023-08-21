@@ -24,7 +24,7 @@ protocol LanguagesDataStore
 class LanguagesInteractor: LanguagesBusinessLogic, LanguagesDataStore
 {
   var presenter: LanguagesPresentationLogic?
-  var worker: LanguagesWorker?
+//  var worker: LanguagesWorker?
   var languages = [Languages.Something.ViewModel]()
   
   // MARK: Do something
