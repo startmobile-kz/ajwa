@@ -1,10 +1,3 @@
-//
-//  AppFont.swift
-//  ajwa
-//
-//  Created by Темирлан Кудайберген on 07.08.2023.
-//
-
 import UIKit
 
 protocol AppFontProtocol {

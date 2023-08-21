@@ -1,10 +1,3 @@
-//
-//  AppColor.swift
-//  ajwa
-//
-//  Created by Темирлан Кудайберген on 11.08.2023.
-//
-
 import UIKit
 
 protocol AppColorProtocol {
@@ -27,6 +20,12 @@ extension AppColorProtocol {
 
 enum AppColor: String, AppColorProtocol {
     case blue
+    case celeste
+    case black
+    case white
+    case lightGray
+    case gray
+    case darkGray
     case lightgray
     case lightgreen
     case darkgreen

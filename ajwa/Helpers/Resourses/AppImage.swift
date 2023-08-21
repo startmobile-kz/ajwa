@@ -1,10 +1,3 @@
-//
-//  AppImage.swift
-//  ajwa
-//
-//  Created by Темирлан Кудайберген on 11.08.2023.
-//
-
 import UIKit
 
 protocol AppImageProtocol {
@@ -37,4 +30,5 @@ enum AppImage: String, AppImageProtocol {
     case Rate
     case Settings
     case Share
+    case edit
 }
