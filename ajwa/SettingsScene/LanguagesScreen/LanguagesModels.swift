@@ -24,14 +24,9 @@ enum Languages
     struct Response
     {
     }
-    struct ViewModel
-    {
+    struct ViewModel {
+        var isSelected = false
         let languageTitle : String
-
     }
   }
 }
-
-//struct Languages {
-// let languageTitle : String 
-//}

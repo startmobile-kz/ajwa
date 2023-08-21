@@ -23,6 +23,7 @@ class LanguagesViewController: UIViewController, LanguagesDisplayLogic
   var interactor: LanguagesBusinessLogic?
   var router: (NSObjectProtocol & LanguagesRoutingLogic & LanguagesDataPassing)?
   var languages = [Languages.Something.ViewModel]()
+    var previouslySelectedIndexPath: IndexPath?
 
   private lazy var tableView: UITableView = {
       let tableView = UITableView(frame: .init(x: 9, y: 9, width: self.view.frame.width, height: 324), style: .insetGrouped)
@@ -74,8 +75,12 @@ class LanguagesViewController: UIViewController, LanguagesDisplayLogic
     interactor?.doSomething()
   }
   
-  func displaySomething(viewModel: [Languages.Something.ViewModel])
-  {
+  func displaySomething(viewModel: [Languages.Something.ViewModel]) {
+      viewModel.enumerated().forEach { iterator in
+          if iterator.element.isSelected {
+              previouslySelectedIndexPath = IndexPath(row: 0, section: iterator.offset)
+          }
+      }
       languages.append(contentsOf: viewModel)
       tableView.reloadData()
   }

@@ -10,17 +10,13 @@
 //  see http://clean-swift.com
 //
 
-//import UIKit
-//
-//class LanguagesWorker
-//{
-//    func fetchLanguages(data: [Languages.Something.ViewModel]) -> [Languages.Something.ViewModel]
-//  {
-////      var languages = 
-//      
-////      languages.append(Languages(languageTitle: "English"))
-//      
-//      return languages
-//      
-//  }
-//}
+final class LanguagesWorker {
+    func fetchLanguages() -> [Languages.Something.ViewModel] {
+        let languages = [
+            Languages.Something.ViewModel(languageTitle: "English"),
+            Languages.Something.ViewModel(isSelected: true, languageTitle: "Русский"),
+            Languages.Something.ViewModel(languageTitle: "Казахcкий")
+        ]
+        return languages
+    }
+}

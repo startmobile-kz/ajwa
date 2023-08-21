@@ -7,25 +7,25 @@
 
 import UIKit
 
-extension LanguagesViewController: UITableViewDataSource, UITableViewDelegate {
+extension LanguagesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1   }
+        1
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         languages.count
-        }
-    
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         48
     }
-//
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-                    return 60
-                } else {
-                    return 0
-                }
+            return 60
+        } else {
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -44,6 +44,7 @@ extension LanguagesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
+        
         if section == 2 {
             let footerView = UIView()
             footerView.backgroundColor = .clear
@@ -60,39 +61,17 @@ extension LanguagesViewController: UITableViewDataSource, UITableViewDelegate {
         else { return UIView()}
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        let cornerRadius = 15
-        var corners: UIRectCorner = []
-
-        if indexPath.row == 0
-        {
-            corners.update(with: .topLeft)
-            corners.update(with: .topRight)
-        }
-
-        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1
-        {
-            corners.update(with: .bottomLeft)
-            corners.update(with: .bottomRight)
-        }
-
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: cell.bounds,
-                                      byRoundingCorners: corners,
-                                      cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
-        cell.layer.mask = maskLayer
-    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let cell = tableView.cellForRow(at: indexPath) as! LanguageTypeCell
-            cell.updateCheckState(true)
+        if let previouslySelectedIndexPath = previouslySelectedIndexPath {
+            languages[previouslySelectedIndexPath.section].isSelected = false
         }
-        
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! LanguageTypeCell
-        cell.updateCheckState(false)}
-    
+        languages[indexPath.section].isSelected = true
+        previouslySelectedIndexPath = indexPath
+        tableView.reloadData()
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = languages[indexPath.section]
         let cell: LanguageTypeCell = tableView.dequeueReusableCell()
@@ -100,9 +79,6 @@ extension LanguagesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 26
         cell.clipsToBounds = true
-        cell.updateCheckState(false)
         return cell
-        
     }
-    }
-
+}

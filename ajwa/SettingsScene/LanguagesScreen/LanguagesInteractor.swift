@@ -10,34 +10,21 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-protocol LanguagesBusinessLogic
-{
-  func doSomething()
+protocol LanguagesBusinessLogic {
+    func doSomething()
 }
 
-protocol LanguagesDataStore
-{
-}
+protocol LanguagesDataStore {}
 
-class LanguagesInteractor: LanguagesBusinessLogic, LanguagesDataStore
-{
-  var presenter: LanguagesPresentationLogic?
-//  var worker: LanguagesWorker?
-  var languages = [Languages.Something.ViewModel]()
-  
-  // MARK: Do something
-  
-  func doSomething()
-  {
-      languages.append(Languages.Something.ViewModel(languageTitle: "Русский"))
-      languages.append(Languages.Something.ViewModel(languageTitle: "Казакша"))
-      languages.append(Languages.Something.ViewModel(languageTitle: "English"))
-      
-      
-//    worker = LanguagesWorker()
-//    let response = (worker?.fetchLanguages(data: languages))!
-      self.presenter?.presentSomething(response: languages)
-  }
+final class LanguagesInteractor: LanguagesBusinessLogic, LanguagesDataStore {
+    var presenter: LanguagesPresentationLogic?
+    var worker: LanguagesWorker?
+    var languages = [Languages.Something.ViewModel]()
+    
+    // MARK: Do something
+    
+    func doSomething() {
+        worker = LanguagesWorker()
+        self.presenter?.presentSomething(response: worker?.fetchLanguages() ?? [])
+    }
 }

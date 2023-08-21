@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		078888962A8178DD006E0FE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 078888952A8178DD006E0FE0 /* Alamofire */; };
 		09ECE9EE3CABB547D38E728F /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */; };
-		3E2EF13F3D3716C515C6E0A3 /* Pods_ajwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */; };
+		3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
@@ -22,12 +22,7 @@
 		9FBC53A32A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53A22A80F9D100CE8ED7 /* ajwaUITestsLaunchTests.swift */; };
 		9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBC53B02A8100C300CE8ED7 /* SnapKit */; };
 		B2187AF82A83E65400C0FB82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B2187AF72A83E65400C0FB82 /* Kingfisher */; };
-		B2E133872A88AF07008A46E0 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
 		B2E133912A88B53E008A46E0 /* CHIOTPField in Frameworks */ = {isa = PBXBuildFile; productRef = B2E133902A88B53E008A46E0 /* CHIOTPField */; };
-		B2E133932A88BC9A008A46E0 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133922A88BC9A008A46E0 /* Int+Extension.swift */; };
-		B2E9F06E2A89374900E33F51 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
-		B2E9F0702A8938C300E33F51 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
-		B2E9F0732A89FC1A00E33F51 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */; };
 		BBC2835379CEFD5B7B17271C /* Pods_ajwaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1898F0C127C697DC98DF74D /* Pods_ajwaTests.framework */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
 		C8B48CFC2A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48CF82A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf */; };
@@ -63,6 +58,7 @@
 		E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */; };
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
+		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
@@ -117,8 +113,6 @@
 		C8BDB0A02A868559009B9D5D /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
 		C8BDB0A22A8685BB009B9D5D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C8BDB0A52A868692009B9D5D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		D3F9579726FD126FB505194B /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE0A12C1D36D3A817EF36ABC /* Pods-ajwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.debug.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.debug.xcconfig"; sourceTree = "<group>"; };
 		E437F93F2A8B4F3E00D90F3B /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		E437F9432A8B4F8F00D90F3B /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		E437F9462A8B4FDD00D90F3B /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
@@ -145,7 +139,7 @@
 		E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTypeCell.swift; sourceTree = "<group>"; };
 		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
-		ECD2EE9510CC29B9B6402C9B /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +152,7 @@
 				B2E133912A88B53E008A46E0 /* CHIOTPField in Frameworks */,
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
-				3E2EF13F3D3716C515C6E0A3 /* Pods_ajwa.framework in Frameworks */,
+				3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,11 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				50DC7B7AC84EE6C5F946E7E7 /* Pods-ajwa.debug.xcconfig */,
-				CB78CF8F6C8C45A0B90B13BD /* Pods-ajwa.release.xcconfig */,
 				8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */,
 				1A7DF254EB3F3358A3320519 /* Pods-ajwa-ajwaUITests.release.xcconfig */,
 				9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */,
-				DBAC10FFC8039F8F3D6E3A12 /* Pods-ajwaTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -255,7 +247,6 @@
 		A469FBEC7FAF711F8434085C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */,
 				8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */,
 				B1898F0C127C697DC98DF74D /* Pods_ajwaTests.framework */,
 			);
@@ -429,6 +420,7 @@
 				E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */,
 				E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */,
 				E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */,
+				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
 			sourceTree = "<group>";
@@ -676,6 +668,7 @@
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
+				E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
@@ -888,7 +881,6 @@
 		};
 		9FBC53A82A80F9D100CE8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB78CF8F6C8C45A0B90B13BD /* Pods-ajwa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -938,7 +930,6 @@
 		};
 		9FBC53AB2A80F9D100CE8ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBAC10FFC8039F8F3D6E3A12 /* Pods-ajwaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
