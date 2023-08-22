@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ZeekrsSceneDisplayLogic: class {
+protocol ZeekrsSceneDisplayLogic: AnyObject {
     func displayData()
 }
 
@@ -45,14 +45,15 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
     private lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Поиск"
-        textField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        textField.backgroundColor = AppColor.white.uiColor
         textField.rightViewMode = .always
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         textField.leftView = paddingView
         textField.leftViewMode = .always
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "searchTextFieldIcon")
+//        imageView.image = UIImage(named: "searchTextFieldIcon")
+        imageView.image = AppImage.searchTextFieldIcon.uiImage
         textField.rightView = imageView
         textField.delegate = self
         textField.layer.cornerRadius = 16
@@ -65,7 +66,7 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(ZeekrsTableViewCell.self, forCellReuseIdentifier: ZeekrsTableViewCell.identifier)
-        tableView.backgroundColor = #colorLiteral(red: 0.9764706492, green: 0.9764706492, blue: 0.9764706492, alpha: 1)
+        tableView.backgroundColor = AppColor.background.uiColor
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -75,6 +76,7 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigation()
         setupViews()
         setupConstraints()
         
@@ -84,9 +86,12 @@ class ZeekrsViewController: UIViewController, ZeekrsSceneDisplayLogic {
         interactor?.fetchArticles()
     }
     
-    private func setupViews() {
+    private func setupNavigation() {
         title = "Зикры"
-        view.backgroundColor = #colorLiteral(red: 0.9764706492, green: 0.9764706492, blue: 0.9764706492, alpha: 1)
+    }
+    
+    private func setupViews() {
+        view.backgroundColor = AppColor.background.uiColor
         view.addSubview(searchTextField)
         view.addSubview(tableView)
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -119,7 +124,6 @@ extension ZeekrsViewController: UITableViewDataSource, UITableViewDelegate, UITe
         
         if string.isEmpty {
             filteredNames = []
-            print("aa")
             isFiltered = false
             tableView.reloadData()
         }
@@ -159,7 +163,7 @@ extension ZeekrsViewController: UITableViewDataSource, UITableViewDelegate, UITe
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ZeekrsTableViewCell.identifier, for: indexPath) as? ZeekrsTableViewCell else { return UITableViewCell() }
-        cell.backgroundColor = #colorLiteral(red: 0.9764706492, green: 0.9764706492, blue: 0.9764706492, alpha: 1)
+        cell.backgroundColor = AppColor.background.uiColor
         cell.idLabel.text = "\(indexPath.row + 1)"
         cell.selectionStyle = .none
         if !filteredNames.isEmpty {

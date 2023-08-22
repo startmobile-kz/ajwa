@@ -11,7 +11,7 @@ protocol ZeekrsBusinessLogic {
     func fetchArticles()
 }
 
-class ZeekrsSceneInteractor: ZeekrsBusinessLogic {
+final class ZeekrsSceneInteractor: ZeekrsBusinessLogic {
     
     var presenter: ZeekrsScenePresentationLogic?
     

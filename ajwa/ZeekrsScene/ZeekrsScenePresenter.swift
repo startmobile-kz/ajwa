@@ -11,7 +11,7 @@ protocol ZeekrsScenePresentationLogic {
     func presentData()
 }
 
-class ZeekrsScenePresenter: ZeekrsScenePresentationLogic {
+final class ZeekrsScenePresenter: ZeekrsScenePresentationLogic {
     
     weak var viewController: ZeekrsSceneDisplayLogic?
     

@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ZeekrsSceneRouter {
+final class ZeekrsSceneRouter {
     
 }

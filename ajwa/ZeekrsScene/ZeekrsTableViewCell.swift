@@ -7,17 +7,18 @@
 
 import UIKit
 
-class ZeekrsTableViewCell: UITableViewCell {
+final class ZeekrsTableViewCell: UITableViewCell {
     
-    static let identifier = "ZeekrsTableViewCell"
+    static let identifier = String(describing: ZeekrsTableViewCell.self)
     
+    //MARK: - UI
     lazy var idLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = AppColor.white.uiColor
         label.text = "1"
         label.clipsToBounds = true
         label.textAlignment = .center
-        label.backgroundColor = #colorLiteral(red: 0, green: 0.6172668338, blue: 0.7476156354, alpha: 1)
+        label.backgroundColor = AppColor.blue.uiColor
         label.layer.cornerRadius = 12
         label.font = .systemFont(ofSize: 15)
         return label
@@ -33,7 +34,7 @@ class ZeekrsTableViewCell: UITableViewCell {
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = #colorLiteral(red: 0.5098040104, green: 0.5098040104, blue: 0.5098040104, alpha: 1)
+        label.textColor = AppColor.text.uiColor
         label.numberOfLines = 0
         label.text = "asdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;lsdmaasdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;asdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;asdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;asdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;asdasdaklsmdaknsdkanklsdnalksdnaknsdkamsd;lam;"
         label.font = .systemFont(ofSize: 12)
@@ -42,26 +43,33 @@ class ZeekrsTableViewCell: UITableViewCell {
     
     private lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = AppColor.white.uiColor
         view.layer.cornerRadius = 15
         return view
     }()
     
     private lazy var checkmarkButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "checkmark"), for: .normal)
+        button.setImage(AppImage.checkmark.uiImage, for: .normal)
         return button
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        setupViews()
+        setupConstraints()
+    }
+    
+    private func setupViews() {
         addSubview(mainView)
         mainView.addSubview(idLabel)
         mainView.addSubview(titleLabel)
         mainView.addSubview(descriptionLabel)
         mainView.addSubview(checkmarkButton)
+    }
         
+    private func setupConstraints() {
         mainView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(10)
