@@ -16,7 +16,7 @@ protocol RegistrationSceneDisplayLogic: AnyObject {
     func displaySomething(viewModel: RegistrationScene.Something.ViewModel)
 }
 
-class RegistrationSceneViewController: UIViewController, RegistrationSceneDisplayLogic {
+final class RegistrationSceneViewController: UIViewController, RegistrationSceneDisplayLogic {
     
     var interactor: RegistrationSceneBusinessLogic?
     var router: (NSObjectProtocol & RegistrationSceneRoutingLogic & RegistrationSceneDataPassing)?
@@ -31,17 +31,27 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
     private lazy var welcomeMessageLabel: UILabel = {
         let label = UILabel()
         
-        let attributedTitle = NSMutableAttributedString(string: "Добро пожаловать в ",
-                                                        attributes:
-                                                            [NSAttributedString.Key.font: AppFont.regular.s20(),
-                                                             NSAttributedString.Key.foregroundColor: AppColor.blue.uiColor])
+        let inputString = "Добро пожаловать в Namaz"
         
-        attributedTitle.append(NSAttributedString(string: "Namaz",
-                                                  attributes:
-                                                    [NSAttributedString.Key.font: AppFont.semibold.s20(),
-                                                     NSAttributedString.Key.foregroundColor: AppColor.blue.uiColor]))
+        label.textColor = AppColor.blue.uiColor
+        
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: inputString)
+        
+        attributedString.addAttribute(.font, value: AppFont.regular.s20(), range: NSRange(location: 0, length: inputString.count))
+        
+        if let range = inputString.range(of: "Namaz") {
+            let startIndex = range.lowerBound
+            let endIndex = range.upperBound
+            
+            attributedString.addAttribute(
+                .font,
+                value: AppFont.semibold.s20(),
+                range: NSRange(startIndex..<endIndex, in: inputString)
+            )
+        }
+        
+        label.attributedText = attributedString
         label.textAlignment = .center
-        label.attributedText = attributedTitle
         return label
     }()
     
@@ -133,6 +143,9 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
         
         setupUI()
         setupConstraints()
+        
+        phoneNumberTextField.delegate = self
+        
     }
     
     // MARK: - UI Setup
@@ -207,5 +220,32 @@ class RegistrationSceneViewController: UIViewController, RegistrationSceneDispla
     }
     
     func displaySomething(viewModel: RegistrationScene.Something.ViewModel) {
+    }
+}
+
+// MARK: Custom Mask for Phone
+extension RegistrationSceneViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
+        updatedText = updatedText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        
+        if updatedText.count <= 10 {
+            var formattedText = ""
+            
+            for (index, char) in updatedText.enumerated() {
+                if index == 0 {
+                    formattedText += "("
+                } else if index == 3 {
+                    formattedText += ") "
+                } else if index == 6 || index == 8 {
+                    formattedText += "-"
+                }
+                formattedText += String(char)
+            }
+            textField.text = formattedText
+        }
+        return false
     }
 }
