@@ -13,31 +13,27 @@
 import UIKit
 import SnapKit
 
-protocol LanguagesDisplayLogic: AnyObject
-{
-  func displaySomething(viewModel: [Languages.Something.ViewModel])
+protocol LanguagesDisplayLogic: AnyObject {
+    func displayLanguages(viewModel: [Languages.ModelType.ViewModel])
 }
 
-class LanguagesViewController: UIViewController, LanguagesDisplayLogic
-{
-  var interactor: LanguagesBusinessLogic?
-  var router: (NSObjectProtocol & LanguagesRoutingLogic & LanguagesDataPassing)?
-  var languages = [Languages.Something.ViewModel]()
+final class LanguagesViewController: UIViewController, LanguagesDisplayLogic {
+    var interactor: LanguagesBusinessLogic?
+    var router: (NSObjectProtocol & LanguagesRoutingLogic & LanguagesDataPassing)?
+    var languages = [Languages.ModelType.ViewModel]()
     var previouslySelectedIndexPath: IndexPath?
-
-  private lazy var tableView: UITableView = {
-      let tableView = UITableView(frame: .init(x: 9, y: 9, width: self.view.frame.width, height: 324), style: .insetGrouped)
-  tableView.register(LanguageTypeCell.self, forCellReuseIdentifier: LanguageTypeCell.identifier)
-      tableView.dataSource = self
-      tableView.delegate = self
-    return tableView
-  }()
     
-
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(LanguageTypeCell.self, forCellReuseIdentifier: LanguageTypeCell.identifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        return tableView
+    }()
     
-  // MARK: View lifecycle
+    // MARK: View lifecycle
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         LanguagesConfigurator.shared.configure(viewController: self)
     }
@@ -47,41 +43,35 @@ class LanguagesViewController: UIViewController, LanguagesDisplayLogic
         LanguagesConfigurator.shared.configure(viewController: self)
     }
     
-
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-      setupHierarchy()
-      setupLayout()
-      doSomething()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupHierarchy()
+        setupLayout()
+        getLanguagesData()
+    }
     
     private func setupHierarchy() {
         view.addSubview(tableView)
     }
     
     private func setupLayout() {
-        
-        tableView.snp.makeConstraints {make in
+        tableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
     }
-  
-  // MARK: Do something
-  
-  func doSomething()
-  {
-//      let request = [Languages]()
-    interactor?.doSomething()
-  }
-  
-  func displaySomething(viewModel: [Languages.Something.ViewModel]) {
-      viewModel.enumerated().forEach { iterator in
-          if iterator.element.isSelected {
-              previouslySelectedIndexPath = IndexPath(row: 0, section: iterator.offset)
-          }
-      }
-      languages.append(contentsOf: viewModel)
-      tableView.reloadData()
-  }
+    
+    
+    func getLanguagesData() {
+        interactor?.getLanguages()
+    }
+    
+    func displayLanguages(viewModel: [Languages.ModelType.ViewModel]) {
+        viewModel.enumerated().forEach { iterator in
+            if iterator.element.isSelected {
+                previouslySelectedIndexPath = IndexPath(row: 0, section: iterator.offset)
+            }
+        }
+        languages.append(contentsOf: viewModel)
+        tableView.reloadData()
+    }
 }

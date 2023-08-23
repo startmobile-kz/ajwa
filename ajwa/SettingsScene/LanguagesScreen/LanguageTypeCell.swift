@@ -8,10 +8,6 @@
 import UIKit
 import SnapKit
 
-class CheckBox: UIButton {
-    
-}
-
 final class LanguageTypeCell: UITableViewCell {
     static let identifier = "LanguageTypeCell"
     
@@ -22,7 +18,7 @@ final class LanguageTypeCell: UITableViewCell {
     }()
     
     private let checkImageView = UIImageView()
-
+    
     private var isChecked: Bool = false {
         didSet {
             let checkImage = UIImage(named: "img-check")
@@ -30,7 +26,7 @@ final class LanguageTypeCell: UITableViewCell {
             self.checkImageView.image = isChecked ? checkImage : uncheckImage
         }
     }
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
@@ -41,7 +37,7 @@ final class LanguageTypeCell: UITableViewCell {
         fatalError()
     }
     
-    public func configure(with model: Languages.Something.ViewModel) {
+    public func configure(with model: Languages.ModelType.ViewModel) {
         label.text = model.languageTitle
         isChecked = model.isSelected
     }
@@ -51,7 +47,7 @@ final class LanguageTypeCell: UITableViewCell {
         contentView.addSubview(checkImageView)
         contentView.clipsToBounds = true
     }
-
+    
     private func setupLayout() {
         label.snp.makeConstraints{ make in
             make.leading.equalToSuperview().offset(16)
@@ -61,7 +57,6 @@ final class LanguageTypeCell: UITableViewCell {
         checkImageView.snp.makeConstraints{make in
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
-
         }
     }
 }

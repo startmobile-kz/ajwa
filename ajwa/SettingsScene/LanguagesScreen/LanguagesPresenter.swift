@@ -12,20 +12,16 @@
 
 import UIKit
 
-protocol LanguagesPresentationLogic
-{
-    func presentSomething(response: [Languages.Something.ViewModel])
+protocol LanguagesPresentationLogic {
+    func presentLanguages(response: [Languages.ModelType.ViewModel])
 }
 
-class LanguagesPresenter: LanguagesPresentationLogic
-{
-  weak var viewController: LanguagesDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: [Languages.Something.ViewModel])
-  {
-//      let viewModel = Languages.Something.ViewModel(languageTitle: "Test")
-    viewController?.displaySomething(viewModel: response)
-  }
+class LanguagesPresenter: LanguagesPresentationLogic {
+    weak var viewController: LanguagesDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentLanguages(response: [Languages.ModelType.ViewModel]) {
+        viewController?.displayLanguages(viewModel: response)
+    }
 }

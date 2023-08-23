@@ -12,18 +12,15 @@
 
 import UIKit
 
-@objc protocol LanguagesRoutingLogic
-{
+@objc protocol LanguagesRoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol LanguagesDataPassing
-{
+protocol LanguagesDataPassing {
   var dataStore: LanguagesDataStore? { get }
 }
 
-class LanguagesRouter: NSObject, LanguagesRoutingLogic, LanguagesDataPassing
-{
+class LanguagesRouter: NSObject, LanguagesRoutingLogic, LanguagesDataPassing {
   weak var viewController: LanguagesViewController?
   var dataStore: LanguagesDataStore?
   

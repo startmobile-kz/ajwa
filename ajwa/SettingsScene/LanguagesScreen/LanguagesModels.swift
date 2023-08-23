@@ -12,18 +12,17 @@
 
 import UIKit
 
-enum Languages
-{
+enum Languages {
   // MARK: Use cases
 
-  enum Something
-  {
-    struct Request
-    {
+  enum ModelType {
+      
+    struct Request {
     }
-    struct Response
-    {
+      
+    struct Response {
     }
+      
     struct ViewModel {
         var isSelected = false
         let languageTitle : String

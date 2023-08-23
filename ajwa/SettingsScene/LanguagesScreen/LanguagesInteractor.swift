@@ -11,7 +11,7 @@
 //
 
 protocol LanguagesBusinessLogic {
-    func doSomething()
+    func getLanguages()
 }
 
 protocol LanguagesDataStore {}
@@ -19,12 +19,12 @@ protocol LanguagesDataStore {}
 final class LanguagesInteractor: LanguagesBusinessLogic, LanguagesDataStore {
     var presenter: LanguagesPresentationLogic?
     var worker: LanguagesWorker?
-    var languages = [Languages.Something.ViewModel]()
+    var languages = [Languages.ModelType.ViewModel]()
     
     // MARK: Do something
     
-    func doSomething() {
+    func getLanguages() {
         worker = LanguagesWorker()
-        self.presenter?.presentSomething(response: worker?.fetchLanguages() ?? [])
+        self.presenter?.presentLanguages(response: worker?.fetchLanguages() ?? [])
     }
 }

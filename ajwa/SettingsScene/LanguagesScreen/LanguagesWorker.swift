@@ -11,11 +11,11 @@
 //
 
 final class LanguagesWorker {
-    func fetchLanguages() -> [Languages.Something.ViewModel] {
+    func fetchLanguages() -> [Languages.ModelType.ViewModel] {
         let languages = [
-            Languages.Something.ViewModel(languageTitle: "English"),
-            Languages.Something.ViewModel(isSelected: true, languageTitle: "Русский"),
-            Languages.Something.ViewModel(languageTitle: "Казахcкий")
+            Languages.ModelType.ViewModel(languageTitle: "English"),
+            Languages.ModelType.ViewModel(isSelected: true, languageTitle: "Русский"),
+            Languages.ModelType.ViewModel(languageTitle: "Казахcкий")
         ]
         return languages
     }
