@@ -31,4 +31,6 @@ enum AppImage: String, AppImageProtocol {
     case Settings
     case Share
     case edit
+    case searchTextFieldIcon
+    case checkmark
 }
