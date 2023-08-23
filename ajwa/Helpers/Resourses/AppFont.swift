@@ -1,10 +1,3 @@
-//
-//  AppFont.swift
-//  ajwa
-//
-//  Created by Темирлан Кудайберген on 07.08.2023.
-//
-
 import UIKit
 
 protocol AppFontProtocol {
@@ -68,8 +61,8 @@ extension AppFontProtocol {
 }
 
 enum AppFont: String, AppFontProtocol {
-    case regular = "SF-Pro-Display-Regular"
-    case medium = "SF-Pro-Display-Medium"
-    case semibold = "SF-Pro-Display-Semibold"
-    case bold = "SF-Pro-Display-Bold"
+    case regular = "SFProDisplay-Regular"
+    case medium = "SFProDisplay-Medium"
+    case semibold = "SFProDisplay-Semibold"
+    case bold = "SFProDisplay-Bold"
 }

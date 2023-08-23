@@ -1,10 +1,3 @@
-//
-//  AppImage.swift
-//  ajwa
-//
-//  Created by Темирлан Кудайберген on 11.08.2023.
-//
-
 import UIKit
 
 protocol AppImageProtocol {
@@ -31,6 +24,7 @@ extension AppImageProtocol {
 
 enum AppImage: String, AppImageProtocol {
     case picture
+    case edit
     case searchTextFieldIcon
     case checkmark
 }
