@@ -25,4 +25,6 @@ extension AppImageProtocol {
 enum AppImage: String, AppImageProtocol {
     case picture
     case edit
+    case searchTextFieldIcon
+    case checkmark
 }
