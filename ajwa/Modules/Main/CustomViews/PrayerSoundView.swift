@@ -1,5 +1,5 @@
 //
-//  AllPrayersView.swift
+//  PrayerSoundView.swift
 //  ajwa
 //
 //  Created by Damir Aliyev on 26.08.2023.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class AllPrayersView: UIView {
+final class PrayerSoundView: UIView {
     
     // MARK: - UI
     
@@ -25,11 +25,6 @@ final class AllPrayersView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = 20
-    }
-    
     // MARK: - SetupViews
     
     private func setupViews() {
@@ -41,5 +36,4 @@ final class AllPrayersView: UIView {
     private func setupConstraints() {
         
     }
-    
 }

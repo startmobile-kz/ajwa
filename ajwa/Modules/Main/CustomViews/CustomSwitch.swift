@@ -51,6 +51,7 @@ final class CustomSwitch: UIView {
         backgroundColor = AppColor.white.uiColor
         layer.borderWidth = 0.5
         layer.borderColor = AppColor.black.cgColor
+        
         [circlularView].forEach {
             addSubview($0)
         }
