@@ -12,6 +12,18 @@ final class PrayerSoundView: UIView {
     
     // MARK: - UI
     
+    private lazy var prayerNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = AppFont.semibold.s16()
+        label.textColor = .blue
+        return label
+    }()
+    
+    private lazy var speakerButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
