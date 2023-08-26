@@ -31,4 +31,6 @@ enum AppImage: String, AppImageProtocol {
     case mosque_2
     case mosque_icon
     case clock
+    case searchTextFieldIcon
+    case checkmark
 }

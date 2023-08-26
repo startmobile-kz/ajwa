@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */; };
+		074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */; };
+		074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */; };
+		074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */; };
+		074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */; };
+		074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */; };
+		074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */; };
 		078888962A8178DD006E0FE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 078888952A8178DD006E0FE0 /* Alamofire */; };
+		07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */; };
+		07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */; };
+		07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */; };
+		07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */; };
+		07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */; };
+		07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */; };
+		07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */; };
 		09ECE9EE3CABB547D38E728F /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */; };
 		3E2EF13F3D3716C515C6E0A3 /* Pods_ajwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */; };
 		681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDBF2A91E97E00382F1B /* MainPresenter.swift */; };
@@ -67,6 +81,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScenePresenter.swift; sourceTree = "<group>"; };
+		074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneWorker.swift; sourceTree = "<group>"; };
+		074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneRouter.swift; sourceTree = "<group>"; };
+		074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneModels.swift; sourceTree = "<group>"; };
+		074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneViewController.swift; sourceTree = "<group>"; };
+		074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneInteractor.swift; sourceTree = "<group>"; };
+		074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneConfigurator.swift; sourceTree = "<group>"; };
+		07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntryScenePresenter.swift; sourceTree = "<group>"; };
+		07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneWorker.swift; sourceTree = "<group>"; };
+		07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneRouter.swift; sourceTree = "<group>"; };
+		07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneModels.swift; sourceTree = "<group>"; };
+		07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneViewController.swift; sourceTree = "<group>"; };
+		07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneInteractor.swift; sourceTree = "<group>"; };
+		07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneConfigurator.swift; sourceTree = "<group>"; };
 		1A7DF254EB3F3358A3320519 /* Pods-ajwa-ajwaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.release.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		50DC7B7AC84EE6C5F946E7E7 /* Pods-ajwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.debug.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.debug.xcconfig"; sourceTree = "<group>"; };
 		681ECDBF2A91E97E00382F1B /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -147,6 +175,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074E7B462A90BA9B00D9F4C6 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */,
+				074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */,
+				074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */,
+				074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */,
+				074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */,
+				074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */,
+				074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		07C3A5D52A92252400CB64BD /* NameEntry */ = {
+			isa = PBXGroup;
+			children = (
+				07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */,
+				07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */,
+				07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */,
+				07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */,
+				07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */,
+				07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */,
+				07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */,
+			);
+			path = NameEntry;
+			sourceTree = "<group>";
+		};
 		2BDE5DC87257C1440180D3E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +310,8 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				07C3A5D52A92252400CB64BD /* NameEntry */,
+				074E7B462A90BA9B00D9F4C6 /* Registration */,
 				B2E133882A88AF10008A46E0 /* RegisterVerification */,
 				681ECDBE2A91E93D00382F1B /* Main */,
 			);
@@ -546,6 +604,9 @@
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
 				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
+				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
+				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
+				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
 				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
@@ -554,13 +615,24 @@
 				B2E133872A88AF07008A46E0 /* RegisterVerificationViewController.swift in Sources */,
 				B2E9F06E2A89374900E33F51 /* OTPTextField.swift in Sources */,
 				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
+				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
+				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
+				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
+				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
+				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				B2E9F0732A89FC1A00E33F51 /* UILabel+Extension.swift in Sources */,
+				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
+				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
+				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
 				B2E9F0702A8938C300E33F51 /* OTPStackView.swift in Sources */,
 				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
 				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,
+				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
+				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
+				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

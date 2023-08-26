@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Suffix-icon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
