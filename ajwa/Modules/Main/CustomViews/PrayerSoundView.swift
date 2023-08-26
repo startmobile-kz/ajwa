@@ -21,6 +21,8 @@ final class PrayerSoundView: UIView {
     
     private lazy var speakerButton: UIButton = {
         let button = UIButton()
+        button.setImage(AppImage.speaker_on.uiImage, for: .normal)
+        button.setImage(AppImage.speaker_off.uiImage, for: .selected)
         return button
     }()
     
@@ -40,12 +42,22 @@ final class PrayerSoundView: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
-        
+        [prayerNameLabel, speakerButton].forEach {
+            addSubview($0)
+        }
     }
     
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
+        prayerNameLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview()
+        }
         
+        speakerButton.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
     }
 }
