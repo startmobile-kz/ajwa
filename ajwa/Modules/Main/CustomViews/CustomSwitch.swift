@@ -12,13 +12,15 @@ final class CustomSwitch: UIView {
     
     // MARK: - State
     
+    private var isOn = false
     private var horizontalPositionConstraint: NSLayoutConstraint?
     
     // MARK: - UI
     
     private lazy var circlularView: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColor.white.uiColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = AppColor.black.uiColor
         return view
     }()
     
@@ -46,8 +48,9 @@ final class CustomSwitch: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
-        backgroundColor = .black
-        
+        backgroundColor = AppColor.white.uiColor
+        layer.borderWidth = 1
+        layer.borderColor = AppColor.black.cgColor
         [circlularView].forEach {
             addSubview($0)
         }
@@ -56,7 +59,8 @@ final class CustomSwitch: UIView {
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
-
+        horizontalPositionConstraint = circlularView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2)
+        horizontalPositionConstraint?.isActive = true
     }
     
     // MARK: - SetupGestureRecognizers
@@ -70,9 +74,22 @@ final class CustomSwitch: UIView {
     }
     
     // MARK: - Actions
-    
+
     @objc func switchTapped() {
-        print("Switched")
+        if isOn {
+            self.horizontalPositionConstraint?.constant = 2
+            isOn = false
+        } else {
+            self.horizontalPositionConstraint?.constant =
+            frame.width - circlularView.frame.width - 2
+            isOn = true
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.layoutIfNeeded()
+        } completion: { _ in
+            self.setupColor()
+        }
     }
     
     override var intrinsicContentSize: CGSize {
@@ -87,10 +104,17 @@ final class CustomSwitch: UIView {
             make.size.equalTo(neededSize)
         }
         
-        horizontalPositionConstraint = circlularView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2)
-        horizontalPositionConstraint?.isActive = true
-        
         circlularView.layer.cornerRadius = cornerRadis
+    }
+    
+    private func setupColor() {
+        if !self.isOn {
+            self.backgroundColor = AppColor.white.uiColor
+            self.circlularView.backgroundColor = AppColor.black.uiColor
+        } else {
+            self.backgroundColor = AppColor.black.uiColor
+            self.circlularView.backgroundColor = AppColor.white.uiColor
+        }
     }
     
 }
