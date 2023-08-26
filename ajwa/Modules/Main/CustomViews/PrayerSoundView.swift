@@ -10,6 +10,10 @@ import SnapKit
 
 final class PrayerSoundView: UIView {
     
+    // MARK: - State
+    
+    private let prayerName: PrayerNames
+    
     // MARK: - UI
     
     private lazy var prayerNameLabel: UILabel = {
@@ -28,8 +32,9 @@ final class PrayerSoundView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(prayerName: PrayerNames) {
+        self.prayerName = prayerName
+        super.init(frame: .zero)
         
         setupViews()
         setupConstraints()
@@ -45,6 +50,8 @@ final class PrayerSoundView: UIView {
         [prayerNameLabel, speakerButton].forEach {
             addSubview($0)
         }
+        
+        setupName()
     }
     
     // MARK: - SetupConstraints
@@ -59,5 +66,24 @@ final class PrayerSoundView: UIView {
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview()
         }
+    }
+    
+    private func setupName() {
+        switch prayerName {
+        case .fajr:
+            prayerNameLabel.text = "Таң намазы"
+        case .zuhr:
+            prayerNameLabel.text = "Бесін намазы"
+        case .asr:
+            prayerNameLabel.text = "Екінті намазы"
+        case .maghrib:
+            prayerNameLabel.text = "Ақшам намазы"
+        case .isha:
+            prayerNameLabel.text = "Құптан намазы"
+        }
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 136, height: 24)
     }
 }
