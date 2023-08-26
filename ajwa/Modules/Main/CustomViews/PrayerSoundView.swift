@@ -65,6 +65,7 @@ final class PrayerSoundView: UIView {
         speakerButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview()
+            make.size.equalTo(24)
         }
     }
     
