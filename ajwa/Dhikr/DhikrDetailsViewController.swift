@@ -13,6 +13,7 @@ final class DhikrDetailsViewController: UIViewController {
     
     //    MARK: - Properties
     
+    var numbers: [Int] = Array(0...59)
     let sections = DhikrModel.shared.pageData
     
     //    MARK: - UI
@@ -57,7 +58,7 @@ final class DhikrDetailsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "play"), for: .normal)
         button.backgroundColor = .white
-//        button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
+        button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         return button
     }()
     
@@ -80,20 +81,50 @@ final class DhikrDetailsViewController: UIViewController {
     
     //    MARK: Number section
     
-    private lazy var backgroundViewForNumber: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
+    private lazy var numberPickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        return pickerView
+    }()
+    
+    //    MARK: - NavBar
+    
+    private lazy var backgroudViewForNavBar: UIView = {
+       let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16
         return view
     }()
     
-    private lazy var numberLable: UILabel = {
-        let lable = UILabel()
-        lable.font = AppFont.semibold.s64()
-        lable.center = view.center
-        lable.sizeToFit()
-        lable.text = "1"
-        return lable
+    private lazy var allUsersDhikrLabel: UILabel = {
+        let label = UILabel()
+        label.text = "220 228"
+        label.font = .boldSystemFont(ofSize: 14)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
+        return label
     }()
+    
+    private lazy var menuButton: UIButton = {
+       let button = UIButton()
+        button.setImage(UIImage(named: "menu"), for: .normal)
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(menuButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    //    MARK: - obj metodhs
+    
+    @objc
+    private func menuButtonTapped() {
+        
+    }
+    
+    @objc
+    private func startTimer() {
+        
+    }
     
     //    MARK: - Lifecycle
 
@@ -101,7 +132,6 @@ final class DhikrDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupLayout()
-        startVerticalScrollAnimation()
     }
     
     //    MARK: - SetupView
@@ -110,11 +140,14 @@ final class DhikrDetailsViewController: UIViewController {
         stackView.addArrangedSubview(playButton)
         stackView.addArrangedSubview(progressLayer)
         stackView.addArrangedSubview(timerLabel)
+        view.addSubview(menuButton)
         view.addSubview(collectionView)
         view.addSubview(backgroundViewForAudio)
         view.addSubview(stackView)
-        view.addSubview(backgroundViewForNumber)
-        view.addSubview(numberLable)
+        view.addSubview(numberPickerView)
+        view.addSubview(backgroudViewForNavBar)
+        view.addSubview(menuButton)
+        view.addSubview(allUsersDhikrLabel)
         view.backgroundColor = UIColor(red: 0.975, green: 0.975, blue: 0.975, alpha: 1)
     }
     
@@ -156,37 +189,36 @@ final class DhikrDetailsViewController: UIViewController {
             $0.height.equalTo(10)
         }
         
-        backgroundViewForNumber.snp.makeConstraints {
-            $0.width.equalTo(74)
+        numberPickerView.snp.makeConstraints {
+            $0.width.equalTo(100)
             $0.height.equalTo(156)
             $0.top.equalTo(backgroundViewForAudio.snp.bottom).offset(24)
-            $0.leading.equalToSuperview().inset(158)
+            $0.centerX.equalToSuperview()
         }
         
-        numberLable.snp.makeConstraints {
-            $0.centerX.equalTo(backgroundViewForNumber.snp.centerX)
-            $0.centerY.equalTo(backgroundViewForNumber.snp.centerY)
-            
+        backgroudViewForNavBar.snp.makeConstraints {
+            $0.width.equalTo(350)
+            $0.height.equalTo(40)
+            $0.bottom.equalToSuperview().offset(-38)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
+        
+        menuButton.snp.makeConstraints {
+            $0.width.equalTo(24)
+            $0.height.equalTo(24)
+            $0.top.equalTo(backgroudViewForNavBar.snp.top).offset(8)
+            $0.trailing.equalTo(backgroudViewForNavBar.snp.trailing).inset(20)
+        }
+        
+        allUsersDhikrLabel.snp.makeConstraints {
+            $0.width.equalTo(52)
+            $0.height.equalTo(24)
+            $0.top.equalTo(backgroudViewForNavBar.snp.top).offset(8)
+            $0.leading.equalTo(backgroudViewForNavBar.snp.leading).inset(20)
+        }
+        
     }
     
-    //    MARK: - Methods
-    
-    func startVerticalScrollAnimation() {
-        let targetNumber = 99 // Целевое число
-        let animationDuration: TimeInterval = 5 // Продолжительность анимации (в секундах)
-        let animationDelay: TimeInterval = 0.1 // Задержка перед началом анимации (в секундах)
-
-        UIView.animate(withDuration: animationDuration, delay: animationDelay, options: [.curveEaseOut], animations: {
-            self.numberLable.alpha = 0.3 // Затухание числа
-            self.numberLable.frame.origin.y -= self.backgroundViewForNumber.frame.height // Сдвиг числа вверх
-        }) { _ in
-            self.numberLable.alpha = 1.0 // Восстановление прозрачности
-            self.numberLable.frame.origin.y = self.backgroundViewForNumber.center.y // Возврат числа на исходное место
-            self.numberLable.text = "\(targetNumber)" // Обновление числа
-            self.numberLable.sizeToFit() // Обновление размера лейбла
-        }
-    }
     
     // MARK: - Section Layouts
     
@@ -277,6 +309,50 @@ extension DhikrDetailsViewController: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
     }
+}
+
+//    MARK: - PickerView Delegate methods
+
+extension DhikrDetailsViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+         return String(numbers[row])
+     }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerView.reloadComponent(component)
+     }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 87
+    }
+}
+
+//    MARK: - PickerView Delegate methods
+
+extension DhikrDetailsViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numbers.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        for subviews in pickerView.subviews {
+            subviews.backgroundColor = .clear
+        }
+        
+        let label = UILabel()
+        label.text = "\(numbers[row])"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 64)
+        return label
+    }
+
 }
 
 //    MARK: - UICollectionView Delegate methods
