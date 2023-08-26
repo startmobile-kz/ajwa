@@ -18,6 +18,11 @@ final class RemainingTimeView: UIView {
         return imageView
     }()
     
+    private lazy var customSwitch: CustomSwitch = {
+        let customSwitch = CustomSwitch()
+        return customSwitch
+    }()
+    
     private lazy var switchView: UISwitch = {
         let view = UISwitch()
         return view
@@ -62,7 +67,7 @@ final class RemainingTimeView: UIView {
     private func setupViews() {
         backgroundColor = AppColor.white.uiColor
         
-        [clockImageView, switchView,timeLabel, timeBeforePrayerLabel].forEach {
+        [clockImageView, customSwitch,timeLabel, timeBeforePrayerLabel].forEach {
             addSubview($0)
         }
     }
@@ -76,9 +81,11 @@ final class RemainingTimeView: UIView {
             make.size.equalTo(20)
         }
         
-        switchView.snp.makeConstraints { make in
+        customSwitch.snp.makeConstraints { make in
             make.centerY.equalTo(clockImageView)
             make.trailing.equalToSuperview().offset(-20)
+            make.width.equalTo(40)
+            make.height.equalTo(20)
         }
         
         timeLabel.snp.makeConstraints { make in

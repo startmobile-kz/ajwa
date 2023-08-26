@@ -59,11 +59,11 @@ final class CustomSwitch: UIView {
     }
     
     private func setupCirularView() {
-        let neededSize = frame.height * 0.9
+        let neededSize = frame.height * 0.8
         let cornerRadis = neededSize / 2
         circlularView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(2)
+            make.trailing.equalToSuperview().offset(-2)
             make.size.equalTo(neededSize)
         }
         circlularView.layer.cornerRadius = cornerRadis
