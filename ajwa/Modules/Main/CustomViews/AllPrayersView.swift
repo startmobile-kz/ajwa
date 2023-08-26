@@ -46,6 +46,8 @@ final class AllPrayersView: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
+        backgroundColor = AppColor.white.uiColor
+        
         [fajrPrayerView,
          zuhrPrayerView,
          asrPrayerView,
@@ -66,7 +68,6 @@ final class AllPrayersView: UIView {
          maghribPrayerView,
          ishaPrayerView].forEach {
             $0.snp.makeConstraints { make in
-                make.width.equalTo(136)
                 make.height.equalTo(24)
             }
         }

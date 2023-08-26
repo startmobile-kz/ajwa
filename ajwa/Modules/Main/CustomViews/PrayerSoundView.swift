@@ -19,7 +19,8 @@ final class PrayerSoundView: UIView {
     private lazy var prayerNameLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.semibold.s16()
-        label.textColor = .blue
+        label.textColor = AppColor.blue.uiColor
+        label.numberOfLines = 0
         return label
     }()
     
@@ -57,30 +58,32 @@ final class PrayerSoundView: UIView {
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
-        prayerNameLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview()
-        }
         
         speakerButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview()
             make.size.equalTo(24)
         }
+        
+        prayerNameLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.lessThanOrEqualTo(speakerButton.snp.leading).offset(-10)
+        }
     }
     
     private func setupName() {
         switch prayerName {
         case .fajr:
-            prayerNameLabel.text = "Таң намазы"
+            prayerNameLabel.text = "Таң"
         case .zuhr:
-            prayerNameLabel.text = "Бесін намазы"
+            prayerNameLabel.text = "Бесін"
         case .asr:
-            prayerNameLabel.text = "Екінті намазы"
+            prayerNameLabel.text = "Екінті"
         case .maghrib:
-            prayerNameLabel.text = "Ақшам намазы"
+            prayerNameLabel.text = "Ақшам"
         case .isha:
-            prayerNameLabel.text = "Құптан намазы"
+            prayerNameLabel.text = "Құптан"
         }
     }
     
