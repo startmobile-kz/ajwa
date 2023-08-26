@@ -10,6 +10,10 @@ import UIKit
 
 final class CustomSwitch: UIView {
     
+    // MARK: - State
+    
+    private var horizontalPositionConstraint: NSLayoutConstraint?
+    
     // MARK: - UI
     
     private lazy var circlularView: UIView = {
@@ -25,6 +29,7 @@ final class CustomSwitch: UIView {
         
         setupViews()
         setupConstraints()
+        setupGestureRecognizers()
     }
     
     required init?(coder: NSCoder) {
@@ -54,6 +59,22 @@ final class CustomSwitch: UIView {
 
     }
     
+    // MARK: - SetupGestureRecognizers
+    
+    private func setupGestureRecognizers() {
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(switchTapped)
+        )
+        addGestureRecognizer(tapGesture)
+    }
+    
+    // MARK: - Actions
+    
+    @objc func switchTapped() {
+        print("Switched")
+    }
+    
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 80, height: 40)
     }
@@ -63,9 +84,12 @@ final class CustomSwitch: UIView {
         let cornerRadis = neededSize / 2
         circlularView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(-2)
             make.size.equalTo(neededSize)
         }
+        
+        horizontalPositionConstraint = circlularView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2)
+        horizontalPositionConstraint?.isActive = true
+        
         circlularView.layer.cornerRadius = cornerRadis
     }
     
