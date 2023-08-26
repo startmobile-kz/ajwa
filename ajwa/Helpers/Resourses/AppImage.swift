@@ -33,4 +33,5 @@ enum AppImage: String, AppImageProtocol {
     case clock
     case searchTextFieldIcon
     case checkmark
+    case sound_on = "sound_on"
 }
