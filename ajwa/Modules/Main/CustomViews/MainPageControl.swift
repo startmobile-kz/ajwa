@@ -20,7 +20,15 @@ final class MainPageControl: UIView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 4
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
         return stackView
+    }()
+    
+    private lazy var v1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        return view
     }()
     
     // MARK: - Lifecycle
@@ -37,13 +45,21 @@ final class MainPageControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        stackView.arrangedSubviews.forEach {
+            $0.layer.cornerRadius = 2
+        }
+    }
+    
     // MARK: - SetupViews
     
     private func setupViews() {
-        for _ in 0...amountOfPages {
+        for _ in 1...amountOfPages {
             stackView.addArrangedSubview(createControl())
         }
-        
+
+        addSubview(stackView)
     }
     
     // MARK: - SetupConstraints
@@ -63,8 +79,7 @@ final class MainPageControl: UIView {
     
     private func createControl() -> UIView {
         let view = UIView()
-        view.layer.cornerRadius = 20
-        view.backgroundColor = AppColor.gray.uiColor
+        view.backgroundColor = AppColor.controlsGray.uiColor
         return view
     }
 }

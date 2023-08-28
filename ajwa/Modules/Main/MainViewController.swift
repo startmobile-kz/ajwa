@@ -54,6 +54,8 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var allPrayersView = AllPrayersView()
     
+    private lazy var pageControl = MainPageControl(amountOfPages: 5)
+    
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.delegate = self
@@ -81,9 +83,10 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl].forEach {
             view.addSubview($0)
         }
+        
     }
     
     // MARK: - SetupConstraints
@@ -139,6 +142,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.top.equalTo(allPrayersView.snp.bottom).offset(12)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(120)
+        }
+        
+        pageControl.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom).offset(6)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(4)
         }
     }
     
