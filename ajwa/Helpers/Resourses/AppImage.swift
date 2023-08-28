@@ -35,4 +35,5 @@ enum AppImage: String, AppImageProtocol {
     case checkmark
     case speaker_on
     case speaker_off
+    case sacred_event
 }
