@@ -72,6 +72,19 @@
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
+		E4AE5F102A962DF5007F4140 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */; };
+		E4AE5F112A962DF5007F4140 /* LocationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */; };
+		E4AE5F122A962DF5007F4140 /* LocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */; };
+		E4AE5F132A962DF5007F4140 /* LocationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0C2A962DF5007F4140 /* LocationModels.swift */; };
+		E4AE5F142A962DF5007F4140 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */; };
+		E4AE5F152A962DF5007F4140 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */; };
+		E4AE5F162A962DF5007F4140 /* LocationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */; };
+		E4AE5F182A96322B007F4140 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F172A96322B007F4140 /* CountryCell.swift */; };
+		E4AE5F1A2A96333A007F4140 /* LocationViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */; };
+		E4AE5F1C2A963392007F4140 /* LocationViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */; };
+		E4AF150C2A9A41C0004E31C8 /* InnerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */; };
+		E4AF15102A9B5032004E31C8 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF150F2A9B5032004E31C8 /* CityCell.swift */; };
+		E4AF15122A9BA82D004E31C8 /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = E4AF15112A9BA82C004E31C8 /* states.json */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +179,19 @@
 		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
+		E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresenter.swift; sourceTree = "<group>"; };
+		E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWorker.swift; sourceTree = "<group>"; };
+		E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRouter.swift; sourceTree = "<group>"; };
+		E4AE5F0C2A962DF5007F4140 /* LocationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModels.swift; sourceTree = "<group>"; };
+		E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
+		E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfigurator.swift; sourceTree = "<group>"; };
+		E4AE5F172A96322B007F4140 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
+		E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerTableView.swift; sourceTree = "<group>"; };
+		E4AF150F2A9B5032004E31C8 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		E4AF15112A9BA82C004E31C8 /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = states.json; path = ../../../states.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +299,7 @@
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
 				9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */,
+				E4AF15112A9BA82C004E31C8 /* states.json */,
 				9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */,
 				9FBC538D2A80F9D100CE8ED7 /* Info.plist */,
 				9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */,
@@ -377,6 +404,7 @@
 		E437F93D2A8B4E8900D90F3B /* SettingsScene */ = {
 			isa = PBXGroup;
 			children = (
+				E4AE5F082A962DBC007F4140 /* LocationScreen */,
 				E489938A2A8D13AE002274C9 /* LanguagesScreen */,
 				E48993892A8D11C0002274C9 /* MainSettingsScreen */,
 			);
@@ -478,6 +506,25 @@
 				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
+			sourceTree = "<group>";
+		};
+		E4AE5F082A962DBC007F4140 /* LocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */,
+				E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */,
+				E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */,
+				E4AE5F0C2A962DF5007F4140 /* LocationModels.swift */,
+				E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */,
+				E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */,
+				E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */,
+				E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */,
+				E4AE5F172A96322B007F4140 /* CountryCell.swift */,
+				E4AF150F2A9B5032004E31C8 /* CityCell.swift */,
+				E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */,
+				E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */,
+			);
+			path = LocationScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +654,7 @@
 				9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */,
 				C8B48CFC2A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */,
 				C8B48CFD2A8A567C00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */,
+				E4AF15122A9BA82D004E31C8 /* states.json in Resources */,
 				C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,10 +751,13 @@
 			files = (
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
+				E4AF15102A9B5032004E31C8 /* CityCell.swift in Sources */,
 				E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */,
 				E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */,
+				E4AE5F132A962DF5007F4140 /* LocationModels.swift in Sources */,
 				E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */,
 				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
+				E4AE5F152A962DF5007F4140 /* LocationInteractor.swift in Sources */,
 				E437F95C2A8B515C00D90F3B /* FooterCell.swift in Sources */,
 				E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */,
 				E437F9562A8B510A00D90F3B /* ShareAndRateCell.swift in Sources */,
@@ -722,15 +773,20 @@
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
+				E4AE5F182A96322B007F4140 /* CountryCell.swift in Sources */,
 				E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */,
+				E4AE5F122A962DF5007F4140 /* LocationRouter.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
+				E4AE5F162A962DF5007F4140 /* LocationConfigurator.swift in Sources */,
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
 				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
+				E4AE5F1C2A963392007F4140 /* LocationViewController + TableViewDelegate.swift in Sources */,
 				E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */,
 				E437F9512A8B50AE00D90F3B /* SettingsViewController + UITableView.swift in Sources */,
 				E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */,
+				E4AE5F112A962DF5007F4140 /* LocationWorker.swift in Sources */,
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
@@ -738,22 +794,22 @@
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
 				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
 				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
+				E4AE5F1A2A96333A007F4140 /* LocationViewController + TableViewDataSource.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
+				E4AE5F102A962DF5007F4140 /* LocationPresenter.swift in Sources */,
+				E4AE5F142A962DF5007F4140 /* LocationViewController.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
-				B2E133872A88AF07008A46E0 /* RegisterVerificationViewController.swift in Sources */,
-				B2E9F06E2A89374900E33F51 /* OTPTextField.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
-				B2E9F0732A89FC1A00E33F51 /* UILabel+Extension.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
+				E4AF150C2A9A41C0004E31C8 /* InnerTableView.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
-				B2E9F0702A8938C300E33F51 /* OTPStackView.swift in Sources */,
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
@@ -793,7 +849,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-			isa = PBXVariantGroup;
 		9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

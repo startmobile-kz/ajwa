@@ -21,7 +21,14 @@ extension SettingsViewController: UITableViewDelegate{
         case .profileCell:
             break
         case .locationCell:
-            break
+            let locationViewController = LocationViewController()
+            locationViewController.modalPresentationStyle = .formSheet
+            let sheet = locationViewController.sheetPresentationController
+            let fraction = UISheetPresentationController.Detent.custom { context in
+                290
+            }
+            sheet?.detents = [fraction]
+            navigationController?.present(locationViewController, animated: true)
         case .shareAndRateCell:
             break
         case .prayTimeCell:
