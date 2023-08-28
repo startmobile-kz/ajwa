@@ -62,6 +62,8 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             SacredEventCell.self,
             forCellWithReuseIdentifier: SacredEventCell.reuseID
         )
+        collectionView.backgroundColor = .clear
+        collectionView.alwaysBounceVertical = false
         return collectionView
     }()
     
@@ -146,7 +148,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalWidth(1)
+                heightDimension: .fractionalHeight(1)
             )
         )
         
@@ -159,12 +161,13 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             ),
             subitems: [item]
         )
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         
         // Section
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-        
+        section.orthogonalScrollingBehavior = .groupPaging
+      
         return UICollectionViewCompositionalLayout(section: section)
     }
     
@@ -195,7 +198,7 @@ extension MainViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SacredEventCell.reuseID, for: indexPath) as? SacredEventCell else {
             fatalError("Could not cast to SacredEventCell")
         }
-        
+
         return cell
     }
 }

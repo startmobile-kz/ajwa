@@ -57,10 +57,11 @@ final class SacredEventCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 20
+        contentView.layer.cornerRadius = 20
     }
     
     private func setupViews() {
+        contentView.backgroundColor = AppColor.white.uiColor
         [imageView, stackView].forEach {
             contentView.addSubview($0)
         }
@@ -80,7 +81,7 @@ final class SacredEventCell: UICollectionViewCell {
         
         stackView.snp.makeConstraints { make in
             make.centerY.equalTo(imageView)
-            make.leading.equalToSuperview().offset(-35)
+            make.trailing.equalToSuperview().offset(-35)
         }
     }
 }
