@@ -16,6 +16,14 @@ protocol MainDisplayLogic: AnyObject {
     func displaySomething(viewModel: Main.Something.ViewModel)
 }
 
+enum MainPageFigmaSizes {
+    static let figmaScreenWidth: CGFloat = 390
+    static let mosqueImageViewFigmaWidth: CGFloat = 141
+    static let particularNamazViewFigmaWidth: CGFloat = 170
+    static let remainingTimeViewFigmaWidth: CGFloat = 170
+    static let allPrayersViewFigmaWidth: CGFloat = 168
+}
+
 final class MainViewController: UIViewController, MainDisplayLogic {
     
     var interactor: MainBusinessLogic?
@@ -68,6 +76,10 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
+        let mosqueImageAdaptivePercentage: CGFloat = MainPageFigmaSizes.mosqueImageViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
+        let prayerInfoViewsAdaptivePercentage: CGFloat = MainPageFigmaSizes.particularNamazViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
+        let allPrayersViewAdaptivePercentage: CGFloat = MainPageFigmaSizes.allPrayersViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
+        
         headerView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
             make.leading.equalToSuperview().offset(20)
@@ -78,28 +90,28 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         firstMosqueImageView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(11.35)
             make.leading.equalTo(headerView)
-            make.width.equalTo(141.28)
+            make.width.equalTo(view.frame.width * mosqueImageAdaptivePercentage)
             make.height.equalTo(124.47)
         }
         
         secondMosqueImageView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(11.35)
             make.trailing.equalTo(headerView)
-            make.width.equalTo(141.28)
+            make.width.equalTo(view.frame.width * mosqueImageAdaptivePercentage)
             make.height.equalTo(124.47)
         }
         
         particularNamazView.snp.makeConstraints { make in
             make.top.equalTo(firstMosqueImageView).offset(113.65)
             make.leading.equalTo(headerView)
-            make.width.equalTo(170)
+            make.width.equalTo(view.frame.width * prayerInfoViewsAdaptivePercentage)
             make.height.equalTo(164)
         }
         
         remainingTimeView.snp.makeConstraints { make in
             make.top.equalTo(particularNamazView.snp.bottom).offset(12)
             make.leading.equalTo(headerView)
-            make.width.equalTo(170)
+            make.width.equalTo(view.frame.width * prayerInfoViewsAdaptivePercentage)
             make.height.equalTo(164)
         }
         
@@ -107,13 +119,9 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.top.equalTo(particularNamazView)
             make.trailing.equalTo(headerView)
             make.bottom.equalTo(remainingTimeView)
-            make.width.equalTo(168)
+            make.width.equalTo(view.frame.width * allPrayersViewAdaptivePercentage)
         }
     }
-    
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
     
     func doSomething() {
         let request = Main.Something.Request()
