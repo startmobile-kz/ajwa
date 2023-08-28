@@ -71,6 +71,15 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var bottomView = MainBottomView()
     
+    private lazy var startButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Бастау", for: .normal)
+        button.setTitleColor(AppColor.white.uiColor, for: .normal)
+        button.titleLabel?.font = AppFont.regular.s14()
+        button.backgroundColor = AppColor.black.uiColor
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -80,12 +89,18 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         setupConstraints()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        startButton.layer.cornerRadius = startButton.frame.height / 2
+    }
+    
     // MARK: - SetupViews
     
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl, bottomView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl, bottomView, startButton].forEach {
             view.addSubview($0)
         }
         
@@ -157,6 +172,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview().offset(-29)
             make.height.equalTo(54)
+        }
+        
+        startButton.snp.makeConstraints { make in
+            make.centerY.equalTo(bottomView)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(70)
         }
     }
     
