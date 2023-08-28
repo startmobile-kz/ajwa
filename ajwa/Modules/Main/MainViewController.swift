@@ -54,8 +54,6 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var allPrayersView = AllPrayersView()
     
-    private lazy var pageControl = MainPageControl(amountOfPages: 5)
-    
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.delegate = self
@@ -68,6 +66,10 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         collectionView.alwaysBounceVertical = false
         return collectionView
     }()
+    
+    private lazy var pageControl = MainPageControl(amountOfPages: 5)
+    
+    private lazy var bottomView = MainBottomView()
     
     // MARK: - Lifecycle
     
@@ -83,7 +85,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl, bottomView].forEach {
             view.addSubview($0)
         }
         
@@ -148,6 +150,13 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.top.equalTo(collectionView.snp.bottom).offset(6)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(4)
+        }
+        
+        bottomView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-29)
+            make.height.equalTo(54)
         }
     }
     
