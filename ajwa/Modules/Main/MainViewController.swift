@@ -56,6 +56,11 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        collectionView.register(
+            SacredEventCell.self,
+            forCellWithReuseIdentifier: SacredEventCell.reuseID
+        )
+        
         return collectionView
     }()
     
@@ -73,7 +78,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView].forEach {
             view.addSubview($0)
         }
     }
@@ -126,6 +131,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.bottom.equalTo(remainingTimeView)
             make.width.equalTo(view.frame.width * allPrayersViewAdaptivePercentage)
         }
+        
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(allPrayersView.snp.bottom).offset(12)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(120)
+        }
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
@@ -151,6 +162,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         // Section
         
         let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
         
         return UICollectionViewCompositionalLayout(section: section)
     }
