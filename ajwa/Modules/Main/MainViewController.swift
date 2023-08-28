@@ -76,7 +76,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         button.setTitle("Бастау", for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = AppFont.regular.s14()
-        button.backgroundColor = AppColor.black.uiColor
+        button.backgroundColor = AppColor.gray208.uiColor
         return button
     }()
     
