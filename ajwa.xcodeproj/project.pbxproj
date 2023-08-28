@@ -34,6 +34,7 @@
 		681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */; };
 		681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD02A92585000382F1B /* ParticularNamazView.swift */; };
 		681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD22A92664000382F1B /* RemainingTimeView.swift */; };
+		68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */; };
 		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
@@ -111,6 +112,7 @@
 		681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		681ECDD02A92585000382F1B /* ParticularNamazView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularNamazView.swift; sourceTree = "<group>"; };
 		681ECDD22A92664000382F1B /* RemainingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeView.swift; sourceTree = "<group>"; };
+		68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacredEventCell.swift; sourceTree = "<group>"; };
 		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		681ECDBE2A91E93D00382F1B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68C79B0D2A9C7D1600D57C96 /* Cells */,
 				681ECDCD2A91EAA300382F1B /* CustomViews */,
 				681ECDBF2A91E97E00382F1B /* MainPresenter.swift */,
 				681ECDC02A91E97E00382F1B /* MainWorker.swift */,
@@ -251,6 +254,14 @@
 				68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		68C79B0D2A9C7D1600D57C96 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9FBC53702A80F9CE00CE8ED7 = {
@@ -631,6 +642,7 @@
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
+				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				B2E9F0732A89FC1A00E33F51 /* UILabel+Extension.swift in Sources */,
