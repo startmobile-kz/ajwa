@@ -60,6 +60,8 @@ final class SacredEventCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 20
     }
     
+    // MARK: - SetupViews
+    
     private func setupViews() {
         contentView.backgroundColor = AppColor.white.uiColor
         [imageView, stackView].forEach {
@@ -70,6 +72,8 @@ final class SacredEventCell: UICollectionViewCell {
             stackView.addArrangedSubview($0)
         }
     }
+    
+    // MARK: - SetupConstraints
     
     private func setupConstraints() {
         imageView.snp.makeConstraints { make in
