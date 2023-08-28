@@ -40,16 +40,28 @@ final class MainPageControl: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
+        for _ in 0...amountOfPages {
+            stackView.addArrangedSubview(createControl())
+        }
         
     }
     
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
+        stackView.arrangedSubviews.forEach {
+            $0.snp.makeConstraints { make in
+                make.width.equalTo(12)
+                make.height.equalTo(4)
+            }
+        }
         
+        stackView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
-    private func createControls() -> UIView {
+    private func createControl() -> UIView {
         let view = UIView()
         view.layer.cornerRadius = 20
         view.backgroundColor = AppColor.gray.uiColor
