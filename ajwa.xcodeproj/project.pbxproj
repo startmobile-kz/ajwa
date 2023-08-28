@@ -36,6 +36,7 @@
 		681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD22A92664000382F1B /* RemainingTimeView.swift */; };
 		68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */; };
 		68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B102A9C8DC200D57C96 /* MainPageControl.swift */; };
+		68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B122A9CAEA200D57C96 /* MainBottomView.swift */; };
 		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
@@ -115,6 +116,7 @@
 		681ECDD22A92664000382F1B /* RemainingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeView.swift; sourceTree = "<group>"; };
 		68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacredEventCell.swift; sourceTree = "<group>"; };
 		68C79B102A9C8DC200D57C96 /* MainPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageControl.swift; sourceTree = "<group>"; };
+		68C79B122A9CAEA200D57C96 /* MainBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomView.swift; sourceTree = "<group>"; };
 		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				68F62FB12A9A0B3400970025 /* AllPrayersView.swift */,
 				68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */,
 				68C79B102A9C8DC200D57C96 /* MainPageControl.swift */,
+				68C79B122A9CAEA200D57C96 /* MainBottomView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */,
+				68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
 				B2E9F0702A8938C300E33F51 /* OTPStackView.swift in Sources */,
