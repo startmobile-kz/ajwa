@@ -29,7 +29,7 @@ final class SacredEventCell: UICollectionViewCell {
     
     private lazy var eventNameLabel: UILabel = {
         let label = UILabel()
-        label.font = AppFont.regular.s12()
+        label.font = AppFont.regular.s16()
         label.text = "Рамаданға"
         return label
     }()
