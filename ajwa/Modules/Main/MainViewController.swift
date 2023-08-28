@@ -56,11 +56,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.register(
             SacredEventCell.self,
             forCellWithReuseIdentifier: SacredEventCell.reuseID
         )
-        
         return collectionView
     }()
     
@@ -174,5 +175,27 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     func displaySomething(viewModel: Main.Something.ViewModel) {
         //nameTextField.text = viewModel.name
+    }
+}
+
+// MARK: - CollectionViewDelegate methods
+
+extension MainViewController: UICollectionViewDelegate {
+    
+}
+
+// MARK: - CollectionViewDataSource methods
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SacredEventCell.reuseID, for: indexPath) as? SacredEventCell else {
+            fatalError("Could not cast to SacredEventCell")
+        }
+        
+        return cell
     }
 }
