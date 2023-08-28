@@ -54,6 +54,11 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var allPrayersView = AllPrayersView()
     
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        return collectionView
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -121,6 +126,33 @@ final class MainViewController: UIViewController, MainDisplayLogic {
             make.bottom.equalTo(remainingTimeView)
             make.width.equalTo(view.frame.width * allPrayersViewAdaptivePercentage)
         }
+    }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        // Item
+        
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalWidth(1)
+            )
+        )
+        
+        // Group
+        
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(120)
+            ),
+            subitems: [item]
+        )
+        
+        // Section
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        return UICollectionViewCompositionalLayout(section: section)
     }
     
     func doSomething() {
