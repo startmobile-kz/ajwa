@@ -176,7 +176,11 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-      
+        section.visibleItemsInvalidationHandler = { [weak self] visibleItems, point, environment in
+            if let lastItem = visibleItems.last?.indexPath.row {
+                self?.pageControl.changeCurrentPage(to: lastItem + 1)
+            }
+        }
         return UICollectionViewCompositionalLayout(section: section)
     }
     
@@ -193,7 +197,9 @@ final class MainViewController: UIViewController, MainDisplayLogic {
 // MARK: - CollectionViewDelegate methods
 
 extension MainViewController: UICollectionViewDelegate {
-    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("ENDED")
+    }
 }
 
 // MARK: - CollectionViewDataSource methods
