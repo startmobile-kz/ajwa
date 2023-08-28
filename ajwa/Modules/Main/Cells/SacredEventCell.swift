@@ -16,7 +16,15 @@ final class SacredEventCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = AppImage.sacred_event.uiImage
         return imageView
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        return stackView
     }()
     
     private lazy var eventNameLabel: UILabel = {
@@ -53,10 +61,26 @@ final class SacredEventCell: UICollectionViewCell {
     }
     
     private func setupViews() {
+        [imageView, stackView].forEach {
+            contentView.addSubview($0)
+        }
         
+        [eventNameLabel, remainingDaysLabel].forEach {
+            stackView.addArrangedSubview($0)
+        }
     }
     
     private func setupConstraints() {
+        imageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(6)
+            make.leading.equalToSuperview().offset(10)
+            make.bottom.equalToSuperview().offset(-6)
+            make.width.equalTo(138)
+        }
         
+        stackView.snp.makeConstraints { make in
+            make.centerY.equalTo(imageView)
+            make.leading.equalToSuperview().offset(-35)
+        }
     }
 }
