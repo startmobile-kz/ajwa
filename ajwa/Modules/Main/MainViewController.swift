@@ -189,7 +189,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         }
         
         bottomView.snp.makeConstraints { make in
-            make.top.equalTo(pageControl.snp.bottom).offset(20)
+            make.top.equalTo(pageControl.snp.bottom).offset(51)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(54)
