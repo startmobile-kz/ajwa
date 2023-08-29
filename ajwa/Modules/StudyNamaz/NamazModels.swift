@@ -16,7 +16,7 @@ enum Namaz
 {
   // MARK: Use cases
   
-  enum Something
+  enum ModelType
   {
     struct Request
     {
@@ -26,6 +26,10 @@ enum Namaz
     }
     struct ViewModel
     {
+    let id: String
+    let title: String
+    let description: String
+        
     }
   }
 }

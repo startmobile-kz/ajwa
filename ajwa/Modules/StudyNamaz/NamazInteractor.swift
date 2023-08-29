@@ -14,28 +14,31 @@ import UIKit
 
 protocol NamazBusinessLogic
 {
-  func doSomething(request: Namaz.Something.Request)
+  func getNamazList()
 }
 
 protocol NamazDataStore
 {
-  //var name: String { get set }
 }
 
 class NamazInteractor: NamazBusinessLogic, NamazDataStore
 {
+    
+    
   var presenter: NamazPresentationLogic?
   var worker: NamazWorker?
-  //var name: String = ""
-  
+  var namaz = [Namaz.ModelType.ViewModel]()
+
   // MARK: Do something
   
-  func doSomething(request: Namaz.Something.Request)
+  func getNamazList()
   {
     worker = NamazWorker()
-    worker?.doSomeWork()
     
-    let response = Namaz.Something.Response()
-    presenter?.presentSomething(response: response)
+      self.presenter?.presentSomething(response: worker?.fetchNamaz() ?? [])
   }
 }
+
+
+  
+ 

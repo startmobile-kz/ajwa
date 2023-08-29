@@ -12,36 +12,109 @@
 
 import UIKit
 
-protocol NamazDisplayLogic: AnyObject
-{
-  func displaySomething(viewModel: Namaz.Something.ViewModel)
+protocol NamazDisplayLogic: AnyObject{
+    func displaySomething(viewModel: [Namaz.ModelType.ViewModel])
 }
 
-class NamazViewController: UIViewController, NamazDisplayLogic
-{
-  var interactor: NamazBusinessLogic?
-  var router: (NSObjectProtocol & NamazRoutingLogic & NamazDataPassing)?
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Namaz.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Namaz.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+class NamazViewController: UIViewController, NamazDisplayLogic {
+    
+    
+    var interactor: NamazBusinessLogic?
+    var router: (NSObjectProtocol & NamazRoutingLogic & NamazDataPassing)?
+    var prayers = [Namaz.ModelType.ViewModel]()
+    var filteredPrayers = [Namaz.ModelType.ViewModel]()
+    var isFiltered = false
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(NamazCell.self, forCellReuseIdentifier: NamazCell.identifier)
+        tableView.dataSource = self
+//        tableView.delegate = self
+        tableView.headerView(forSection: 0)
+        tableView.sectionHeaderTopPadding = 0
+        return tableView
+    }()
+    
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.backgroundImage = UIImage()
+        searchBar.placeholder = "Поиск"
+        searchBar.delegate = self
+        return searchBar
+    }()
+    
+    // MARK: View lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        NamazConfigurator.shared.configure(viewController: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        NamazConfigurator.shared.configure(viewController: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Обучение намазу"
+        view.backgroundColor = UIColor.red
+        
+        
+        getNamazData()
+
+//        self.filteredPrayers = prayers
+        setupHierarchy()
+        setupLayout()
+    }
+    
+    private func setupHierarchy() {
+        view.addSubview(searchBar)
+        view.addSubview(tableView)
+    }
+    
+    private func setupLayout() {
+        
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.centerX.equalToSuperview()
+        }
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+    }
+    
+    // MARK: Do something
+
+    
+    func getNamazData() {
+        interactor?.getNamazList()
+    }
+    
+    func displaySomething(viewModel: [Namaz.ModelType.ViewModel]) {
+        prayers.append(contentsOf: viewModel)
+        filteredPrayers = prayers
+        tableView.reloadData()
+    }
+}
+
+extension NamazViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredPrayers = prayers
+        } else {
+        filteredPrayers = []
+            for prayer in prayers {
+                if prayer.title.lowercased().contains(searchText.lowercased()) || prayer.description.lowercased().contains(searchText.lowercased()) {
+//                    5 + 5 = 30
+                    filteredPrayers.append(prayer)
+                }
+            }
+        }
+        
+        tableView.reloadData()
+    }
 }

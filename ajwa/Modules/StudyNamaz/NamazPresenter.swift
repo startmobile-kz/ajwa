@@ -14,7 +14,7 @@ import UIKit
 
 protocol NamazPresentationLogic
 {
-  func presentSomething(response: Namaz.Something.Response)
+  func presentSomething(response: [Namaz.ModelType.ViewModel])
 }
 
 class NamazPresenter: NamazPresentationLogic
@@ -23,9 +23,8 @@ class NamazPresenter: NamazPresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: Namaz.Something.Response)
+  func presentSomething(response: [Namaz.ModelType.ViewModel])
   {
-    let viewModel = Namaz.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+    viewController?.displaySomething(viewModel: response)
   }
 }
