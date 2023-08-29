@@ -31,6 +31,14 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     // MARK: - UI
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        return scrollView
+    }()
+    
+    private lazy var contentView = UIView()
+    
     private lazy var headerView: MainHeaderView = {
         let view = MainHeaderView()
         return view
@@ -101,9 +109,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         view.backgroundColor = AppColor.background.uiColor
         
         [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl, bottomView, startButton].forEach {
-            view.addSubview($0)
+            contentView.addSubview($0)
         }
         
+        scrollView.addSubview(contentView)
+        
+        view.addSubview(scrollView)
     }
     
     // MARK: - SetupConstraints
@@ -113,8 +124,18 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         let prayerInfoViewsAdaptivePercentage: CGFloat = MainPageFigmaSizes.particularNamazViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
         let allPrayersViewAdaptivePercentage: CGFloat = MainPageFigmaSizes.allPrayersViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
         
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+        
         headerView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.top.equalToSuperview().offset(16)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(44)
@@ -168,10 +189,11 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         }
         
         bottomView.snp.makeConstraints { make in
+            make.top.equalTo(pageControl.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
-            make.bottom.equalToSuperview().offset(-29)
             make.height.equalTo(54)
+            make.bottom.equalToSuperview().offset(-29)
         }
         
         startButton.snp.makeConstraints { make in
@@ -227,9 +249,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
 // MARK: - CollectionViewDelegate methods
 
 extension MainViewController: UICollectionViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("ENDED")
-    }
+
 }
 
 // MARK: - CollectionViewDataSource methods

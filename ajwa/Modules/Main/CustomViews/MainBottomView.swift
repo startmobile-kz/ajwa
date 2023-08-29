@@ -39,6 +39,7 @@ final class MainBottomView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         layer.cornerRadius = 25
     }
     

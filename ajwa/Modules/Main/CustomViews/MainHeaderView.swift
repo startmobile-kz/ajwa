@@ -63,6 +63,7 @@ final class MainHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         rightButton.layer.cornerRadius = rightButton.frame.height / 2
         applyShadowToButton()
     }

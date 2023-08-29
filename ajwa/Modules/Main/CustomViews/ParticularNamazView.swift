@@ -64,6 +64,7 @@ final class ParticularNamazView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         layer.cornerRadius = 20
     }
     

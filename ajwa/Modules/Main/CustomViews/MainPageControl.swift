@@ -46,6 +46,7 @@ final class MainPageControl: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         stackView.arrangedSubviews.forEach {
             $0.layer.cornerRadius = 2
         }

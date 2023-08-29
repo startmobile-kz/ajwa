@@ -40,8 +40,8 @@ final class CustomSwitch: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = frame.height / 2
         
+        layer.cornerRadius = frame.height / 2
         setupCirularView()
     }
     
