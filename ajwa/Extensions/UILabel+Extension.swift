@@ -18,4 +18,12 @@ extension UILabel {
                                       range: range ?? NSRange(..<text.count))
         attributedText = attributedString
     }
+    
+    convenience init(text: String, font: UIFont, textColor: UIColor) {
+        self.init()
+        
+        self.textColor = textColor
+        self.font = font
+        self.text = text
+    }
 }
