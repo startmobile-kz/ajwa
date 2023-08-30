@@ -29,5 +29,4 @@ enum AppColor: String, AppColorProtocol {
     case lightBlue
     case background
     case text
-    case tableViewBackgroundGray
 }

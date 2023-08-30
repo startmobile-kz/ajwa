@@ -1,16 +1,17 @@
-//
-//  NamazCell.swift
-//  ajwa
-//
-//  Created by Aisaule Sibatova on 28.08.2023.
-//
 
 import UIKit
 import SnapKit
 
-class NamazCell: UITableViewCell {
+final class NamazCell: UITableViewCell {
     
     static let identifier = String.init(describing: NamazCell.self)
+    
+    private let cellContainer: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 15
+        view.backgroundColor = AppColor.white.uiColor
+        return view
+    }()
     
     lazy var namazIdLabel: UILabel = {
         let label = UILabel()
@@ -38,7 +39,7 @@ class NamazCell: UITableViewCell {
         label.font = AppFont.regular.s12()
         return label
     }()
-  
+    
     private lazy var checkmarkButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "checkmark"), for: .normal)
@@ -50,15 +51,33 @@ class NamazCell: UITableViewCell {
         namazTitleLabel.text = model.title
         descriptionLabel.text = model.description
     }
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupHierarchy()
+        setupLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupHierarchy() {
+        contentView.addSubview(cellContainer)
+        cellContainer.addSubview(namazIdLabel)
+        cellContainer.addSubview(namazTitleLabel)
+        cellContainer.addSubview(descriptionLabel)
+        cellContainer.addSubview(checkmarkButton)
+    }
+    
+    private func setupLayout () {
         
-        contentView.addSubview(namazIdLabel)
-        contentView.addSubview(namazTitleLabel)
-        contentView.addSubview(descriptionLabel)
-        contentView.addSubview(checkmarkButton)
-        
+        cellContainer.snp.makeConstraints {make in
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(79)
+            make.width.equalTo(350)
+            make.centerY.equalToSuperview()
+        }
         
         namazIdLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(12)
@@ -66,7 +85,7 @@ class NamazCell: UITableViewCell {
             make.width.equalTo(30)
             make.height.equalTo(30)
         }
-                
+        
         namazTitleLabel.snp.makeConstraints { make in
             make.centerY.equalTo(namazIdLabel.snp.centerY)
             make.leading.equalTo(namazIdLabel.snp.trailing).offset(16)
@@ -83,10 +102,5 @@ class NamazCell: UITableViewCell {
             make.centerY.equalToSuperview()
         }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }
 
