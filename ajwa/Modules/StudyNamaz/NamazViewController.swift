@@ -29,19 +29,33 @@ class NamazViewController: UIViewController, NamazDisplayLogic {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(NamazCell.self, forCellReuseIdentifier: NamazCell.identifier)
         tableView.dataSource = self
-//        tableView.delegate = self
         tableView.headerView(forSection: 0)
         tableView.sectionHeaderTopPadding = 0
+        tableView.sectionHeaderHeight = 0
+        tableView.sectionFooterHeight = 10
         return tableView
     }()
+
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.backgroundImage = UIImage()
+        searchBar.barTintColor = UIColor.systemGroupedBackground
+        searchBar.layer.borderWidth = 1
+        searchBar.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        searchBar.searchTextField.backgroundColor = .white
         searchBar.placeholder = "Поиск"
+        let image = UIImage(named: "search")
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.searchTextField.borderStyle = .none
+        searchBar.searchTextField.layer.cornerRadius = 15
+        searchBar.searchTextField.clearButtonMode = .always
+        searchBar.searchTextField.leftViewMode = .never
+        searchBar.showsBookmarkButton = true
+        searchBar.setImage(image, for: .bookmark, state: .normal)
         searchBar.delegate = self
         return searchBar
     }()
+    
     
     // MARK: View lifecycle
     
@@ -63,7 +77,6 @@ class NamazViewController: UIViewController, NamazDisplayLogic {
         
         getNamazData()
 
-//        self.filteredPrayers = prayers
         setupHierarchy()
         setupLayout()
     }
@@ -77,11 +90,20 @@ class NamazViewController: UIViewController, NamazDisplayLogic {
         
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.leading.trailing.equalToSuperview()
             make.centerX.equalToSuperview()
+            make.height.equalTo(80)
         }
+        
+        searchBar.searchTextField.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(25)
+            make.leading.equalToSuperview().offset(20)
+            make.height.equalTo(52)
+            make.width.equalTo(352)
+        }
+        
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom).offset(10)
+            make.top.equalTo(searchBar.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
@@ -109,7 +131,6 @@ extension NamazViewController: UISearchBarDelegate {
         filteredPrayers = []
             for prayer in prayers {
                 if prayer.title.lowercased().contains(searchText.lowercased()) || prayer.description.lowercased().contains(searchText.lowercased()) {
-//                    5 + 5 = 30
                     filteredPrayers.append(prayer)
                 }
             }

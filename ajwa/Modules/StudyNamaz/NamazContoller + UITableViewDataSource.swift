@@ -26,9 +26,6 @@ extension NamazViewController: UITableViewDataSource {
             
     guard let cell = tableView.dequeueReusableCell(withIdentifier: NamazCell.identifier, for: indexPath) as? NamazCell else { return UITableViewCell() }
         
-//        let model = prayers[indexPath.section]
-        
-        
             cell.configure(with: filteredPrayers[indexPath.section])
        
         return cell
