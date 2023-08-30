@@ -84,6 +84,8 @@ extension LocationViewController: UITableViewDelegate {
         cell.layer.mask = maskLayer
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedLocation = location[indexPath.section].locationList.states[indexPath.row]
