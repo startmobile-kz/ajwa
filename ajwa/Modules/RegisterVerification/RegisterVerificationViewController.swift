@@ -58,7 +58,7 @@ final class RegisterVerificationViewController: UIViewController {
     
     private lazy var editPhoneButton: UIButton = {
         let button = UIButton()
-        button.setImage(AppImage.edit.uiImage, for: .normal)
+//        button.setImage(AppImage.edit.uiImage, for: .normal)
         button.layer.cornerRadius = 50
         button.addTarget(self, action: #selector(editPhoneDidTap), for: .touchUpInside)
         return button
