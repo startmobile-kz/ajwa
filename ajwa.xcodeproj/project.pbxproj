@@ -7,13 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */; };
+		074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */; };
+		074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */; };
+		074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */; };
+		074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */; };
+		074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */; };
+		074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */; };
 		078888962A8178DD006E0FE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 078888952A8178DD006E0FE0 /* Alamofire */; };
+		07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */; };
+		07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */; };
+		07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */; };
+		07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */; };
+		07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */; };
+		07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */; };
+		07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */; };
 		09ECE9EE3CABB547D38E728F /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */; };
 		3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDBF2A91E97E00382F1B /* MainPresenter.swift */; };
+		681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC02A91E97E00382F1B /* MainWorker.swift */; };
+		681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC12A91E97E00382F1B /* MainRouter.swift */; };
+		681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC22A91E97E00382F1B /* MainModels.swift */; };
+		681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC32A91E97E00382F1B /* MainViewController.swift */; };
+		681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC42A91E97E00382F1B /* MainInteractor.swift */; };
+		681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC52A91E97E00382F1B /* MainConfigurator.swift */; };
+		681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */; };
+		681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD02A92585000382F1B /* ParticularNamazView.swift */; };
+		681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD22A92664000382F1B /* RemainingTimeView.swift */; };
+		68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */; };
+		68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B102A9C8DC200D57C96 /* MainPageControl.swift */; };
+		68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B122A9CAEA200D57C96 /* MainBottomView.swift */; };
+		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
+		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
+		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
+		68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB52A9A1FE400970025 /* PrayerNames.swift */; };
+		9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
+		9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
+		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
+		9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */; };
+		9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133922A88BC9A008A46E0 /* Int+Extension.swift */; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
-		9FBC53842A80F9CE00CE8ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBC53822A80F9CE00CE8ED7 /* Main.storyboard */; };
 		9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */; };
 		9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */; };
 		9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */; };
@@ -80,8 +115,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScenePresenter.swift; sourceTree = "<group>"; };
+		074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneWorker.swift; sourceTree = "<group>"; };
+		074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneRouter.swift; sourceTree = "<group>"; };
+		074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneModels.swift; sourceTree = "<group>"; };
+		074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneViewController.swift; sourceTree = "<group>"; };
+		074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneInteractor.swift; sourceTree = "<group>"; };
+		074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSceneConfigurator.swift; sourceTree = "<group>"; };
+		07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntryScenePresenter.swift; sourceTree = "<group>"; };
+		07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneWorker.swift; sourceTree = "<group>"; };
+		07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneRouter.swift; sourceTree = "<group>"; };
+		07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneModels.swift; sourceTree = "<group>"; };
+		07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneViewController.swift; sourceTree = "<group>"; };
+		07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneInteractor.swift; sourceTree = "<group>"; };
+		07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneConfigurator.swift; sourceTree = "<group>"; };
 		1A7DF254EB3F3358A3320519 /* Pods-ajwa-ajwaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.release.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		50DC7B7AC84EE6C5F946E7E7 /* Pods-ajwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.debug.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.debug.xcconfig"; sourceTree = "<group>"; };
+		681ECDBF2A91E97E00382F1B /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		681ECDC02A91E97E00382F1B /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
+		681ECDC12A91E97E00382F1B /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		681ECDC22A91E97E00382F1B /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
+		681ECDC32A91E97E00382F1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		681ECDC42A91E97E00382F1B /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		681ECDC52A91E97E00382F1B /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		681ECDD02A92585000382F1B /* ParticularNamazView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularNamazView.swift; sourceTree = "<group>"; };
+		681ECDD22A92664000382F1B /* RemainingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeView.swift; sourceTree = "<group>"; };
+		68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacredEventCell.swift; sourceTree = "<group>"; };
+		68C79B102A9C8DC200D57C96 /* MainPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageControl.swift; sourceTree = "<group>"; };
+		68C79B122A9CAEA200D57C96 /* MainBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomView.swift; sourceTree = "<group>"; };
+		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
+		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
+		68F62FB52A9A1FE400970025 /* PrayerNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerNames.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +155,6 @@
 		9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9FBC53832A80F9CE00CE8ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FBC53862A80F9CE00CE8ED7 /* ajwa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ajwa.xcdatamodel; sourceTree = "<group>"; };
 		9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FBC538B2A80F9D100CE8ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -175,6 +240,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074E7B462A90BA9B00D9F4C6 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				074E7B472A90BAC500D9F4C6 /* RegistrationScenePresenter.swift */,
+				074E7B482A90BAC500D9F4C6 /* RegistrationSceneWorker.swift */,
+				074E7B492A90BAC500D9F4C6 /* RegistrationSceneRouter.swift */,
+				074E7B4A2A90BAC500D9F4C6 /* RegistrationSceneModels.swift */,
+				074E7B4B2A90BAC500D9F4C6 /* RegistrationSceneViewController.swift */,
+				074E7B4C2A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift */,
+				074E7B4D2A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		07C3A5D52A92252400CB64BD /* NameEntry */ = {
+			isa = PBXGroup;
+			children = (
+				07C3A5D62A92257800CB64BD /* NameEntryScenePresenter.swift */,
+				07C3A5D72A92257800CB64BD /* NameEntrySceneWorker.swift */,
+				07C3A5D82A92257800CB64BD /* NameEntrySceneRouter.swift */,
+				07C3A5D92A92257800CB64BD /* NameEntrySceneModels.swift */,
+				07C3A5DA2A92257800CB64BD /* NameEntrySceneViewController.swift */,
+				07C3A5DB2A92257800CB64BD /* NameEntrySceneInteractor.swift */,
+				07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */,
+			);
+			path = NameEntry;
+			sourceTree = "<group>";
+		};
 		2BDE5DC87257C1440180D3E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +277,46 @@
 				9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		681ECDBE2A91E93D00382F1B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				68C79B0D2A9C7D1600D57C96 /* Cells */,
+				681ECDCD2A91EAA300382F1B /* CustomViews */,
+				681ECDBF2A91E97E00382F1B /* MainPresenter.swift */,
+				681ECDC02A91E97E00382F1B /* MainWorker.swift */,
+				681ECDC12A91E97E00382F1B /* MainRouter.swift */,
+				681ECDC22A91E97E00382F1B /* MainModels.swift */,
+				681ECDC32A91E97E00382F1B /* MainViewController.swift */,
+				681ECDC42A91E97E00382F1B /* MainInteractor.swift */,
+				681ECDC52A91E97E00382F1B /* MainConfigurator.swift */,
+				68F62FB52A9A1FE400970025 /* PrayerNames.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		681ECDCD2A91EAA300382F1B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */,
+				681ECDD02A92585000382F1B /* ParticularNamazView.swift */,
+				681ECDD22A92664000382F1B /* RemainingTimeView.swift */,
+				68F62FAF2A99F59500970025 /* CustomSwitch.swift */,
+				68F62FB12A9A0B3400970025 /* AllPrayersView.swift */,
+				68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */,
+				68C79B102A9C8DC200D57C96 /* MainPageControl.swift */,
+				68C79B122A9CAEA200D57C96 /* MainBottomView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		68C79B0D2A9C7D1600D57C96 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9FBC53702A80F9CE00CE8ED7 = {
@@ -219,7 +352,6 @@
 				9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */,
 				9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */,
 				9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */,
-				9FBC53822A80F9CE00CE8ED7 /* Main.storyboard */,
 				9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */,
 				9FBC538D2A80F9D100CE8ED7 /* Info.plist */,
 				9FBC53852A80F9CE00CE8ED7 /* ajwa.xcdatamodeld */,
@@ -256,7 +388,10 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				07C3A5D52A92252400CB64BD /* NameEntry */,
+				074E7B462A90BA9B00D9F4C6 /* Registration */,
 				B2E133882A88AF10008A46E0 /* RegisterVerification */,
+				681ECDBE2A91E93D00382F1B /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -553,7 +688,6 @@
 				C8B48CFC2A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */,
 				C8B48CFD2A8A567C00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */,
 				C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */,
-				9FBC53842A80F9CE00CE8ED7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +781,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */,
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
+				9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
 				E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */,
 				E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */,
@@ -659,19 +795,54 @@
 				E437F9622A8B521F00D90F3B /* FontSizeCell.swift in Sources */,
 				E437F95A2A8B514000D90F3B /* HeaderCell.swift in Sources */,
 				E437F9582A8B512700D90F3B /* LocationCell.swift in Sources */,
+				9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
+				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
+				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
+				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
+				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
+				68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */,
+				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
 				E437F94A2A8B500F00D90F3B /* SettingsInteractor.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
+				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
+				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
+				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
+				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
+				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
+				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
+				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
+				68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */,
+				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
+				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
+				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
+				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
+				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
+				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
+				68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */,
+				68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */,
+				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
+				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
+				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
+				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,
+				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
+				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
+				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
+				68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */,
+				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
 				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
 				E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */,
+				9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
+				9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */,
 				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */,
@@ -679,6 +850,7 @@
 				E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */,
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
+				9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
 			);
@@ -717,14 +889,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9FBC53822A80F9CE00CE8ED7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FBC53832A80F9CE00CE8ED7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -863,7 +1027,6 @@
 				INFOPLIST_FILE = ajwa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -891,7 +1054,6 @@
 				INFOPLIST_FILE = ajwa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
