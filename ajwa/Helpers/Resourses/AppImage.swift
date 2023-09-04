@@ -47,4 +47,5 @@ enum AppImage: String, AppImageProtocol {
     case sacred_event
     case compass
     case ellipsis
+    case search
 }

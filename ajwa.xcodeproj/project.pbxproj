@@ -112,6 +112,16 @@
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
+		E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */; };
+		E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */; };
+		E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15152A9C7786004E31C8 /* NamazWorker.swift */; };
+		E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15162A9C7786004E31C8 /* NamazRouter.swift */; };
+		E4AF151E2A9C7786004E31C8 /* NamazModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15172A9C7786004E31C8 /* NamazModels.swift */; };
+		E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15182A9C7786004E31C8 /* NamazViewController.swift */; };
+		E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15192A9C7786004E31C8 /* NamazInteractor.swift */; };
+		E4AF15212A9C7786004E31C8 /* NamazConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF151A2A9C7786004E31C8 /* NamazConfigurator.swift */; };
+		E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15222A9C7BB7004E31C8 /* NamazCell.swift */; };
+		E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15242A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +251,19 @@
 		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
+		CB78CF8F6C8C45A0B90B13BD /* Pods-ajwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.release.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.release.xcconfig"; sourceTree = "<group>"; };
+		D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAC10FFC8039F8F3D6E3A12 /* Pods-ajwaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.release.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazPresenter.swift; sourceTree = "<group>"; };
+		E4AF15152A9C7786004E31C8 /* NamazWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazWorker.swift; sourceTree = "<group>"; };
+		E4AF15162A9C7786004E31C8 /* NamazRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazRouter.swift; sourceTree = "<group>"; };
+		E4AF15172A9C7786004E31C8 /* NamazModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazModels.swift; sourceTree = "<group>"; };
+		E4AF15182A9C7786004E31C8 /* NamazViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazViewController.swift; sourceTree = "<group>"; };
+		E4AF15192A9C7786004E31C8 /* NamazInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazInteractor.swift; sourceTree = "<group>"; };
+		E4AF151A2A9C7786004E31C8 /* NamazConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazConfigurator.swift; sourceTree = "<group>"; };
+		E4AF15222A9C7BB7004E31C8 /* NamazCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazCell.swift; sourceTree = "<group>"; };
+		E4AF15242A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazContoller + UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +478,7 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E4AF15132A9C7693004E31C8 /* StudyNamaz */,
 				9F2E97B62AA6244D00AD1FC6 /* MonthTable */,
 				9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */,
 				07C3A5D52A92252400CB64BD /* NameEntry */,
@@ -628,6 +652,23 @@
 				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
+               sourceTree = "<group>";
+        };
+		E4AF15132A9C7693004E31C8 /* StudyNamaz */ = {
+			isa = PBXGroup;
+			children = (
+				E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */,
+				E4AF15152A9C7786004E31C8 /* NamazWorker.swift */,
+				E4AF15162A9C7786004E31C8 /* NamazRouter.swift */,
+				E4AF15172A9C7786004E31C8 /* NamazModels.swift */,
+				E4AF15182A9C7786004E31C8 /* NamazViewController.swift */,
+				E4AF15192A9C7786004E31C8 /* NamazInteractor.swift */,
+				E4AF151A2A9C7786004E31C8 /* NamazConfigurator.swift */,
+				E4AF15222A9C7BB7004E31C8 /* NamazCell.swift */,
+				E4AF15242A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift */,
+				E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */,
+			);
+			path = StudyNamaz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -875,11 +916,21 @@
 				9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */,
 				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
 				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
+				E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */,
+				E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */,
+				E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */,
+				E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */,
+				B2E133932A88BC9A008A46E0 /* Int+Extension.swift in Sources */,
+				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
+				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
+				E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */,
+				E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */,
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
 				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
 				68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */,
 				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
 				E437F94A2A8B500F00D90F3B /* SettingsInteractor.swift in Sources */,
+				E4AF151E2A9C7786004E31C8 /* NamazModels.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
 				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
@@ -887,14 +938,17 @@
 				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
 				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
+				E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
 				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
+				E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
 				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
 				68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */,
 				9F2E97CC2AA6244D00AD1FC6 /* MonthTableRouter.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
+				E4AF15212A9C7786004E31C8 /* NamazConfigurator.swift in Sources */,
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
