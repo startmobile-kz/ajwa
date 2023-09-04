@@ -128,24 +128,24 @@ extension MonthTableViewController: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
 }
-
-import SwiftUI
-
-struct MonthTableProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = MonthTableViewController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<MonthTableProvider.ContainerView>) -> MonthTableViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}
+//
+//import SwiftUI
+//
+//struct MonthTableProvider: PreviewProvider {
+//    static var previews: some View {
+//        ContainerView().edgesIgnoringSafeArea(.all)
+//    }
+//
+//    struct ContainerView: UIViewControllerRepresentable {
+//        
+//        let viewController = MonthTableViewController()
+//
+//        func makeUIViewController(context: UIViewControllerRepresentableContext<MonthTableProvider.ContainerView>) -> MonthTableViewController {
+//            return viewController
+//        }
+//
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//
+//        }
+//    }
+//}
