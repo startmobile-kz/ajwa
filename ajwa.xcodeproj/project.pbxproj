@@ -46,6 +46,24 @@
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
 		9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */; };
 		9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133922A88BC9A008A46E0 /* Int+Extension.swift */; };
+		9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */; };
+		9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */; };
+		9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */; };
+		9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */; };
+		9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */; };
+		9F2E97C62AA6244D00AD1FC6 /* ZeekrsSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */; };
+		9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */; };
+		9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B72AA6244D00AD1FC6 /* MonthTableViewCell.swift */; };
+		9F2E97C92AA6244D00AD1FC6 /* MonthTableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B82AA6244D00AD1FC6 /* MonthTableWorker.swift */; };
+		9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B92AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift */; };
+		9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BA2AA6244D00AD1FC6 /* MonthTablePresenter.swift */; };
+		9F2E97CC2AA6244D00AD1FC6 /* MonthTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BB2AA6244D00AD1FC6 /* MonthTableRouter.swift */; };
+		9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BC2AA6244D00AD1FC6 /* MonthTableInteractor.swift */; };
+		9F2E97CE2AA6244D00AD1FC6 /* MonthTableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BD2AA6244D00AD1FC6 /* MonthTableModels.swift */; };
+		9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BE2AA6244D00AD1FC6 /* MonthTableConfigurator.swift */; };
+		9F2E97D02AA6244D00AD1FC6 /* MonthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97BF2AA6244D00AD1FC6 /* MonthTableViewController.swift */; };
+		9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97C02AA6244D00AD1FC6 /* TopView.swift */; };
+		9F2E97D32AA6248800AD1FC6 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97D22AA6248800AD1FC6 /* Date + Extension.swift */; };
 		9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */; };
 		9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */; };
 		9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC53802A80F9CE00CE8ED7 /* ViewController.swift */; };
@@ -151,6 +169,24 @@
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsTableViewCell.swift; sourceTree = "<group>"; };
+		9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
+		9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsViewController.swift; sourceTree = "<group>"; };
+		9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsScenePresenter.swift; sourceTree = "<group>"; };
+		9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneRouter.swift; sourceTree = "<group>"; };
+		9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneModels.swift; sourceTree = "<group>"; };
+		9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneInteractor.swift; sourceTree = "<group>"; };
+		9F2E97B72AA6244D00AD1FC6 /* MonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableViewCell.swift; sourceTree = "<group>"; };
+		9F2E97B82AA6244D00AD1FC6 /* MonthTableWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableWorker.swift; sourceTree = "<group>"; };
+		9F2E97B92AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesMonthTableViewCell.swift; sourceTree = "<group>"; };
+		9F2E97BA2AA6244D00AD1FC6 /* MonthTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTablePresenter.swift; sourceTree = "<group>"; };
+		9F2E97BB2AA6244D00AD1FC6 /* MonthTableRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableRouter.swift; sourceTree = "<group>"; };
+		9F2E97BC2AA6244D00AD1FC6 /* MonthTableInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableInteractor.swift; sourceTree = "<group>"; };
+		9F2E97BD2AA6244D00AD1FC6 /* MonthTableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableModels.swift; sourceTree = "<group>"; };
+		9F2E97BE2AA6244D00AD1FC6 /* MonthTableConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableConfigurator.swift; sourceTree = "<group>"; };
+		9F2E97BF2AA6244D00AD1FC6 /* MonthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableViewController.swift; sourceTree = "<group>"; };
+		9F2E97C02AA6244D00AD1FC6 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		9F2E97D22AA6248800AD1FC6 /* Date + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		9FBC53792A80F9CE00CE8ED7 /* ajwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ajwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC537C2A80F9CE00CE8ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FBC537E2A80F9CE00CE8ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -319,6 +355,37 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */,
+				9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */,
+				9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */,
+				9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */,
+				9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */,
+				9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */,
+				9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */,
+			);
+			path = ZeekrsScene;
+			sourceTree = "<group>";
+		};
+		9F2E97B62AA6244D00AD1FC6 /* MonthTable */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E97B72AA6244D00AD1FC6 /* MonthTableViewCell.swift */,
+				9F2E97B82AA6244D00AD1FC6 /* MonthTableWorker.swift */,
+				9F2E97B92AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift */,
+				9F2E97BA2AA6244D00AD1FC6 /* MonthTablePresenter.swift */,
+				9F2E97BB2AA6244D00AD1FC6 /* MonthTableRouter.swift */,
+				9F2E97BC2AA6244D00AD1FC6 /* MonthTableInteractor.swift */,
+				9F2E97BD2AA6244D00AD1FC6 /* MonthTableModels.swift */,
+				9F2E97BE2AA6244D00AD1FC6 /* MonthTableConfigurator.swift */,
+				9F2E97BF2AA6244D00AD1FC6 /* MonthTableViewController.swift */,
+				9F2E97C02AA6244D00AD1FC6 /* TopView.swift */,
+			);
+			path = MonthTable;
+			sourceTree = "<group>";
+		};
 		9FBC53702A80F9CE00CE8ED7 = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +455,8 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E97B62AA6244D00AD1FC6 /* MonthTable */,
+				9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */,
 				07C3A5D52A92252400CB64BD /* NameEntry */,
 				074E7B462A90BA9B00D9F4C6 /* Registration */,
 				B2E133882A88AF10008A46E0 /* RegisterVerification */,
@@ -409,6 +478,7 @@
 		B2E9F0712A89F88D00E33F51 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E97D22AA6248800AD1FC6 /* Date + Extension.swift */,
 				B2E133922A88BC9A008A46E0 /* Int+Extension.swift */,
 				B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */,
 			);
@@ -783,11 +853,14 @@
 			files = (
 				681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */,
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
+				9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */,
 				9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
 				E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */,
+				9F2E97C92AA6244D00AD1FC6 /* MonthTableWorker.swift in Sources */,
 				E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */,
 				E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */,
+				9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */,
 				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
 				E437F95C2A8B515C00D90F3B /* FooterCell.swift in Sources */,
 				E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */,
@@ -796,8 +869,10 @@
 				E437F95A2A8B514000D90F3B /* HeaderCell.swift in Sources */,
 				E437F9582A8B512700D90F3B /* LocationCell.swift in Sources */,
 				9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */,
+				9F2E97C62AA6244D00AD1FC6 /* ZeekrsSceneModels.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
+				9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */,
 				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
 				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
@@ -809,16 +884,23 @@
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
 				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
 				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
+				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
 				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
 				68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */,
+				9F2E97CC2AA6244D00AD1FC6 /* MonthTableRouter.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
+				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
+				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
+				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
+				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
@@ -832,6 +914,7 @@
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */,
+				9F2E97D02AA6244D00AD1FC6 /* MonthTableViewController.swift in Sources */,
 				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
 				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
@@ -844,15 +927,20 @@
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
 				9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */,
 				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
+				9F2E97CE2AA6244D00AD1FC6 /* MonthTableModels.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */,
 				E437F9512A8B50AE00D90F3B /* SettingsViewController + UITableView.swift in Sources */,
 				E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */,
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
+				9F2E97D32AA6248800AD1FC6 /* Date + Extension.swift in Sources */,
 				9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
+				9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
+				9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */,
+				9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
