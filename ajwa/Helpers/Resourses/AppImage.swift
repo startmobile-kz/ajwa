@@ -39,6 +39,9 @@ enum AppImage: String, AppImageProtocol {
     case clock
     case searchTextFieldIcon
     case checkmark
+    case leftArrow
+    case rightArrow
+    case dot
     case speaker_on
     case speaker_off
     case sacred_event
