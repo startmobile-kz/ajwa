@@ -222,7 +222,7 @@ final class DhikrDetailsViewController: UIViewController {
     
     // MARK: - Section Layouts
     
-    func createLayout() -> UICollectionViewCompositionalLayout {
+    private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
             guard let self = self else { return nil}
             return self.dhikrSectionLayout()
@@ -380,3 +380,5 @@ struct MyProvider: PreviewProvider {
         }
     }
 }
+
+
