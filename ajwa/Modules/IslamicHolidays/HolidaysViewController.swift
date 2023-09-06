@@ -22,6 +22,11 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(
+            HolidayCell.self,
+            forCellWithReuseIdentifier: HolidayCell.reuseID
+        )
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -47,8 +52,8 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
     private func setupConstraints() {
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }
@@ -73,9 +78,18 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
             subitems: [item]
         )
         
+        group.contentInsets = NSDirectionalEdgeInsets(
+            top: 0,
+            leading: 20,
+            bottom: 0,
+            trailing: 20
+        )
+        
         // Section
         
         let section = NSCollectionLayoutSection(group: group)
+        
+        section.interGroupSpacing = 16
         
         return UICollectionViewCompositionalLayout(section: section)
     }
@@ -97,11 +111,18 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
 
 extension HolidaysViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: HolidayCell.reuseID,
+            for: indexPath
+        ) as? HolidayCell else {
+            fatalError("Could not cast to HolidayCell.")
+        }
+        
+        return cell
     }
 }
 

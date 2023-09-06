@@ -30,7 +30,7 @@ final class HolidayCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var backgrounView: UIView = {
+    private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = AppColor.background.uiColor
         return view
@@ -56,13 +56,20 @@ final class HolidayCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.layer.cornerRadius = 16
+        containerView.layer.cornerRadius = 10
+    }
+    
     // MARK: - SetupViews
     
     private func setupViews() {
         contentView.backgroundColor = AppColor.white.uiColor
         
-        backgrounView.addSubview(nameLabel)
-        [dayButton, monthLabel, backgrounView].forEach {
+        containerView.addSubview(nameLabel)
+        
+        [dayButton, monthLabel, containerView].forEach {
             contentView.addSubview($0)
         }
     }
@@ -79,11 +86,11 @@ final class HolidayCell: UICollectionViewCell {
         
         monthLabel.snp.makeConstraints { make in
             make.centerY.equalTo(dayButton)
-            make.leading.equalTo(dayButton).offset(12)
+            make.leading.equalTo(dayButton.snp.trailing).offset(12)
         }
         
-        backgrounView.snp.makeConstraints { make in
-            make.top.equalTo(12)
+        containerView.snp.makeConstraints { make in
+            make.top.equalTo(dayButton.snp.bottom).offset(12)
             make.leading.equalToSuperview().offset(12)
             make.trailing.equalToSuperview().offset(-12)
             make.height.equalTo(54)
