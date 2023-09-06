@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HolidaysConfigurator {
+final class HolidaysConfigurator {
     
     static let shared = HolidaysConfigurator()
     

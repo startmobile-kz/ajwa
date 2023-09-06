@@ -11,7 +11,7 @@ protocol HolidaysPresentationLogic {
     func presentSomething(response: Holidays.Something.Response)
 }
 
-class HolidaysPresenter: HolidaysPresentationLogic {
+final class HolidaysPresenter: HolidaysPresentationLogic {
     weak var viewController: HolidaysDisplayLogic?
     
     // MARK: Do something

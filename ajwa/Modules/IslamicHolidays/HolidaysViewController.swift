@@ -11,7 +11,7 @@ protocol HolidaysDisplayLogic: AnyObject {
     func displaySomething(viewModel: Holidays.Something.ViewModel)
 }
 
-class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
+final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
     
     var interactor: HolidaysBusinessLogic?
     var router: (NSObjectProtocol & HolidaysRoutingLogic & HolidaysDataPassing)?

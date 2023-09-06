@@ -15,7 +15,7 @@ protocol HolidaysDataStore {
     //var name: String { get set }
 }
 
-class HolidaysInteractor: HolidaysBusinessLogic, HolidaysDataStore {
+final class HolidaysInteractor: HolidaysBusinessLogic, HolidaysDataStore {
     
     var presenter: HolidaysPresentationLogic?
     var worker: HolidaysWorker?

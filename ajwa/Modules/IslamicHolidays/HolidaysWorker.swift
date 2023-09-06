@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HolidaysWorker {
+final class HolidaysWorker {
     
   func doSomeWork() {
       

@@ -15,7 +15,7 @@ protocol HolidaysDataPassing {
     var dataStore: HolidaysDataStore? { get }
 }
 
-class HolidaysRouter: NSObject, HolidaysRoutingLogic, HolidaysDataPassing {
+final class HolidaysRouter: NSObject, HolidaysRoutingLogic, HolidaysDataPassing {
     
     weak var viewController: HolidaysViewController?
     var dataStore: HolidaysDataStore?
