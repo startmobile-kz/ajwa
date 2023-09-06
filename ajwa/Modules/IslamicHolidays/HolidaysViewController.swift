@@ -16,6 +16,10 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
     var interactor: HolidaysBusinessLogic?
     var router: (NSObjectProtocol & HolidaysRoutingLogic & HolidaysDataPassing)?
     
+    // MARK: - State
+    
+    private let sections = ["Ноябрь", "Декабрь"]
+    
     // MARK: - UI
     
     private lazy var collectionView: UICollectionView = {
@@ -128,6 +132,11 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
 // MARK: - UICollectionViewDataSource methods
 
 extension HolidaysViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sections.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         4
     }
@@ -145,6 +154,7 @@ extension HolidaysViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
+            let section = sections[indexPath.section]
             guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: MonthSectionHeader.reuseID,
@@ -152,7 +162,9 @@ extension HolidaysViewController: UICollectionViewDataSource {
             ) as? MonthSectionHeader else {
                 fatalError("Could not cast to MonthSectionHeader")
             }
-            sectionHeader.setSectionHeaderTitle(title: "Ноябрь")
+            
+            sectionHeader.setSectionHeaderTitle(title: section)
+            
             return sectionHeader
         } else {
             return UICollectionReusableView()
