@@ -8,26 +8,26 @@
 import UIKit
 
 protocol HolidaysBusinessLogic {
-  func doSomething(request: Holidays.Something.Request)
+    func doSomething(request: Holidays.Something.Request)
 }
 
 protocol HolidaysDataStore {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class HolidaysInteractor: HolidaysBusinessLogic, HolidaysDataStore {
     
-  var presenter: HolidaysPresentationLogic?
-  var worker: HolidaysWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Holidays.Something.Request) {
-    worker = HolidaysWorker()
-    worker?.doSomeWork()
+    var presenter: HolidaysPresentationLogic?
+    var worker: HolidaysWorker?
+    //var name: String = ""
     
-    let response = Holidays.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Do something
+    
+    func doSomething(request: Holidays.Something.Request) {
+        worker = HolidaysWorker()
+        worker?.doSomeWork()
+        
+        let response = Holidays.Something.Response()
+        presenter?.presentSomething(response: response)
+    }
 }

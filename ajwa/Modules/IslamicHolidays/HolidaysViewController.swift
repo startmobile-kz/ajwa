@@ -8,31 +8,33 @@
 import UIKit
 
 protocol HolidaysDisplayLogic: AnyObject {
-  func displaySomething(viewModel: Holidays.Something.ViewModel)
+    func displaySomething(viewModel: Holidays.Something.ViewModel)
 }
 
 class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
     
-  var interactor: HolidaysBusinessLogic?
-  var router: (NSObjectProtocol & HolidaysRoutingLogic & HolidaysDataPassing)?
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething() {
-    let request = Holidays.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Holidays.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
+    var interactor: HolidaysBusinessLogic?
+    var router: (NSObjectProtocol & HolidaysRoutingLogic & HolidaysDataPassing)?
+    
+    
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doSomething()
+    }
+    
+    // MARK: Do something
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
+    func doSomething() {
+        let request = Holidays.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Holidays.Something.ViewModel) {
+        //nameTextField.text = viewModel.name
+    }
 }
