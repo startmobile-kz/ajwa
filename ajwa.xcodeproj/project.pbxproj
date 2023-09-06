@@ -45,6 +45,7 @@
 		68D8F7AD2AA867EF00CA5B5F /* HolidaysInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A62AA867EF00CA5B5F /* HolidaysInteractor.swift */; };
 		68D8F7AE2AA867EF00CA5B5F /* HolidaysConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A72AA867EF00CA5B5F /* HolidaysConfigurator.swift */; };
 		68D8F7B12AA86C9100CA5B5F /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */; };
+		68D8F7B42AA8A62300CA5B5F /* MonthSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7B32AA8A62300CA5B5F /* MonthSectionHeader.swift */; };
 		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
@@ -188,6 +189,7 @@
 		68D8F7A62AA867EF00CA5B5F /* HolidaysInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysInteractor.swift; sourceTree = "<group>"; };
 		68D8F7A72AA867EF00CA5B5F /* HolidaysConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysConfigurator.swift; sourceTree = "<group>"; };
 		68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
+		68D8F7B32AA8A62300CA5B5F /* MonthSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSectionHeader.swift; sourceTree = "<group>"; };
 		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		68D8F7A02AA867CB00CA5B5F /* IslamicHolidays */ = {
 			isa = PBXGroup;
 			children = (
+				68D8F7B22AA8A5F100CA5B5F /* CustomViews */,
 				68D8F7AF2AA86C7B00CA5B5F /* Cells */,
 				68D8F7A12AA867EF00CA5B5F /* HolidaysPresenter.swift */,
 				68D8F7A22AA867EF00CA5B5F /* HolidaysWorker.swift */,
@@ -412,6 +415,14 @@
 				68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		68D8F7B22AA8A5F100CA5B5F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				68D8F7B32AA8A62300CA5B5F /* MonthSectionHeader.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -1004,6 +1015,7 @@
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
 				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
+				68D8F7B42AA8A62300CA5B5F /* MonthSectionHeader.swift in Sources */,
 				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,

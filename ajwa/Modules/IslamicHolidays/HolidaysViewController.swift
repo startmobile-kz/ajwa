@@ -26,6 +26,11 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
             HolidayCell.self,
             forCellWithReuseIdentifier: HolidayCell.reuseID
         )
+        collectionView.register(
+            MonthSectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: MonthSectionHeader.reuseID
+        )
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -90,6 +95,7 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
         let section = NSCollectionLayoutSection(group: group)
         
         section.interGroupSpacing = 16
+        section.boundarySupplementaryItems = [supplementaryHeaderItem()]
         
         return UICollectionViewCompositionalLayout(section: section)
     }
@@ -104,6 +110,18 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
     func displaySomething(viewModel: Holidays.Something.ViewModel) {
         //nameTextField.text = viewModel.name
     }
+    
+    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        return NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(0.5),
+                heightDimension: .absolute(56)
+            ),
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .topLeading
+        )
+    }
+    
 }
 
 
@@ -123,6 +141,22 @@ extension HolidaysViewController: UICollectionViewDataSource {
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: MonthSectionHeader.reuseID,
+                for: indexPath
+            ) as? MonthSectionHeader else {
+                fatalError("Could not cast to MonthSectionHeader")
+            }
+            sectionHeader.setSectionHeaderTitle(title: "Ноябрь")
+            return sectionHeader
+        } else {
+            return UICollectionReusableView()
+        }
     }
 }
 
