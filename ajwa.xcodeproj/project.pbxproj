@@ -44,6 +44,7 @@
 		68D8F7AC2AA867EF00CA5B5F /* HolidaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A52AA867EF00CA5B5F /* HolidaysViewController.swift */; };
 		68D8F7AD2AA867EF00CA5B5F /* HolidaysInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A62AA867EF00CA5B5F /* HolidaysInteractor.swift */; };
 		68D8F7AE2AA867EF00CA5B5F /* HolidaysConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A72AA867EF00CA5B5F /* HolidaysConfigurator.swift */; };
+		68D8F7B12AA86C9100CA5B5F /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */; };
 		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
@@ -186,6 +187,7 @@
 		68D8F7A52AA867EF00CA5B5F /* HolidaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewController.swift; sourceTree = "<group>"; };
 		68D8F7A62AA867EF00CA5B5F /* HolidaysInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysInteractor.swift; sourceTree = "<group>"; };
 		68D8F7A72AA867EF00CA5B5F /* HolidaysConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysConfigurator.swift; sourceTree = "<group>"; };
+		68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
 		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		68D8F7A02AA867CB00CA5B5F /* IslamicHolidays */ = {
 			isa = PBXGroup;
 			children = (
+				68D8F7AF2AA86C7B00CA5B5F /* Cells */,
 				68D8F7A12AA867EF00CA5B5F /* HolidaysPresenter.swift */,
 				68D8F7A22AA867EF00CA5B5F /* HolidaysWorker.swift */,
 				68D8F7A32AA867EF00CA5B5F /* HolidaysRouter.swift */,
@@ -401,6 +404,14 @@
 				68D8F7A72AA867EF00CA5B5F /* HolidaysConfigurator.swift */,
 			);
 			path = IslamicHolidays;
+			sourceTree = "<group>";
+		};
+		68D8F7AF2AA86C7B00CA5B5F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68D8F7B02AA86C9100CA5B5F /* HolidayCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -1022,6 +1033,7 @@
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
 				9F2E97D32AA6248800AD1FC6 /* Date + Extension.swift in Sources */,
 				9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */,
+				68D8F7B12AA86C9100CA5B5F /* HolidayCell.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
 				9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
