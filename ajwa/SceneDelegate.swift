@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController(rootViewController: UIViewController())
-        let namazController = NamazViewController()
+        let namazController = SettingsViewController()
         namazController.view.backgroundColor = .white
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
