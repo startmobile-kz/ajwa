@@ -12,30 +12,21 @@
 
 import UIKit
 
-protocol FontSettingsBusinessLogic
-{
-  func doSomething(request: FontSettings.Something.Request)
+protocol FontSettingsBusinessLogic {
+    func getFonts()
 }
 
-protocol FontSettingsDataStore
-{
-  //var name: String { get set }
-}
+protocol FontSettingsDataStore {}
 
-class FontSettingsInteractor: FontSettingsBusinessLogic, FontSettingsDataStore
-{
-  var presenter: FontSettingsPresentationLogic?
-  var worker: FontSettingsWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: FontSettings.Something.Request)
-  {
-    worker = FontSettingsWorker()
-    worker?.doSomeWork()
-    
-    let response = FontSettings.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+final class FontSettingsInteractor: FontSettingsBusinessLogic, FontSettingsDataStore {
+    var presenter: FontSettingsPresentationLogic?
+    var worker: FontSettingsWorker?
+    var fonts = [FontSettings.ModelType.ViewModel]()
+
+    // MARK: Do something
+
+    func getFonts() {
+        worker = FontSettingsWorker()
+        self.presenter?.presentFonts(response: worker?.fetchFonts() ?? [])
+    }
 }

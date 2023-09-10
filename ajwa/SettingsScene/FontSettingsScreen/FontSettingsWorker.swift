@@ -12,9 +12,14 @@
 
 import UIKit
 
-class FontSettingsWorker
-{
-  func doSomeWork()
-  {
-  }
+final class FontSettingsWorker {
+    
+    func fetchFonts() -> [FontSettings.ModelType.ViewModel] {
+        let fonts = [
+            FontSettings.ModelType.ViewModel(fontTitle: "На русском", fontDescription: "А а"),
+            FontSettings.ModelType.ViewModel(fontTitle: "На казахском", fontDescription: "Ә ә"),
+            FontSettings.ModelType.ViewModel(fontTitle: "На арабском", fontDescription: "ب ا ")
+        ]
+        return fonts
+    }
 }

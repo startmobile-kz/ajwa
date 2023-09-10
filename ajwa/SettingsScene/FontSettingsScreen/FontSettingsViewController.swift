@@ -11,37 +11,67 @@
 //
 
 import UIKit
+import SnapKit
 
-protocol FontSettingsDisplayLogic: AnyObject
-{
-  func displaySomething(viewModel: FontSettings.Something.ViewModel)
+protocol FontSettingsDisplayLogic: AnyObject {
+    func displayFonts(viewModel: [FontSettings.ModelType.ViewModel])
 }
 
-class FontSettingsViewController: UIViewController, FontSettingsDisplayLogic
-{
-  var interactor: FontSettingsBusinessLogic?
-  var router: (NSObjectProtocol & FontSettingsRoutingLogic & FontSettingsDataPassing)?
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = FontSettings.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: FontSettings.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+final class FontSettingsViewController: UIViewController, FontSettingsDisplayLogic {
+
+    var interactor: FontSettingsBusinessLogic?
+    var router: (NSObjectProtocol & FontSettingsRoutingLogic & FontSettingsDataPassing)?
+    var fonts = [FontSettings.ModelType.ViewModel]()
+
+    // MARK: - Outlets
+
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(FontSettingsTypeCell.self, forCellReuseIdentifier: FontSettingsTypeCell.identifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        return tableView
+    }()
+
+    // MARK: View lifecycle
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        FontSettingsConfigurator.shared.configure(viewController: self)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        FontSettingsConfigurator.shared.configure(viewController: self)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupHierarchy()
+        setupLayout()
+        getFontsData()
+    }
+
+    // MARK: - Setup
+
+    private func setupHierarchy() {
+        view.addSubview(tableView)
+    }
+
+    private func setupLayout() {
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+    }
+    
+    // MARK: Actions
+
+    func getFontsData() {
+        interactor?.getFonts()
+    }
+
+    func displayFonts(viewModel: [FontSettings.ModelType.ViewModel]) {
+        fonts.append(contentsOf: viewModel)
+        tableView.reloadData()
+    }
 }

@@ -12,20 +12,16 @@
 
 import UIKit
 
-protocol FontSettingsPresentationLogic
-{
-  func presentSomething(response: FontSettings.Something.Response)
+protocol FontSettingsPresentationLogic {
+    func presentFonts(response: [FontSettings.ModelType.ViewModel])
 }
 
-class FontSettingsPresenter: FontSettingsPresentationLogic
-{
-  weak var viewController: FontSettingsDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: FontSettings.Something.Response)
-  {
-    let viewModel = FontSettings.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+final class FontSettingsPresenter: FontSettingsPresentationLogic {
+    weak var viewController: FontSettingsDisplayLogic?
+
+    // MARK: Do something
+
+    func presentFonts(response: [FontSettings.ModelType.ViewModel]) {
+        viewController?.displayFonts(viewModel: response)
+    }
 }

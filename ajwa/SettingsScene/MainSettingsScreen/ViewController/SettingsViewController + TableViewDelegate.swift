@@ -36,7 +36,14 @@ extension SettingsViewController: UITableViewDelegate{
             sheet?.detents = [fraction]
             navigationController?.present(languagesViewController, animated: true)
         case .fontSizeCell:
-            break
+            let fontSizeViewController = FontSettingsViewController()
+            fontSizeViewController.modalPresentationStyle = .formSheet
+            let sheet = fontSizeViewController.sheetPresentationController
+            let fraction = UISheetPresentationController.Detent.custom { context in
+                473
+            }
+            sheet?.detents = [fraction]
+            navigationController?.present(fontSizeViewController, animated: true)
         case .notificationAndSoundCell:
             break
         }

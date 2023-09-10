@@ -12,20 +12,21 @@
 
 import UIKit
 
-enum FontSettings
-{
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
-    {
+enum FontSettings {
+    // MARK: Use cases
+
+    enum ModelType {
+        
+        struct Request {
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+            let fontTitle: String
+            let fontDescription: String
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
+
 }

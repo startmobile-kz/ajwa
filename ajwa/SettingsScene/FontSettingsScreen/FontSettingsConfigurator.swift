@@ -12,7 +12,7 @@
 
 import UIKit
 
-class FontSettingsConfigurator {
+final class FontSettingsConfigurator {
     
     static let shared = FontSettingsConfigurator()
     
