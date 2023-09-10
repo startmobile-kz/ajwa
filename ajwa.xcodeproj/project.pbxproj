@@ -41,6 +41,13 @@
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
 		68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB52A9A1FE400970025 /* PrayerNames.swift */; };
+		8C9A15782AAE1B5B00B25309 /* PrayerTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */; };
+		8C9A15792AAE1B5B00B25309 /* PrayerTimeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */; };
+		8C9A157A2AAE1B5B00B25309 /* PrayerTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */; };
+		8C9A157B2AAE1B5B00B25309 /* PrayerTimeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15742AAE1B5B00B25309 /* PrayerTimeModels.swift */; };
+		8C9A157C2AAE1B5B00B25309 /* PrayerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */; };
+		8C9A157D2AAE1B5B00B25309 /* PrayerTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */; };
+		8C9A157E2AAE1B5B00B25309 /* PrayerTimeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */; };
 		9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
 		9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
@@ -101,6 +108,7 @@
 		E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F95F2A8B51A200D90F3B /* LanguageCell.swift */; };
 		E437F9622A8B521F00D90F3B /* FontSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9612A8B521F00D90F3B /* FontSizeCell.swift */; };
 		E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */; };
+		E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */; };
 		E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */; };
 		E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */; };
 		E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */; };
@@ -112,7 +120,6 @@
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
-		E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */; };
 		E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */; };
 		E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15152A9C7786004E31C8 /* NamazWorker.swift */; };
 		E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15162A9C7786004E31C8 /* NamazRouter.swift */; };
@@ -176,6 +183,13 @@
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
 		68F62FB52A9A1FE400970025 /* PrayerNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerNames.swift; sourceTree = "<group>"; };
+		8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimePresenter.swift; sourceTree = "<group>"; };
+		8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeWorker.swift; sourceTree = "<group>"; };
+		8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeRouter.swift; sourceTree = "<group>"; };
+		8C9A15742AAE1B5B00B25309 /* PrayerTimeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeModels.swift; sourceTree = "<group>"; };
+		8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeViewController.swift; sourceTree = "<group>"; };
+		8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeInteractor.swift; sourceTree = "<group>"; };
+		8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeConfigurator.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +254,7 @@
 		E437F95F2A8B51A200D90F3B /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		E437F9612A8B521F00D90F3B /* FontSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCell.swift; sourceTree = "<group>"; };
 		E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAndSoundCell.swift; sourceTree = "<group>"; };
+		E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPresenter.swift; sourceTree = "<group>"; };
 		E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesWorker.swift; sourceTree = "<group>"; };
 		E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRouter.swift; sourceTree = "<group>"; };
@@ -251,10 +266,6 @@
 		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
-		CB78CF8F6C8C45A0B90B13BD /* Pods-ajwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.release.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.release.xcconfig"; sourceTree = "<group>"; };
-		D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBAC10FFC8039F8F3D6E3A12 /* Pods-ajwaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.release.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.release.xcconfig"; sourceTree = "<group>"; };
-		E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazPresenter.swift; sourceTree = "<group>"; };
 		E4AF15152A9C7786004E31C8 /* NamazWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazWorker.swift; sourceTree = "<group>"; };
 		E4AF15162A9C7786004E31C8 /* NamazRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazRouter.swift; sourceTree = "<group>"; };
@@ -376,6 +387,20 @@
 				68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8C9A15702AAE1B1A00B25309 /* PrayerTimeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */,
+				8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */,
+				8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */,
+				8C9A15742AAE1B5B00B25309 /* PrayerTimeModels.swift */,
+				8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */,
+				8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */,
+				8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */,
+			);
+			path = PrayerTimeScreen;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -551,6 +576,7 @@
 		E437F93D2A8B4E8900D90F3B /* SettingsScene */ = {
 			isa = PBXGroup;
 			children = (
+				8C9A15702AAE1B1A00B25309 /* PrayerTimeScreen */,
 				E489938A2A8D13AE002274C9 /* LanguagesScreen */,
 				E48993892A8D11C0002274C9 /* MainSettingsScreen */,
 			);
@@ -652,8 +678,8 @@
 				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
-               sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		E4AF15132A9C7693004E31C8 /* StudyNamaz */ = {
 			isa = PBXGroup;
 			children = (
@@ -893,6 +919,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */,
+				8C9A157C2AAE1B5B00B25309 /* PrayerTimeViewController.swift in Sources */,
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
 				9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */,
 				9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */,
@@ -920,7 +947,6 @@
 				E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */,
 				E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */,
 				E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */,
-				B2E133932A88BC9A008A46E0 /* Int+Extension.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */,
@@ -928,8 +954,10 @@
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
 				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
 				68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */,
+				8C9A157E2AAE1B5B00B25309 /* PrayerTimeConfigurator.swift in Sources */,
 				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
 				E437F94A2A8B500F00D90F3B /* SettingsInteractor.swift in Sources */,
+				8C9A157D2AAE1B5B00B25309 /* PrayerTimeInteractor.swift in Sources */,
 				E4AF151E2A9C7786004E31C8 /* NamazModels.swift in Sources */,
 				C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */,
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
@@ -938,6 +966,7 @@
 				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
 				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
+				8C9A15782AAE1B5B00B25309 /* PrayerTimePresenter.swift in Sources */,
 				E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
 				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
@@ -957,6 +986,7 @@
 				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
+				8C9A157B2AAE1B5B00B25309 /* PrayerTimeModels.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */,
 				68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */,
@@ -985,6 +1015,7 @@
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */,
 				E437F9512A8B50AE00D90F3B /* SettingsViewController + UITableView.swift in Sources */,
+				8C9A15792AAE1B5B00B25309 /* PrayerTimeWorker.swift in Sources */,
 				E437F94D2A8B504C00D90F3B /* SettingsViewController.swift in Sources */,
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
@@ -993,6 +1024,7 @@
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
 				9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
+				8C9A157A2AAE1B5B00B25309 /* PrayerTimeRouter.swift in Sources */,
 				9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */,
 				9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */,
 			);
