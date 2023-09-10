@@ -19,7 +19,8 @@ extension SettingsViewController: UITableViewDelegate{
         case .footerCell:
             break
         case .profileCell:
-            break
+            let editProfileViewController = EditProfileViewController()
+            navigationController?.pushViewController(editProfileViewController, animated: true)
         case .locationCell:
             break
         case .shareAndRateCell:

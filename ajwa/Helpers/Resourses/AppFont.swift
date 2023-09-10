@@ -52,6 +52,10 @@ extension AppFontProtocol {
     func s32() -> UIFont {
         return apply(size: 32)
     }
+
+    func s36() -> UIFont {
+        return apply(size: 36)
+    }
 }
 
 extension AppFontProtocol {
