@@ -80,6 +80,7 @@
 		B2E133912A88B53E008A46E0 /* CHIOTPField in Frameworks */ = {isa = PBXBuildFile; productRef = B2E133902A88B53E008A46E0 /* CHIOTPField */; };
 		BBC2835379CEFD5B7B17271C /* Pods_ajwaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1898F0C127C697DC98DF74D /* Pods_ajwaTests.framework */; };
 		C81BE4722A81600400E77EEC /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BE4712A81600400E77EEC /* AppFont.swift */; };
+		C85731302AB75B9500D95702 /* PageControllForDhikrCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857312F2AB75B9500D95702 /* PageControllForDhikrCollectionView.swift */; };
 		C8A450992A82A30400C0B8D2 /* DhikrDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A450982A82A30400C0B8D2 /* DhikrDetailsViewController.swift */; };
 		C8A4509B2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4509A2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift */; };
 		C8A4509D2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4509C2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift */; };
@@ -228,6 +229,7 @@
 		B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
 		B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		C81BE4712A81600400E77EEC /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		C857312F2AB75B9500D95702 /* PageControllForDhikrCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllForDhikrCollectionView.swift; sourceTree = "<group>"; };
 		C8A450982A82A30400C0B8D2 /* DhikrDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsViewController.swift; sourceTree = "<group>"; };
 		C8A4509A2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A4509C2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhikrDetailsSectionHeader.swift; sourceTree = "<group>"; };
@@ -461,7 +463,6 @@
 			children = (
 				68E665812AA78003007F4482 /* Resources */,
 				E437F93D2A8B4E8900D90F3B /* SettingsScene */,
-				C8A450952A82A2B500C0B8D2 /* Dhikr */,
 				C81BE46A2A815CB300E77EEC /* Helpers */,
 				B2E133852A88AED5008A46E0 /* Modules */,
 				B2E9F0712A89F88D00E33F51 /* Extensions */,
@@ -505,6 +506,7 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C8A450952A82A2B500C0B8D2 /* Dhikr */,
 				E4AF15132A9C7693004E31C8 /* StudyNamaz */,
 				9F2E97B62AA6244D00AD1FC6 /* MonthTable */,
 				9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */,
@@ -573,7 +575,8 @@
 				C8A450962A82A2DA00C0B8D2 /* Views */,
 				C8A450982A82A30400C0B8D2 /* DhikrDetailsViewController.swift */,
 			);
-			path = Dhikr;
+			name = Dhikr;
+			path = ../Dhikr;
 			sourceTree = "<group>";
 		};
 		C8A450962A82A2DA00C0B8D2 /* Views */ = {
@@ -581,6 +584,7 @@
 			children = (
 				C8A4509A2A82B2BC00C0B8D2 /* DhikrDetailsCollectionViewCell.swift */,
 				C8A4509C2A82B63400C0B8D2 /* DhikrDetailsSectionHeader.swift */,
+				C857312F2AB75B9500D95702 /* PageControllForDhikrCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -992,6 +996,7 @@
 				E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
 				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
+				C85731302AB75B9500D95702 /* PageControllForDhikrCollectionView.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
 				E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,

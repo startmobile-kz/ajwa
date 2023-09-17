@@ -18,6 +18,8 @@ final class DhikrDetailsViewController: UIViewController {
     
     //    MARK: - UI
     
+    private lazy var pageControll = PageControllForDhikrCollectionView(amountOfPages: 3)
+    
     //    MARK: Collection View
     
     private lazy var collectionView: UICollectionView = {
@@ -58,6 +60,7 @@ final class DhikrDetailsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "play"), for: .normal)
         button.backgroundColor = .white
+        button.tintColor = UIColor(red: 0, green: 0.616, blue: 0.749, alpha: 1)
         button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         return button
     }()
@@ -142,6 +145,7 @@ final class DhikrDetailsViewController: UIViewController {
         stackView.addArrangedSubview(timerLabel)
         view.addSubview(menuButton)
         view.addSubview(collectionView)
+        view.addSubview(pageControll)
         view.addSubview(backgroundViewForAudio)
         view.addSubview(stackView)
         view.addSubview(numberPickerView)
@@ -154,10 +158,17 @@ final class DhikrDetailsViewController: UIViewController {
     //    MARK: - SetupLayout
     
     private func setupLayout() {
+        
         collectionView.snp.makeConstraints {
             $0.height.equalTo(382)
             $0.top.equalToSuperview().inset(120)
             $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        pageControll.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(-15)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(4)
         }
         
         backgroundViewForAudio.snp.makeConstraints {
@@ -261,7 +272,7 @@ final class DhikrDetailsViewController: UIViewController {
             bottom: 0,
             trailing: 0
         )
-        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.orthogonalScrollingBehavior = .groupPaging
         
         // Header
         let layoutSectionHeaderSize = NSCollectionLayoutSize(
@@ -274,6 +285,12 @@ final class DhikrDetailsViewController: UIViewController {
             alignment: .topLeading
         )
         section.boundarySupplementaryItems = [layoutSectionHeader]
+        section.visibleItemsInvalidationHandler = { [weak self] visibleItems, point, environment in
+            if let lastItem = visibleItems.last?.indexPath.row {
+                self?.pageControll.changeCurrentPage(to: lastItem + 1)
+            }
+        }
+
     
         return section
     }
