@@ -13,16 +13,15 @@
 import UIKit
 
 protocol PrayerTimePresentationLogic{
-  func presentSomething(response: PrayerTime.Something.Response)
+    func presentPrayers(response: [PrayerTimes.ModelType.ViewModel])
 }
 
 class PrayerTimePresenter: PrayerTimePresentationLogic{
-  weak var viewController: PrayerTimeDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: PrayerTime.Something.Response){
-    let viewModel = PrayerTime.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: PrayerTimeDisplayLogic?
+    
+    // MARK: Do something
+
+    func presentPrayers(response: [PrayerTimes.ModelType.ViewModel]){
+        viewController?.displayPrayers(viewModel: response)
+    }
 }

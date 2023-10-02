@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PrayerTimeBusinessLogic{
-  func doSomething(request: PrayerTime.Something.Request)
+  func getPrayers()
 }
 
 protocol PrayerTimeDataStore{
@@ -27,11 +27,8 @@ class PrayerTimeInteractor: PrayerTimeBusinessLogic, PrayerTimeDataStore{
   
   // MARK: Do something
   
-  func doSomething(request: PrayerTime.Something.Request){
-    worker = PrayerTimeWorker()
-    worker?.doSomeWork()
-    
-    let response = PrayerTime.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func getPrayers() {
+        worker = PrayerTimeWorker()
+        self.presenter?.presentPrayers(response: worker?.fetchPrayerTimes() ?? [])
+    }
 }

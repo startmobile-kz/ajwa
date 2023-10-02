@@ -25,7 +25,8 @@ extension SettingsViewController: UITableViewDelegate{
         case .shareAndRateCell:
             break
         case .prayTimeCell:
-            break
+            let prayerTimeViewController = PrayerTimeViewController()
+            navigationController?.pushViewController(prayerTimeViewController, animated: true)
         case .languageCell:
             let languagesViewController = LanguagesViewController()
             languagesViewController.modalPresentationStyle = .formSheet

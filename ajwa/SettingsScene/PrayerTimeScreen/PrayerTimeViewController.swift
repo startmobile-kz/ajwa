@@ -11,32 +11,147 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol PrayerTimeDisplayLogic: AnyObject{
-  func displaySomething(viewModel: PrayerTime.Something.ViewModel)
+    func displayPrayers(viewModel: [PrayerTimes.ModelType.ViewModel])
 }
 
 class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
-  var interactor: PrayerTimeBusinessLogic?
-  var router: (NSObjectProtocol & PrayerTimeRoutingLogic & PrayerTimeDataPassing)?
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad(){
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething(){
-    let request = PrayerTime.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: PrayerTime.Something.ViewModel){
-    //nameTextField.text = viewModel.name
-  }
+    var interactor: PrayerTimeBusinessLogic?
+    var router: (NSObjectProtocol & PrayerTimeRoutingLogic & PrayerTimeDataPassing)?
+    var prayers = [PrayerTimes.ModelType.ViewModel]()
+
+    // MARK: Outlets
+    private lazy var detailLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Выберите молитву, чтобы вручную отрегулировать ее время начало"
+        label.font = AppFont.regular.s12()
+        label.textColor = AppColor.darkGray.uiColor
+        label.numberOfLines = 2
+        return label
+    }()
+
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.register(PrayerTimeCell.self, forCellReuseIdentifier: PrayerTimeCell.identifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.alwaysBounceVertical = false
+        tableView.backgroundColor = .secondarySystemBackground
+        return tableView
+    }()
+
+    // MARK: View lifecycle
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        PrayerTimeConfigurator.shared.configure(viewController: self)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        PrayerTimeConfigurator.shared.configure(viewController: self)
+    }
+
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        setupView()
+        setupViews()
+        setupConstraints()
+        getPrayersData()
+    }
+
+    // MARK: - Setup
+
+    private func setupView() {
+        title = "Время молитв"
+        //TODO: fix background color
+        view.backgroundColor = .secondarySystemBackground
+    }
+
+    private func setupViews() {
+        view.addSubview(detailLabel)
+        view.addSubview(tableView)
+    }
+
+    private func setupConstraints() {
+        detailLabel.snp.makeConstraints {
+            $0.width.equalTo(278)
+            $0.top.equalToSuperview().offset(120)
+            $0.leading.equalTo(20)
+        }
+
+        tableView.snp.makeConstraints {
+            $0.height.equalToSuperview()
+            $0.top.equalTo(detailLabel.snp.bottom).offset(12)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+        }
+    }
+
+    // MARK: Actions
+
+    func getPrayersData() {
+        interactor?.getPrayers()
+    }
+
+    func displayPrayers(viewModel: [PrayerTimes.ModelType.ViewModel]){
+        prayers.append(contentsOf: viewModel)
+        tableView.reloadData()
+    }
+}
+
+// MARK: - Extensions
+// MARK: - UITableViewDataSource
+extension PrayerTimeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        prayers.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = prayers[indexPath.section]
+        let cell: PrayerTimeCell = tableView.dequeueReusableCell()
+        cell.configure(with: model)
+        cell.selectionStyle = .none
+        cell.layer.cornerRadius = 26
+        return cell
+    }
+
+
+}
+
+// MARK: - UITableViewDelegate
+extension PrayerTimeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        48
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let cornerRadius = 16
+        var corners: UIRectCorner = []
+
+        if indexPath.row == 0
+        {
+            corners.update(with: .topLeft)
+            corners.update(with: .topRight)
+        }
+
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1
+        {
+            corners.update(with: .bottomLeft)
+            corners.update(with: .bottomRight)
+        }
+
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(roundedRect: cell.bounds,
+                                      byRoundingCorners: corners,
+                                      cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
+        cell.layer.mask = maskLayer
+    }
 }

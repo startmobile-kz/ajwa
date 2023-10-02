@@ -12,15 +12,20 @@
 
 import UIKit
 
-enum PrayerTime{
+enum PrayerTimes {
   // MARK: Use cases
-  
-  enum Something{
-    struct Request{
+
+  enum ModelType {
+
+    struct Request {
     }
-    struct Response{
+
+    struct Response {
     }
-    struct ViewModel{
+
+    struct ViewModel {
+        let prayerName: String
+        var choosenMinute: Int = 0
     }
   }
 }

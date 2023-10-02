@@ -41,6 +41,7 @@
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
 		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
 		68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB52A9A1FE400970025 /* PrayerNames.swift */; };
+		8C61011B2ACAD8E300CC2D88 /* PrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61011A2ACAD8E300CC2D88 /* PrayerTimeCell.swift */; };
 		8C9A15782AAE1B5B00B25309 /* PrayerTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */; };
 		8C9A15792AAE1B5B00B25309 /* PrayerTimeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */; };
 		8C9A157A2AAE1B5B00B25309 /* PrayerTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */; };
@@ -183,6 +184,7 @@
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
 		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
 		68F62FB52A9A1FE400970025 /* PrayerNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerNames.swift; sourceTree = "<group>"; };
+		8C61011A2ACAD8E300CC2D88 /* PrayerTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeCell.swift; sourceTree = "<group>"; };
 		8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimePresenter.swift; sourceTree = "<group>"; };
 		8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeWorker.swift; sourceTree = "<group>"; };
 		8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeRouter.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */,
 				8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */,
 				8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */,
+				8C61011A2ACAD8E300CC2D88 /* PrayerTimeCell.swift */,
 			);
 			path = PrayerTimeScreen;
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
 				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
+				8C61011B2ACAD8E300CC2D88 /* PrayerTimeCell.swift in Sources */,
 				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
@@ -1203,6 +1207,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1230,6 +1235,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,7 +12,16 @@
 
 import UIKit
 
-class PrayerTimeWorker{
-  func doSomeWork(){
-  }
+final class PrayerTimeWorker{
+    func fetchPrayerTimes() -> [PrayerTimes.ModelType.ViewModel] {
+        let prayers = [
+            PrayerTimes.ModelType.ViewModel(prayerName: "Фаджр", choosenMinute: 60),
+            PrayerTimes.ModelType.ViewModel(prayerName: "Восход"),
+            PrayerTimes.ModelType.ViewModel(prayerName: "Зухр"),
+            PrayerTimes.ModelType.ViewModel(prayerName: "Аср"),
+            PrayerTimes.ModelType.ViewModel(prayerName: "Магриб"),
+            PrayerTimes.ModelType.ViewModel(prayerName: "Иша"),
+        ]
+        return prayers
+    }
 }
