@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController(rootViewController: UIViewController())
+        setupNavBar(navigationController)
         let namazController = SettingsViewController()
         namazController.view.backgroundColor = .white
         self.window?.rootViewController = navigationController
@@ -23,6 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navigationController.pushViewController(namazController, animated: true)
         }
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+
+    func setupNavBar(_ navigationController: UINavigationController) {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = AppColor.white.uiColor
+        appearance.shadowColor = .clear
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
     }
 
 }
