@@ -19,4 +19,5 @@ final class HolidaysRouter: NSObject, HolidaysRoutingLogic, HolidaysDataPassing 
     
     weak var viewController: HolidaysViewController?
     var dataStore: HolidaysDataStore?
+    
 }
