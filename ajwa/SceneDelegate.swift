@@ -18,8 +18,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         HolidaysConfigurator.shared.configure(
             viewController: holidaysViewController
         )
-        window?.rootViewController = holidaysViewController
+        
+        let navigationController = UINavigationController(rootViewController: holidaysViewController)
+        setupNavBar(navigationController)
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func setupNavBar(_ navigationController: UINavigationController) {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = AppColor.white.uiColor
+        appearance.shadowColor = .clear
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
     }
 
 }

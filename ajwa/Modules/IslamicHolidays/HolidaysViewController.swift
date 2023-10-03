@@ -46,13 +46,16 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
         
         setupViews()
         setupConstraints()
+        setupNavBar()
     }
     
     // MARK: - SetupViews
     
     private func setupViews() {
-        view.backgroundColor = AppColor.background.uiColor
+        title = "Исламские праздники"
         
+        view.backgroundColor = AppColor.background.uiColor
+    
         view.addSubview(collectionView)
     }
     
@@ -65,6 +68,14 @@ final class HolidaysViewController: UIViewController, HolidaysDisplayLogic {
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+    
+    // MARK: - SetupNavBar
+    
+    private func setupNavBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: AppFont.semibold.s16()
+        ]
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
