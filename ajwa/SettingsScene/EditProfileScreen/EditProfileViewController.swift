@@ -14,10 +14,10 @@ import UIKit
 import SnapKit
 
 protocol EditProfileDisplayLogic: AnyObject{
-    func displaySomething(viewModel: EditProfile.Something.ViewModel)
+    func displayScreen(viewModel: Profile.ModelType.ViewModel)
 }
 
-class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
+final class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
     var interactor: EditProfileBusinessLogic?
     var router: (NSObjectProtocol & EditProfileRoutingLogic & EditProfileDataPassing)?
 
@@ -54,6 +54,7 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.text = "Инсар"
         textField.layer.cornerRadius = 16
         return textField
     }()
@@ -69,6 +70,7 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
     private lazy var phoneTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.text = "+ 7 707 188 1834"
         textField.layer.cornerRadius = 16
         return textField
     }()
@@ -86,9 +88,9 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        doSomething()
         setupView()
         setupViews()
+        setupNavBar()
         setupConstraints()
     }
 
@@ -98,8 +100,7 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
         title = "Редактировать"
         nameTextField.addPaddingToTextField()
         phoneTextField.addPaddingToTextField()
-        //TODO: fix background color
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = AppColor.background.uiColor
     }
 
     private func setupViews() {
@@ -113,7 +114,12 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
         view.addSubview(saveButton)
     }
 
-    //TODO: fix label<->textfield constraints
+    private func setupNavBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: AppFont.semibold.s16()
+        ]
+    }
+
     private func setupConstraints() {
         containerView.snp.makeConstraints {
             $0.top.equalTo(220)
@@ -134,17 +140,17 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
         }
 
         nameTextField.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp_bottomMargin).offset(8)
+            $0.top.equalTo(nameLabel.snp_bottomMargin).offset(12)
             $0.width.equalToSuperview()
             $0.height.equalTo(48)
         }
 
         phoneLabel.snp.makeConstraints {
-            $0.top.equalTo(nameTextField.snp_bottomMargin).offset(12)
+            $0.top.equalTo(nameTextField.snp_bottomMargin).offset(16)
         }
 
         phoneTextField.snp.makeConstraints {
-            $0.top.equalTo(phoneLabel.snp_bottomMargin).offset(8)
+            $0.top.equalTo(phoneLabel.snp_bottomMargin).offset(12)
             $0.width.equalToSuperview()
             $0.height.equalTo(48)
         }
@@ -157,16 +163,13 @@ class EditProfileViewController: UIViewController, EditProfileDisplayLogic{
         }
     }
 
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething(){
-        let request = EditProfile.Something.Request()
-        interactor?.doSomething(request: request)
+    // MARK: Actions
+
+    public func configure(with model: Profile.ModelType.ViewModel) {
+        nameTextField.text = model.name
+        phoneTextField.text = model.phoneNumber
     }
     
-    func displaySomething(viewModel: EditProfile.Something.ViewModel){
-        //nameTextField.text = viewModel.name
+    func displayScreen(viewModel: Profile.ModelType.ViewModel){
     }
 }

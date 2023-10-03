@@ -12,15 +12,20 @@
 
 import UIKit
 
-enum EditProfile{
+enum Profile {
     // MARK: Use cases
-    
-    enum Something{
-        struct Request{
+
+    enum ModelType {
+
+        struct Request {
         }
-        struct Response{
+
+        struct Response {
         }
-        struct ViewModel{
+
+        struct ViewModel {
+            var name: String
+            let phoneNumber : String
         }
     }
 }

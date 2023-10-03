@@ -13,16 +13,15 @@
 import UIKit
 
 protocol EditProfilePresentationLogic{
-    func presentSomething(response: EditProfile.Something.Response)
+    func present(response: Profile.ModelType.ViewModel)
 }
 
-class EditProfilePresenter: EditProfilePresentationLogic{
+final class EditProfilePresenter: EditProfilePresentationLogic{
     weak var viewController: EditProfileDisplayLogic?
 
     // MARK: Do something
 
-    func presentSomething(response: EditProfile.Something.Response){
-        let viewModel = EditProfile.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func present(response: Profile.ModelType.ViewModel){
+        viewController?.displayScreen(viewModel: response)
     }
 }

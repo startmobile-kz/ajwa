@@ -12,7 +12,7 @@
 
 import UIKit
 
-class EditProfileConfigurator {
+final class EditProfileConfigurator {
     
     static let shared = EditProfileConfigurator()
     
