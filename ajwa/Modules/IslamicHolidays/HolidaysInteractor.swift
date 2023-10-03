@@ -12,14 +12,13 @@ protocol HolidaysBusinessLogic {
 }
 
 protocol HolidaysDataStore {
-    //var name: String { get set }
+
 }
 
 final class HolidaysInteractor: HolidaysBusinessLogic, HolidaysDataStore {
     
     var presenter: HolidaysPresentationLogic?
     var worker: HolidaysWorker?
-    //var name: String = ""
     
     // MARK: Do something
     
