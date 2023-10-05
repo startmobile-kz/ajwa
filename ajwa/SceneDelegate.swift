@@ -14,15 +14,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController(rootViewController: UIViewController())
-        let namazController = NamazViewController()
-        namazController.view.backgroundColor = .white
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            navigationController.pushViewController(namazController, animated: true)
-        }
-        guard let _ = (scene as? UIWindowScene) else { return }
+        let holidaysViewController = HolidaysViewController()
+        HolidaysConfigurator.shared.configure(
+            viewController: holidaysViewController
+        )
+        
+        let navigationController = UINavigationController(rootViewController: holidaysViewController)
+        setupNavBar(navigationController)
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    func setupNavBar(_ navigationController: UINavigationController) {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = AppColor.white.uiColor
+        appearance.shadowColor = .clear
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
     }
 
 }
