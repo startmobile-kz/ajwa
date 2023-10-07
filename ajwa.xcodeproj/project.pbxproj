@@ -101,6 +101,7 @@
 		E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F95F2A8B51A200D90F3B /* LanguageCell.swift */; };
 		E437F9622A8B521F00D90F3B /* FontSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9612A8B521F00D90F3B /* FontSizeCell.swift */; };
 		E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */; };
+		E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */; };
 		E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */; };
 		E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */; };
 		E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */; };
@@ -112,16 +113,6 @@
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
-		E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */; };
-		E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */; };
-		E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15152A9C7786004E31C8 /* NamazWorker.swift */; };
-		E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15162A9C7786004E31C8 /* NamazRouter.swift */; };
-		E4AF151E2A9C7786004E31C8 /* NamazModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15172A9C7786004E31C8 /* NamazModels.swift */; };
-		E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15182A9C7786004E31C8 /* NamazViewController.swift */; };
-		E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15192A9C7786004E31C8 /* NamazInteractor.swift */; };
-		E4AF15212A9C7786004E31C8 /* NamazConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF151A2A9C7786004E31C8 /* NamazConfigurator.swift */; };
-		E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15222A9C7BB7004E31C8 /* NamazCell.swift */; };
-		E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15242A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift */; };
 		E4AE5F102A962DF5007F4140 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */; };
 		E4AE5F112A962DF5007F4140 /* LocationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */; };
 		E4AE5F122A962DF5007F4140 /* LocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */; };
@@ -132,9 +123,17 @@
 		E4AE5F182A96322B007F4140 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F172A96322B007F4140 /* CountryCell.swift */; };
 		E4AE5F1A2A96333A007F4140 /* LocationViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */; };
 		E4AE5F1C2A963392007F4140 /* LocationViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */; };
-		E4AF150C2A9A41C0004E31C8 /* InnerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */; };
 		E4AF15102A9B5032004E31C8 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF150F2A9B5032004E31C8 /* CityCell.swift */; };
 		E4AF15122A9BA82D004E31C8 /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = E4AF15112A9BA82C004E31C8 /* states.json */; };
+		E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */; };
+		E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15152A9C7786004E31C8 /* NamazWorker.swift */; };
+		E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15162A9C7786004E31C8 /* NamazRouter.swift */; };
+		E4AF151E2A9C7786004E31C8 /* NamazModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15172A9C7786004E31C8 /* NamazModels.swift */; };
+		E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15182A9C7786004E31C8 /* NamazViewController.swift */; };
+		E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15192A9C7786004E31C8 /* NamazInteractor.swift */; };
+		E4AF15212A9C7786004E31C8 /* NamazConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF151A2A9C7786004E31C8 /* NamazConfigurator.swift */; };
+		E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15222A9C7BB7004E31C8 /* NamazCell.swift */; };
+		E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15242A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift */; };
 		E4F176142A8269300022628A /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = E4F176132A8269300022628A /* Wormholy */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +252,7 @@
 		E437F95F2A8B51A200D90F3B /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		E437F9612A8B521F00D90F3B /* FontSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCell.swift; sourceTree = "<group>"; };
 		E437F9632A8B524300D90F3B /* NotificationAndSoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAndSoundCell.swift; sourceTree = "<group>"; };
+		E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E489938B2A8D14BD002274C9 /* LanguagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesPresenter.swift; sourceTree = "<group>"; };
 		E489938C2A8D14BD002274C9 /* LanguagesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesWorker.swift; sourceTree = "<group>"; };
 		E489938D2A8D14BD002274C9 /* LanguagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRouter.swift; sourceTree = "<group>"; };
@@ -274,13 +274,8 @@
 		E4AE5F172A96322B007F4140 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
-		E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerTableView.swift; sourceTree = "<group>"; };
 		E4AF150F2A9B5032004E31C8 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		E4AF15112A9BA82C004E31C8 /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = states.json; path = ../../../states.json; sourceTree = "<group>"; };
-		CB78CF8F6C8C45A0B90B13BD /* Pods-ajwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.release.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.release.xcconfig"; sourceTree = "<group>"; };
-		D2C4546FAB076C4A4F235C68 /* Pods_ajwa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBAC10FFC8039F8F3D6E3A12 /* Pods-ajwaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.release.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.release.xcconfig"; sourceTree = "<group>"; };
-		E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NamazController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazPresenter.swift; sourceTree = "<group>"; };
 		E4AF15152A9C7786004E31C8 /* NamazWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazWorker.swift; sourceTree = "<group>"; };
 		E4AF15162A9C7786004E31C8 /* NamazRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazRouter.swift; sourceTree = "<group>"; };
@@ -680,8 +675,26 @@
 				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
-               sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
+		E4AE5F082A962DBC007F4140 /* LocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */,
+				E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */,
+				E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */,
+				E4AE5F0C2A962DF5007F4140 /* LocationModels.swift */,
+				E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */,
+				E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */,
+				E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */,
+				E4AE5F172A96322B007F4140 /* CountryCell.swift */,
+				E4AF150F2A9B5032004E31C8 /* CityCell.swift */,
+				E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */,
+				E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */,
+			);
+			path = LocationScreen;
+			sourceTree = "<group>";
+		};
 		E4AF15132A9C7693004E31C8 /* StudyNamaz */ = {
 			isa = PBXGroup;
 			children = (
@@ -697,25 +710,6 @@
 				E45C02742A9F999200E60E2C /* NamazController + UITableViewDelegate.swift */,
 			);
 			path = StudyNamaz;
-			sourceTree = "<group>";
-		};
-		E4AE5F082A962DBC007F4140 /* LocationScreen */ = {
-			isa = PBXGroup;
-			children = (
-				E4AE5F092A962DF5007F4140 /* LocationPresenter.swift */,
-				E4AE5F0A2A962DF5007F4140 /* LocationWorker.swift */,
-				E4AE5F0B2A962DF5007F4140 /* LocationRouter.swift */,
-				E4AE5F0C2A962DF5007F4140 /* LocationModels.swift */,
-				E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */,
-				E4AF150B2A9A41C0004E31C8 /* InnerTableView.swift */,
-				E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */,
-				E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */,
-				E4AE5F172A96322B007F4140 /* CountryCell.swift */,
-				E4AF150F2A9B5032004E31C8 /* CityCell.swift */,
-				E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */,
-				E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */,
-			);
-			path = LocationScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -971,7 +965,6 @@
 				E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */,
 				E4AF15202A9C7786004E31C8 /* NamazInteractor.swift in Sources */,
 				E4AF15232A9C7BB7004E31C8 /* NamazCell.swift in Sources */,
-				B2E133932A88BC9A008A46E0 /* Int+Extension.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */,
@@ -1064,7 +1057,6 @@
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
-				E4AF150C2A9A41C0004E31C8 /* InnerTableView.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,

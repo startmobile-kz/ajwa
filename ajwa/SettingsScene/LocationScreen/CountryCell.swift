@@ -11,6 +11,12 @@ import SnapKit
 class CountryCell: UITableViewCell {
     static let identifier = String.init(describing: CountryCell.self)
     
+    private let cellContainer: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 16
+        view.backgroundColor = AppColor.white.uiColor
+        return view
+    }()
     
     var locationLabel: UILabel = {
         let label = UILabel()
@@ -44,12 +50,24 @@ class CountryCell: UITableViewCell {
 //    
 //    
     private func setupHierarchy() {
-        contentView.addSubview(locationLabel)
-        contentView.addSubview(disclosureImageView)
-        contentView.clipsToBounds = true
+        contentView.addSubview(cellContainer)
+        cellContainer.addSubview(locationLabel)
+        cellContainer.addSubview(disclosureImageView)
+//        contentView.clipsToBounds = true
     }
     
     private func setupLayout() {
+        
+        
+        cellContainer.snp.makeConstraints {make in
+            make.leading.equalToSuperview().offset(-24)
+            make.trailing.equalToSuperview().offset(-24)
+
+            make.height.equalTo(48)
+            make.width.equalTo(326)
+            make.centerY.equalToSuperview()
+        }
+        
         locationLabel.snp.makeConstraints{ make in
             make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()

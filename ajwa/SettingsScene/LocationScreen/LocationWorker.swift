@@ -16,22 +16,24 @@ import CoreLocation
 final class LocationWorker {
 
     
-        func fetchCities(completion: @escaping (City?) -> Void) {
-            if let url = Bundle.main.url(forResource: "states", withExtension: "json") {
-                do {
-                    let data = try Data(contentsOf: url)
-                    let decoder = JSONDecoder()
-                    let jsonData = try decoder.decode(City.self, from: data)
-                    completion(jsonData)
-                } catch {
-                    print("error:\(error)")
-                    completion(nil)
-                }
+        
+
+    func fetchCards(completion: @escaping (Location.ModelType.ViewModel?) -> Void) {
+        
+        
+        if let url = Bundle.main.url(forResource: "states", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(Location.ModelType.ViewModel.self, from: data)
+                completion(jsonData)
+            } catch {
+                print("error:\(error)")
+                completion(nil)
             }
         }
     
-
-    
+}
     
     func fetchLocation() -> [Location.ModelType.ViewModel] {
         
@@ -41,20 +43,29 @@ final class LocationWorker {
         }
         
 
-        var cities = [String]()
+//
         
-        countries.enumerated().forEach{ iterator in
+        
+//        let text = try! String(contentsOfFile: Bundle.main.path(forResource: "states", ofType: "json")!) // Reading File
+//        let lineArray = text.components(separatedBy: "\n") // Separating Lines
+//
+//                for eachLA in lineArray
+//                {
+//                    let wordArray = eachLA.components(separatedBy: ",")
+//                    // wordArray[0] is city , [1] is country and so on
+//                }
+        
             
-            if iterator.element == "Kazakhstan" {
-                cities = ["Atyrau" , "Almaty", "Astana" , "Kizilorda" , "Kokshetau", "Uralsk"]
-            }
-    
-        }
         
+//        let location
         
+//       working code
         let location = [
-            Location.ModelType.ViewModel(locationList: Country(states: countries.sorted()), isExpanded: false),
-            Location.ModelType.ViewModel(locationList: City(states: cities.sorted(), utcTimezone: "UTC +6:00"), isExpanded: false)
+           
+            
+           
+            Location.ModelType.ViewModel(country: "Kazakhstan", states: ["Atyrau", "Almaty", "Astana"], isExpanded: false),
+            Location.ModelType.ViewModel(country: "Turkey", states: ["Istanbul", "Bodrum", "Antalya"], isExpanded: false)
         
         ]
                                                                           

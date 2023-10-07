@@ -39,9 +39,13 @@ enum Location
     struct Response
     {
     }
-    struct ViewModel
+      struct ViewModel: Decodable
     {
-        let locationList: LocationType
+//        let countries: [String]
+//        var isExpanded: Bool
+        
+        let country: String
+        let states: [String]
         var isExpanded: Bool
 
       

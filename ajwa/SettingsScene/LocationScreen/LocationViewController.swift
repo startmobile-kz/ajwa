@@ -46,6 +46,8 @@ class LocationViewController: UIViewController, LocationDisplayLogic
     
         override func viewDidLoad() {
             super.viewDidLoad()
+            title = "Настройки"
+
             setupHierarchy()
             setupLayout()
             getLocationData()

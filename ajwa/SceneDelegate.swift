@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            navigationController.pushViewController(namazController, animated: true)
+            navigationController.pushViewController(LocationViewController(), animated: true)
         }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
