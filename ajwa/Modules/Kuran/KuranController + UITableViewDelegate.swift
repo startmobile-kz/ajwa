@@ -1,10 +1,9 @@
 
-
 import UIKit
 
-extension NamazViewController: UITableViewDelegate {
+extension KuranViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        15
+        73
     }
 }

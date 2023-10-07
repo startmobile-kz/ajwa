@@ -120,6 +120,16 @@
 		E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */; };
 		E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */; };
 		E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */; };
+		E4ADD0B12AD17F8C006AF3BE /* KuranPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AA2AD17F8C006AF3BE /* KuranPresenter.swift */; };
+		E4ADD0B22AD17F8C006AF3BE /* KuranWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AB2AD17F8C006AF3BE /* KuranWorker.swift */; };
+		E4ADD0B32AD17F8C006AF3BE /* KuranRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AC2AD17F8C006AF3BE /* KuranRouter.swift */; };
+		E4ADD0B42AD17F8C006AF3BE /* KuranModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AD2AD17F8C006AF3BE /* KuranModels.swift */; };
+		E4ADD0B52AD17F8C006AF3BE /* KuranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AE2AD17F8C006AF3BE /* KuranViewController.swift */; };
+		E4ADD0B62AD17F8C006AF3BE /* KuranInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0AF2AD17F8C006AF3BE /* KuranInteractor.swift */; };
+		E4ADD0B72AD17F8C006AF3BE /* KuranConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0B02AD17F8C006AF3BE /* KuranConfigurator.swift */; };
+		E4ADD0B92AD1851A006AF3BE /* KuranCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0B82AD1851A006AF3BE /* KuranCell.swift */; };
+		E4ADD0BB2AD185D6006AF3BE /* KuranController + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0BA2AD185D6006AF3BE /* KuranController + UITableViewDataSource.swift */; };
+		E4ADD0BD2AD185ED006AF3BE /* KuranController + UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD0BC2AD185ED006AF3BE /* KuranController + UITableViewDelegate.swift */; };
 		E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */; };
 		E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */; };
 		E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */; };
@@ -268,6 +278,16 @@
 		E48993912A8D14BD002274C9 /* LanguagesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesConfigurator.swift; sourceTree = "<group>"; };
 		E48993992A8F7AAC002274C9 /* LanguageTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTypeCell.swift; sourceTree = "<group>"; };
 		E489939B2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		E4ADD0AA2AD17F8C006AF3BE /* KuranPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranPresenter.swift; sourceTree = "<group>"; };
+		E4ADD0AB2AD17F8C006AF3BE /* KuranWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranWorker.swift; sourceTree = "<group>"; };
+		E4ADD0AC2AD17F8C006AF3BE /* KuranRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranRouter.swift; sourceTree = "<group>"; };
+		E4ADD0AD2AD17F8C006AF3BE /* KuranModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranModels.swift; sourceTree = "<group>"; };
+		E4ADD0AE2AD17F8C006AF3BE /* KuranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranViewController.swift; sourceTree = "<group>"; };
+		E4ADD0AF2AD17F8C006AF3BE /* KuranInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranInteractor.swift; sourceTree = "<group>"; };
+		E4ADD0B02AD17F8C006AF3BE /* KuranConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranConfigurator.swift; sourceTree = "<group>"; };
+		E4ADD0B82AD1851A006AF3BE /* KuranCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuranCell.swift; sourceTree = "<group>"; };
+		E4ADD0BA2AD185D6006AF3BE /* KuranController + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KuranController + UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		E4ADD0BC2AD185ED006AF3BE /* KuranController + UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KuranController + UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AE5EF12A921703007F4140 /* SettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AF15142A9C7786004E31C8 /* NamazPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazPresenter.swift; sourceTree = "<group>"; };
@@ -525,6 +545,7 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E4ADD0A92AD17F5A006AF3BE /* Kuran */,
 				68D8F7A02AA867CB00CA5B5F /* IslamicHolidays */,
 				E4AF15132A9C7693004E31C8 /* StudyNamaz */,
 				9F2E97B62AA6244D00AD1FC6 /* MonthTable */,
@@ -700,6 +721,23 @@
 				E4AE5EF32A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift */,
 			);
 			path = LanguagesScreen;
+			sourceTree = "<group>";
+		};
+		E4ADD0A92AD17F5A006AF3BE /* Kuran */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADD0AA2AD17F8C006AF3BE /* KuranPresenter.swift */,
+				E4ADD0AB2AD17F8C006AF3BE /* KuranWorker.swift */,
+				E4ADD0AC2AD17F8C006AF3BE /* KuranRouter.swift */,
+				E4ADD0AD2AD17F8C006AF3BE /* KuranModels.swift */,
+				E4ADD0AE2AD17F8C006AF3BE /* KuranViewController.swift */,
+				E4ADD0AF2AD17F8C006AF3BE /* KuranInteractor.swift */,
+				E4ADD0B02AD17F8C006AF3BE /* KuranConfigurator.swift */,
+				E4ADD0B82AD1851A006AF3BE /* KuranCell.swift */,
+				E4ADD0BA2AD185D6006AF3BE /* KuranController + UITableViewDataSource.swift */,
+				E4ADD0BC2AD185ED006AF3BE /* KuranController + UITableViewDelegate.swift */,
+			);
+			path = Kuran;
 			sourceTree = "<group>";
 		};
 		E4AF15132A9C7693004E31C8 /* StudyNamaz */ = {
@@ -948,6 +986,7 @@
 				E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */,
 				9F2E97C92AA6244D00AD1FC6 /* MonthTableWorker.swift in Sources */,
 				E48993962A8D14BD002274C9 /* LanguagesViewController.swift in Sources */,
+				E4ADD0B52AD17F8C006AF3BE /* KuranViewController.swift in Sources */,
 				68D8F7AE2AA867EF00CA5B5F /* HolidaysConfigurator.swift in Sources */,
 				E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */,
 				9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */,
@@ -964,6 +1003,7 @@
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */,
 				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
+				E4ADD0BD2AD185ED006AF3BE /* KuranController + UITableViewDelegate.swift in Sources */,
 				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
 				E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */,
 				E4AF15252A9C7F4D004E31C8 /* NamazContoller + UITableViewDataSource.swift in Sources */,
@@ -1005,7 +1045,9 @@
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
 				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
+				E4ADD0B72AD17F8C006AF3BE /* KuranConfigurator.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
+				E4ADD0B32AD17F8C006AF3BE /* KuranRouter.swift in Sources */,
 				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
@@ -1015,16 +1057,19 @@
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
 				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
+				E4ADD0B62AD17F8C006AF3BE /* KuranInteractor.swift in Sources */,
 				68D8F7B42AA8A62300CA5B5F /* MonthSectionHeader.swift in Sources */,
 				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
+				E4ADD0BB2AD185D6006AF3BE /* KuranController + UITableViewDataSource.swift in Sources */,
 				68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */,
 				9F2E97D02AA6244D00AD1FC6 /* MonthTableViewController.swift in Sources */,
 				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
 				68D8F7AC2AA867EF00CA5B5F /* HolidaysViewController.swift in Sources */,
 				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
+				E4ADD0B92AD1851A006AF3BE /* KuranCell.swift in Sources */,
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
@@ -1034,6 +1079,7 @@
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
 				9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */,
+				E4ADD0B22AD17F8C006AF3BE /* KuranWorker.swift in Sources */,
 				68D8F7AB2AA867EF00CA5B5F /* HolidaysModels.swift in Sources */,
 				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
 				9F2E97CE2AA6244D00AD1FC6 /* MonthTableModels.swift in Sources */,
@@ -1044,10 +1090,12 @@
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
 				9F2E97D32AA6248800AD1FC6 /* Date + Extension.swift in Sources */,
+				E4ADD0B12AD17F8C006AF3BE /* KuranPresenter.swift in Sources */,
 				9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */,
 				68D8F7B12AA86C9100CA5B5F /* HolidayCell.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
 				9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */,
+				E4ADD0B42AD17F8C006AF3BE /* KuranModels.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
 				9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */,
 				9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */,
