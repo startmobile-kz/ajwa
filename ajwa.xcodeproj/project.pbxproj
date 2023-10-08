@@ -49,8 +49,11 @@
 		8C9A15552AAC5AF100B25309 /* FontSettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A154E2AAC5AF100B25309 /* FontSettingsInteractor.swift */; };
 		8C9A15562AAC5AF100B25309 /* FontSettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A154F2AAC5AF100B25309 /* FontSettingsConfigurator.swift */; };
 		8C9A15582AAC786800B25309 /* FontSettingsTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15572AAC786800B25309 /* FontSettingsTypeCell.swift */; };
-		8C9A155A2AAC78C100B25309 /* FontSettingsViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15592AAC78C100B25309 /* FontSettingsViewController + TableViewDataSource.swift */; };
-		8C9A155C2AAC78D700B25309 /* FontSettingsViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A155B2AAC78D700B25309 /* FontSettingsViewController + TableViewDelegate.swift */; };
+		8CC4B4682AD1AB2100FF08AB /* FontSizeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B4672AD1AB2100FF08AB /* FontSizeSliderView.swift */; };
+		8CC4B46A2AD1AC9500FF08AB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B4692AD1AC9500FF08AB /* UIView+Extension.swift */; };
+		8CC4B46F2AD31D6C00FF08AB /* InRussianButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B46E2AD31D6C00FF08AB /* InRussianButton.swift */; };
+		8CC4B4712AD3212800FF08AB /* InKazakhButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B4702AD3212800FF08AB /* InKazakhButton.swift */; };
+		8CC4B4732AD322B800FF08AB /* InArabicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B4722AD322B800FF08AB /* InArabicButton.swift */; };
 		9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
 		9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
@@ -194,8 +197,11 @@
 		8C9A154E2AAC5AF100B25309 /* FontSettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingsInteractor.swift; sourceTree = "<group>"; };
 		8C9A154F2AAC5AF100B25309 /* FontSettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingsConfigurator.swift; sourceTree = "<group>"; };
 		8C9A15572AAC786800B25309 /* FontSettingsTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingsTypeCell.swift; sourceTree = "<group>"; };
-		8C9A15592AAC78C100B25309 /* FontSettingsViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontSettingsViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
-		8C9A155B2AAC78D700B25309 /* FontSettingsViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontSettingsViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
+		8CC4B4672AD1AB2100FF08AB /* FontSizeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeSliderView.swift; sourceTree = "<group>"; };
+		8CC4B4692AD1AC9500FF08AB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8CC4B46E2AD31D6C00FF08AB /* InRussianButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InRussianButton.swift; sourceTree = "<group>"; };
+		8CC4B4702AD3212800FF08AB /* InKazakhButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InKazakhButton.swift; sourceTree = "<group>"; };
+		8CC4B4722AD322B800FF08AB /* InArabicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InArabicButton.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -398,6 +404,8 @@
 		8C9A15482AAC5ADC00B25309 /* FontSettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8CC4B46B2AD1AD9B00FF08AB /* Cells */,
+				8CC4B4662AD1AB1000FF08AB /* CustomViews */,
 				8C9A15492AAC5AF100B25309 /* FontSettingsPresenter.swift */,
 				8C9A154A2AAC5AF100B25309 /* FontSettingsWorker.swift */,
 				8C9A154B2AAC5AF100B25309 /* FontSettingsRouter.swift */,
@@ -405,11 +413,27 @@
 				8C9A154D2AAC5AF100B25309 /* FontSettingsViewController.swift */,
 				8C9A154E2AAC5AF100B25309 /* FontSettingsInteractor.swift */,
 				8C9A154F2AAC5AF100B25309 /* FontSettingsConfigurator.swift */,
-				8C9A15572AAC786800B25309 /* FontSettingsTypeCell.swift */,
-				8C9A15592AAC78C100B25309 /* FontSettingsViewController + TableViewDataSource.swift */,
-				8C9A155B2AAC78D700B25309 /* FontSettingsViewController + TableViewDelegate.swift */,
 			);
 			path = FontSettingsScreen;
+			sourceTree = "<group>";
+		};
+		8CC4B4662AD1AB1000FF08AB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8CC4B4672AD1AB2100FF08AB /* FontSizeSliderView.swift */,
+				8CC4B46E2AD31D6C00FF08AB /* InRussianButton.swift */,
+				8CC4B4702AD3212800FF08AB /* InKazakhButton.swift */,
+				8CC4B4722AD322B800FF08AB /* InArabicButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8CC4B46B2AD1AD9B00FF08AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8C9A15572AAC786800B25309 /* FontSettingsTypeCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -539,6 +563,7 @@
 				9F2E97D22AA6248800AD1FC6 /* Date + Extension.swift */,
 				B2E133922A88BC9A008A46E0 /* Int+Extension.swift */,
 				B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */,
+				8CC4B4692AD1AC9500FF08AB /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -939,6 +964,7 @@
 				9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */,
 				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
 				E437F95C2A8B515C00D90F3B /* FooterCell.swift in Sources */,
+				8CC4B46A2AD1AC9500FF08AB /* UIView+Extension.swift in Sources */,
 				E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */,
 				E437F9562A8B510A00D90F3B /* ShareAndRateCell.swift in Sources */,
 				E437F9622A8B521F00D90F3B /* FontSizeCell.swift in Sources */,
@@ -959,8 +985,10 @@
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
 				E4AF151F2A9C7786004E31C8 /* NamazViewController.swift in Sources */,
+				8CC4B46F2AD31D6C00FF08AB /* InRussianButton.swift in Sources */,
 				E4AF151C2A9C7786004E31C8 /* NamazWorker.swift in Sources */,
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
+				8CC4B4712AD3212800FF08AB /* InKazakhButton.swift in Sources */,
 				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
 				68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */,
 				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,
@@ -974,9 +1002,9 @@
 				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
 				681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */,
-				8C9A155C2AAC78D700B25309 /* FontSettingsViewController + TableViewDelegate.swift in Sources */,
 				E45C02752A9F999200E60E2C /* NamazController + UITableViewDelegate.swift in Sources */,
 				074E7B532A90BAC500D9F4C6 /* RegistrationSceneInteractor.swift in Sources */,
+				8CC4B4682AD1AB2100FF08AB /* FontSizeSliderView.swift in Sources */,
 				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
 				E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */,
@@ -993,13 +1021,13 @@
 				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
 				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
+				8CC4B4732AD322B800FF08AB /* InArabicButton.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
 				68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */,
 				68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
-				8C9A155A2AAC78C100B25309 /* FontSettingsViewController + TableViewDataSource.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
 				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
 				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,

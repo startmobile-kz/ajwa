@@ -13,7 +13,7 @@ import SnapKit
 final class FontSettingsTypeCell: UITableViewCell {
     static let identifier = "FontSettingsTypeCell"
 
-    // MARK: - Outlets
+    // MARK: - UI
 
     private lazy var languageLabel: UILabel = {
         let label = UILabel()
@@ -28,7 +28,7 @@ final class FontSettingsTypeCell: UITableViewCell {
         return label
     }()
 
-    // MARK: - Lifecycle
+    // MARK: - Init
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,26 +42,25 @@ final class FontSettingsTypeCell: UITableViewCell {
 
     // MARK: - Setup
 
-    public func configure(with model: FontSettings.ModelType.ViewModel) {
-        languageLabel.text = model.fontTitle
-        scriptLabel.text = model.fontDescription
-    }
-
     private func setupHierarchy() {
         contentView.addSubview(languageLabel)
         contentView.addSubview(scriptLabel)
-//        contentView.clipsToBounds = true
     }
 
     private func setupLayout() {
-        languageLabel.snp.makeConstraints{ make in
-            make.leading.equalToSuperview().offset(16)
-            make.centerY.equalToSuperview()
+        languageLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(16)
+            $0.centerY.equalToSuperview()
         }
 
         scriptLabel.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-16)
             $0.centerY.equalToSuperview()
         }
+    }
+
+    public func configure(with model: FontSettings.ModelType.ViewModel) {
+        languageLabel.text = model.languageTitle
+        scriptLabel.text = model.fontTranscription
     }
 }

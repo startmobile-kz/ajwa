@@ -38,6 +38,7 @@ extension SettingsViewController: UITableViewDelegate{
         case .fontSizeCell:
             let fontSizeViewController = FontSettingsViewController()
             fontSizeViewController.modalPresentationStyle = .formSheet
+//            let defaultHeight: CGFloat = 473
             let sheet = fontSizeViewController.sheetPresentationController
             let fraction = UISheetPresentationController.Detent.custom { context in
                 473

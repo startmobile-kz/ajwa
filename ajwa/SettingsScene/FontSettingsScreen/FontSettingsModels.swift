@@ -24,8 +24,8 @@ enum FontSettings {
         }
 
         struct ViewModel {
-            let fontTitle: String
-            let fontDescription: String
+            let languageTitle: String
+            let fontTranscription: String
         }
     }
 

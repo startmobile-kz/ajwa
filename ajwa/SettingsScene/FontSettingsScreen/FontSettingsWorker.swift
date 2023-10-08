@@ -16,9 +16,9 @@ final class FontSettingsWorker {
     
     func fetchFonts() -> [FontSettings.ModelType.ViewModel] {
         let fonts = [
-            FontSettings.ModelType.ViewModel(fontTitle: "На русском", fontDescription: "А а"),
-            FontSettings.ModelType.ViewModel(fontTitle: "На казахском", fontDescription: "Ә ә"),
-            FontSettings.ModelType.ViewModel(fontTitle: "На арабском", fontDescription: "ب ا ")
+            FontSettings.ModelType.ViewModel(languageTitle: "На русском", fontTranscription: "А а"),
+            FontSettings.ModelType.ViewModel(languageTitle: "На казахском", fontTranscription: "Ә ә"),
+            FontSettings.ModelType.ViewModel(languageTitle: "На арабском", fontTranscription: "ب ا ")
         ]
         return fonts
     }
