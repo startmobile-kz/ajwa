@@ -22,7 +22,7 @@ class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
     var router: (NSObjectProtocol & PrayerTimeRoutingLogic & PrayerTimeDataPassing)?
     var prayers = [PrayerTimes.ModelType.ViewModel]()
 
-    // MARK: Outlets
+    // MARK: UI
     private lazy var detailLabel: UILabel = {
         let label = UILabel()
         label.text = "Выберите молитву, чтобы вручную отрегулировать ее время начало"
@@ -42,8 +42,16 @@ class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
         return tableView
     }()
 
-    // MARK: View lifecycle
+    private lazy var saveButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 12
+        button.titleLabel?.font = AppFont.semibold.s16()
+        button.backgroundColor = AppColor.blue.uiColor
+        button.setTitle("Сохранить", for: .normal)
+        return button
+    }()
 
+    // MARK: Init
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         PrayerTimeConfigurator.shared.configure(viewController: self)
@@ -54,25 +62,22 @@ class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
         PrayerTimeConfigurator.shared.configure(viewController: self)
     }
 
+    // MARK: - Lifecycle
     override func viewDidLoad(){
         super.viewDidLoad()
         setupView()
-        setupViews()
         setupConstraints()
         getPrayersData()
     }
 
     // MARK: - Setup
-
     private func setupView() {
         title = "Время молитв"
-        //TODO: fix background color
         view.backgroundColor = .secondarySystemBackground
-    }
 
-    private func setupViews() {
         view.addSubview(detailLabel)
         view.addSubview(tableView)
+        view.addSubview(saveButton)
     }
 
     private func setupConstraints() {
@@ -88,10 +93,16 @@ class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
         }
+
+        saveButton.snp.makeConstraints {
+            $0.height.equalTo(44)
+            $0.leading.equalTo(20)
+            $0.trailing.equalTo(-20)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
 
     // MARK: Actions
-
     func getPrayersData() {
         interactor?.getPrayers()
     }
@@ -102,7 +113,6 @@ class PrayerTimeViewController: UIViewController, PrayerTimeDisplayLogic{
     }
 }
 
-// MARK: - Extensions
 // MARK: - UITableViewDataSource
 extension PrayerTimeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,45 +123,38 @@ extension PrayerTimeViewController: UITableViewDataSource {
         prayers.count
     }
 
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        8
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = prayers[indexPath.section]
         let cell: PrayerTimeCell = tableView.dequeueReusableCell()
         cell.configure(with: model)
         cell.selectionStyle = .none
-        cell.layer.cornerRadius = 26
+        cell.layer.cornerRadius = 16
         return cell
     }
-
-
 }
 
 // MARK: - UITableViewDelegate
 extension PrayerTimeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        48
+        50
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        let cornerRadius = 16
-        var corners: UIRectCorner = []
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        UIView()
+    }
 
-        if indexPath.row == 0
-        {
-            corners.update(with: .topLeft)
-            corners.update(with: .topRight)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let minutesSliderVC = MinutesSliderViewController()
+        minutesSliderVC.modalPresentationStyle = .formSheet
+        let sheet = minutesSliderVC.sheetPresentationController
+        let fraction = UISheetPresentationController.Detent.custom { context in
+            140
         }
-
-        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1
-        {
-            corners.update(with: .bottomLeft)
-            corners.update(with: .bottomRight)
-        }
-
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: cell.bounds,
-                                      byRoundingCorners: corners,
-                                      cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
-        cell.layer.mask = maskLayer
+        sheet?.detents = [fraction]
+        navigationController?.present(minutesSliderVC, animated: true)
     }
 }

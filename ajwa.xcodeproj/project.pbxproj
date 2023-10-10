@@ -49,6 +49,7 @@
 		8C9A157C2AAE1B5B00B25309 /* PrayerTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */; };
 		8C9A157D2AAE1B5B00B25309 /* PrayerTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */; };
 		8C9A157E2AAE1B5B00B25309 /* PrayerTimeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */; };
+		8CC4B4952AD45C4800FF08AB /* MinutesSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4B4942AD45C4800FF08AB /* MinutesSliderViewController.swift */; };
 		9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
 		9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
@@ -192,6 +193,7 @@
 		8C9A15752AAE1B5B00B25309 /* PrayerTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeViewController.swift; sourceTree = "<group>"; };
 		8C9A15762AAE1B5B00B25309 /* PrayerTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeInteractor.swift; sourceTree = "<group>"; };
 		8C9A15772AAE1B5B00B25309 /* PrayerTimeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeConfigurator.swift; sourceTree = "<group>"; };
+		8CC4B4942AD45C4800FF08AB /* MinutesSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesSliderViewController.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		8C9A15702AAE1B1A00B25309 /* PrayerTimeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8CC4B4962AD45EBD00FF08AB /* CustomViews */,
 				8C9A15712AAE1B5B00B25309 /* PrayerTimePresenter.swift */,
 				8C9A15722AAE1B5B00B25309 /* PrayerTimeWorker.swift */,
 				8C9A15732AAE1B5B00B25309 /* PrayerTimeRouter.swift */,
@@ -404,6 +407,14 @@
 				8C61011A2ACAD8E300CC2D88 /* PrayerTimeCell.swift */,
 			);
 			path = PrayerTimeScreen;
+			sourceTree = "<group>";
+		};
+		8CC4B4962AD45EBD00FF08AB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8CC4B4942AD45C4800FF08AB /* MinutesSliderViewController.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -1030,6 +1041,7 @@
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
 				8C9A157A2AAE1B5B00B25309 /* PrayerTimeRouter.swift in Sources */,
 				9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */,
+				8CC4B4952AD45C4800FF08AB /* MinutesSliderViewController.swift in Sources */,
 				9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
