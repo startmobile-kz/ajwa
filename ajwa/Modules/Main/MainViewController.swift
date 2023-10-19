@@ -62,31 +62,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var allPrayersView = AllPrayersView()
     
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(
-            SacredEventCell.self,
-            forCellWithReuseIdentifier: SacredEventCell.reuseID
-        )
-        collectionView.backgroundColor = .clear
-        collectionView.alwaysBounceVertical = false
-        return collectionView
-    }()
-    
-    private lazy var pageControl = MainPageControl(amountOfPages: 5)
-    
     private lazy var bottomView = MainBottomView()
-    
-    private lazy var startButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Бастау", for: .normal)
-        button.setTitleColor(AppColor.white.uiColor, for: .normal)
-        button.titleLabel?.font = AppFont.regular.s14()
-        button.backgroundColor = AppColor.gray208.uiColor
-        return button
-    }()
     
     // MARK: - Lifecycle
     
@@ -97,18 +73,12 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         setupConstraints()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        startButton.layer.cornerRadius = startButton.frame.height / 2
-    }
-    
     // MARK: - SetupViews
     
     private func setupViews() {
         view.backgroundColor = AppColor.background.uiColor
         
-        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, collectionView, pageControl, bottomView, startButton].forEach {
+        [headerView, firstMosqueImageView, secondMosqueImageView, particularNamazView, remainingTimeView, allPrayersView, bottomView].forEach {
             contentView.addSubview($0)
         }
         
@@ -163,77 +133,25 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         }
         
         remainingTimeView.snp.makeConstraints { make in
-            make.top.equalTo(particularNamazView.snp.bottom).offset(12)
-            make.leading.equalTo(headerView)
+            make.top.equalTo(particularNamazView)
+            make.trailing.equalTo(headerView)
             make.width.equalTo(view.frame.width * prayerInfoViewsAdaptivePercentage)
             make.height.equalTo(164)
         }
         
         allPrayersView.snp.makeConstraints { make in
-            make.top.equalTo(particularNamazView)
-            make.trailing.equalTo(headerView)
-            make.bottom.equalTo(remainingTimeView)
-            make.width.equalTo(view.frame.width * allPrayersViewAdaptivePercentage)
-        }
-        
-        collectionView.snp.makeConstraints { make in
-            make.top.equalTo(allPrayersView.snp.bottom).offset(12)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(120)
-        }
-        
-        pageControl.snp.makeConstraints { make in
-            make.top.equalTo(collectionView.snp.bottom).offset(6)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(4)
+            make.top.equalTo(particularNamazView.snp.bottom).offset(16)
+            make.leading.trailing.equalTo(headerView)
+            make.height.equalTo(347)
         }
         
         bottomView.snp.makeConstraints { make in
-            make.top.equalTo(pageControl.snp.bottom).offset(51)
+            make.top.equalTo(allPrayersView.snp.bottom).offset(51)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(54)
             make.bottom.equalToSuperview().offset(-29)
         }
-        
-        startButton.snp.makeConstraints { make in
-            make.centerY.equalTo(bottomView)
-            make.centerX.equalToSuperview()
-            make.size.equalTo(70)
-        }
-    }
-    
-    private func createLayout() -> UICollectionViewCompositionalLayout {
-        // Item
-        
-        let item = NSCollectionLayoutItem(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(1)
-            )
-        )
-        
-        // Group
-        
-        let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .absolute(120)
-            ),
-            subitems: [item]
-        )
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
-        
-        // Section
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.visibleItemsInvalidationHandler = { [weak self] visibleItems, point, environment in
-            if let lastItem = visibleItems.last?.indexPath.row {
-                self?.pageControl.changeCurrentPage(to: lastItem + 1)
-            }
-        }
-        return UICollectionViewCompositionalLayout(section: section)
     }
     
     func doSomething() {
