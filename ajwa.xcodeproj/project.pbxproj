@@ -35,6 +35,7 @@
 		681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */; };
 		681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD02A92585000382F1B /* ParticularNamazView.swift */; };
 		681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD22A92664000382F1B /* RemainingTimeView.swift */; };
+		684288BA2AE13B18007D572B /* PrayerTimeSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684288B92AE13B18007D572B /* PrayerTimeSoundView.swift */; };
 		68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */; };
 		68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B102A9C8DC200D57C96 /* MainPageControl.swift */; };
 		68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B122A9CAEA200D57C96 /* MainBottomView.swift */; };
@@ -187,6 +188,7 @@
 		681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		681ECDD02A92585000382F1B /* ParticularNamazView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularNamazView.swift; sourceTree = "<group>"; };
 		681ECDD22A92664000382F1B /* RemainingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeView.swift; sourceTree = "<group>"; };
+		684288B92AE13B18007D572B /* PrayerTimeSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeSoundView.swift; sourceTree = "<group>"; };
 		68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacredEventCell.swift; sourceTree = "<group>"; };
 		68C79B102A9C8DC200D57C96 /* MainPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageControl.swift; sourceTree = "<group>"; };
 		68C79B122A9CAEA200D57C96 /* MainBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomView.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */,
 				68C79B102A9C8DC200D57C96 /* MainPageControl.swift */,
 				68C79B122A9CAEA200D57C96 /* MainBottomView.swift */,
+				684288B92AE13B18007D572B /* PrayerTimeSoundView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1058,6 +1061,7 @@
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
 				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
+				684288BA2AE13B18007D572B /* PrayerTimeSoundView.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
 				8C4763FF2AD681150075A3AE /* PrayerTimeModels.swift in Sources */,
 				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
