@@ -14,12 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let holidaysViewController = HolidaysViewController()
-        HolidaysConfigurator.shared.configure(
-            viewController: holidaysViewController
+        let mainViewController = MainViewController()
+        MainConfigurator.shared.configure(
+            viewController: mainViewController
         )
         
-        let navigationController = UINavigationController(rootViewController: holidaysViewController)
+        
+        
+        let navigationController = UINavigationController(rootViewController: mainViewController)
         setupNavBar(navigationController)
         
         window?.rootViewController = navigationController
