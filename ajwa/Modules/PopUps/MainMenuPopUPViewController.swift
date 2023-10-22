@@ -43,10 +43,14 @@ final class MainMenuPopUPViewController: UIViewController, MainMenuPopUPDisplayL
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         getPrayerData()
         setupHiearchy()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presentationController?.containerView?.backgroundColor = AppColor.white.uiColor
     }
     
     //    MARK: - SetupHiearchy
