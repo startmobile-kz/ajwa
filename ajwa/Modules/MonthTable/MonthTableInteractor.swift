@@ -12,30 +12,31 @@
 
 import UIKit
 
-protocol MonthTableBusinessLogic
-{
-  func doSomething(request: MonthTable.Something.Request)
+protocol MonthTableBusinessLogic {
+    func loadData()
 }
 
-protocol MonthTableDataStore
-{
+protocol MonthTableDataStore {
   //var name: String { get set }
 }
 
-class MonthTableInteractor: MonthTableBusinessLogic, MonthTableDataStore
-{
+class MonthTableInteractor: MonthTableBusinessLogic, MonthTableDataStore {
   var presenter: MonthTablePresentationLogic?
   var worker: MonthTableWorker?
-  //var name: String = ""
+  var data: ZeekrModel?
   
   // MARK: Do something
   
-  func doSomething(request: MonthTable.Something.Request)
-  {
-    worker = MonthTableWorker()
-    worker?.doSomeWork()
-    
-    let response = MonthTable.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func loadData() {
+        guard let url = URL(string: "https://api.muftyat.kz/prayer-times/2022/51.133333/71.433333?format=json") else { fatalError("Invalid URL") }
+        
+        NetworkManager.shared.getRequest(fromURL: url) { (result: Result<ZeekrModel, Error>) in
+            switch result {
+            case .success(let data):
+                self.presenter?.transformData(data: data)
+            case .failure(let error):
+                print("we got error description: \(error.localizedDescription)")
+            }
+        }
+    }
 }

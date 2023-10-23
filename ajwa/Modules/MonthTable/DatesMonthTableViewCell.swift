@@ -69,4 +69,24 @@ class DatesMonthTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    override func prepareForReuse() {
+//        rowNumber.text = nil
+//        label1.text = nil
+//        label2.text = nil
+//        label3.text = nil
+//        label4.text = nil
+//        label5.text = nil
+//        label6.text = nil
+//    }
+    
+    func configure(index: Int, model: ResultModel) {
+        rowNumber.text = "\(index)"
+        label1.text = model.fajr
+        label2.text = model.sunrise
+        label3.text = model.dhuhr
+        label4.text = model.asr
+        label5.text = model.maghrib
+        label6.text = model.isha
+    }
+    
 }

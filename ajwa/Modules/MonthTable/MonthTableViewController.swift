@@ -13,14 +13,18 @@
 import UIKit
 
 protocol MonthTableDisplayLogic: AnyObject {
-  func displaySomething(viewModel: MonthTable.Something.ViewModel)
+    func updateInterface(data: [MonthSection: [ResultModel]])
 }
 
 class MonthTableViewController: UIViewController, MonthTableDisplayLogic {
+    
   var interactor: MonthTableBusinessLogic?
   var router: (NSObjectProtocol & MonthTableRoutingLogic & MonthTableDataPassing)?
     
     let topView = TopView()
+    var data: ZeekrModel?
+    var transformedData: [MonthSection: [ResultModel]] = [:]
+    
     private lazy var tableView: UITableView = {
        let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -36,116 +40,154 @@ class MonthTableViewController: UIViewController, MonthTableDisplayLogic {
     }()
     
     let currentDate = Date.getCurrentDate()
+    
+    private let currentMonthDays: Int = {
+        let date = Date()
+        let days = date.getDaysInMonth()
+        return days
+    }()
+    
+    let currentMonth = Date.getCurrentMonth()
+    let currentMonthTitle = Date.getCurrentMonthTitle()
   
   // MARK: View lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
       
-      print(currentDate)
-      title = "Таблица на месяц"
-      view.backgroundColor = AppColor.background.uiColor
-      
-      view.addSubview(topView)
-      view.addSubview(tableView)
-      
-      topView.snp.makeConstraints { make in
-          make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-          make.leading.equalTo(view.snp.leading).offset(20)
-          make.trailing.equalTo(view.snp.trailing).offset(-20)
-          make.height.equalTo(50)
-      }
-      
-      tableView.snp.makeConstraints { make in
-          make.top.equalTo(topView.snp.bottom).offset(10)
-          make.leading.equalTo(view.snp.leading).offset(20)
-          make.trailing.equalTo(view.snp.trailing).offset(-20)
-          make.bottom.equalTo(view.snp.bottom)
-      }
-      
-    doSomething()
-      
+    setupView()
+    setupConstraints()
+    viewLoaded()
   }
+    var dataTopView = ["Январь", "Февраль", "Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]
+    lazy var index = currentMonth
+    
+    @objc func leftArrowButtonPressed() {
+        if index > 0 {
+            index -= 1
+            topView.label.text = dataTopView[index]
+        }
+        print("left arrow \(index)")
+        
+    }
+    
+    @objc func rightArrowButtonPressed() {
+        if index < (dataTopView.count - 1) {
+            index += 1
+            topView.label.text = dataTopView[index]
+        }
+        print("right arrow \(index)")
+    }
+    
+    func updateInterface(data: [MonthSection: [ResultModel]]) {
+        self.transformedData = data
+        self.tableView.reloadData()
+    }
+    
+    func setupView() {
+        title = "Таблица на месяц"
+        topView.label.text = currentMonthTitle
+        view.backgroundColor = AppColor.background.uiColor
+        view.addSubview(topView)
+        view.addSubview(tableView)
+    }
+    
+    func setupConstraints() {
+        topView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
+            make.height.equalTo(50)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(10)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).offset(-20)
+            make.bottom.equalTo(view.snp.bottom)
+        }
+    }
   
   // MARK: Do something
   
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething() {
-    let request = MonthTable.Something.Request()
-    interactor?.doSomething(request: request)
+  func viewLoaded() {
+    interactor?.loadData()
   }
   
-  func displaySomething(viewModel: MonthTable.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
-    
 }
 
 extension MonthTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 31
+        return (currentMonthDays + 1)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+//        topView.label.text = currentMonthTitle
+        
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MonthTableViewCell.identifier, for: indexPath) as? MonthTableViewCell else { return UITableViewCell() }
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: DatesMonthTableViewCell.identifier, for: indexPath) as? DatesMonthTableViewCell else { return UITableViewCell() }
-            if indexPath.row < (Int(currentDate) ?? 0) {
-                cell.mainView.backgroundColor = AppColor.gray.uiColor
-                cell.rowNumber.textColor = AppColor.text.uiColor
-                cell.label1.textColor = AppColor.text.uiColor
-                cell.label2.textColor = AppColor.text.uiColor
-                cell.label3.textColor = AppColor.text.uiColor
-                cell.label4.textColor = AppColor.text.uiColor
-                cell.label5.textColor = AppColor.text.uiColor
-                cell.label6.textColor = AppColor.text.uiColor
-            } else {
-                cell.mainView.backgroundColor = AppColor.white.uiColor
-                cell.rowNumber.textColor = AppColor.black.uiColor
-                cell.label1.textColor = AppColor.black.uiColor
-                cell.label2.textColor = AppColor.black.uiColor
-                cell.label3.textColor = AppColor.black.uiColor
-                cell.label4.textColor = AppColor.black.uiColor
-                cell.label5.textColor = AppColor.black.uiColor
-                cell.label6.textColor = AppColor.black.uiColor
-            }
-            cell.rowNumber.text = "\(indexPath.row)"
-            cell.label1.text = "06:07"
-            cell.label2.text = "06:07"
-            cell.label3.text = "06:07"
-            cell.label4.text = "06:07"
-            cell.label5.text = "06:07"
-            cell.label6.text = "06:07"
-            return cell
         }
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DatesMonthTableViewCell.identifier, for: indexPath) as? DatesMonthTableViewCell else { return UITableViewCell() }
+        
+        if currentMonth == 1 {
+            if let model = transformedData[.january]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 2 {
+            if let model = transformedData[.february]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 3 {
+            if let model = transformedData[.march]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 4 {
+            if let model = transformedData[.april]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 5 {
+            if let model = transformedData[.may]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 6 {
+            if let model = transformedData[.june]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 7 {
+            if let model = transformedData[.july]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 8 {
+            if let model = transformedData[.august]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 9 {
+            if let model = transformedData[.september]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 10 {
+            if let model = transformedData[.october]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 11 {
+            if let model = transformedData[.november]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        } else if currentMonth == 12 {
+            if let model = transformedData[.december]?[indexPath.row - 1] {
+                cell.configure(index: indexPath.row, model: model)
+            }
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
 }
-//
-//import SwiftUI
-//
-//struct MonthTableProvider: PreviewProvider {
-//    static var previews: some View {
-//        ContainerView().edgesIgnoringSafeArea(.all)
-//    }
-//
-//    struct ContainerView: UIViewControllerRepresentable {
-//        
-//        let viewController = MonthTableViewController()
-//
-//        func makeUIViewController(context: UIViewControllerRepresentableContext<MonthTableProvider.ContainerView>) -> MonthTableViewController {
-//            return viewController
-//        }
-//
-//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-//
-//        }
-//    }
-//}
+

@@ -23,33 +23,33 @@ class TopView: UIView {
     lazy var leftArrowButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(AppImage.leftArrow.uiImage, for: .normal)
-        button.addTarget(self, action: #selector(leftArrowButtonPressed), for: .touchUpInside)
+        button.addTarget(nil, action: Selector(("leftArrowButtonPressed")), for: .touchUpInside)
         return button
     }()
     
     lazy var rightArrowButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(AppImage.rightArrow.uiImage, for: .normal)
-        button.addTarget(self, action: #selector(rightArrowButtonPressed), for: .touchUpInside)
+        button.addTarget(nil, action: Selector(("leftArrowButtonPressed")), for: .touchUpInside)
         return button
     }()
     
-    @objc func leftArrowButtonPressed() {
-        if index > 0 {
-            index -= 1
-            label.text = data[index]
-        }
-        print("left arrow \(index)")
-        
-    }
-    
-    @objc func rightArrowButtonPressed() {
-        if index < (data.count - 1) {
-            index += 1
-            label.text = data[index]
-        }
-        print("right arrow \(index)")
-    }
+//    @objc func leftArrowButtonPressed() {
+//        if index > 0 {
+//            index -= 1
+//            label.text = data[index]
+//        }
+//        print("left arrow \(index)")
+//        
+//    }
+//    
+//    @objc func rightArrowButtonPressed() {
+//        if index < (data.count - 1) {
+//            index += 1
+//            label.text = data[index]
+//        }
+//        print("right arrow \(index)")
+//    }
  
     override init(frame: CGRect) {
         super.init(frame: frame)
