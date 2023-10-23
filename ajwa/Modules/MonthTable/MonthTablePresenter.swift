@@ -31,12 +31,15 @@ protocol MonthTablePresentationLogic {
     func transformData(data: ZeekrModel?)
 }
 
-class MonthTablePresenter: MonthTablePresentationLogic {
+final class MonthTablePresenter: MonthTablePresentationLogic {
     
-  weak var viewController: MonthTableDisplayLogic?
+    //MARK: - Properties
+    
+    weak var viewController: MonthTableDisplayLogic?
     var filteredData: [MonthSection: [ResultModel]] = [:]
     let currentMonth = Date.getCurrentMonth()
-  // MARK: Do something
+  
+    //MARK: - Methods
   
     func transformData(data: ZeekrModel?) {
         if let data = data {

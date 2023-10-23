@@ -21,16 +21,24 @@ extension Date {
     
     static func getCurrentMonthTitle() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
+        dateFormatter.locale = Locale(identifier: "RU")
+        dateFormatter.dateFormat = "LLLL"
         return dateFormatter.string(from: Date())
     }
     
-    func getDaysInMonth() -> Int {
+//    func getDaysInMonth() -> Int {
+//        let calendar = Calendar.current
+//        let dateComponents = DateComponents(year: calendar.component(.year, from: self), month: calendar.component(.month, from: self))
+//        let date = calendar.date(from: dateComponents)!
+//        let range = calendar.range(of: .day, in: .month, for: date)!
+//        let numDays = range.count
+//        return numDays
+//    }
+    static func getDaysInMonth() -> Int {
         let calendar = Calendar.current
-        let dateComponents = DateComponents(year: calendar.component(.year, from: self), month: calendar.component(.month, from: self))
-        let date = calendar.date(from: dateComponents)!
-        let range = calendar.range(of: .day, in: .month, for: date)!
-        let numDays = range.count
-        return numDays
+        let date = Date()
+        let interval = calendar.dateInterval(of: .month, for: date)!
+        let days = calendar.dateComponents([.day], from: interval.start, to: interval.end).day!
+        return days
     }
 }

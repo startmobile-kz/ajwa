@@ -17,17 +17,20 @@ protocol MonthTableBusinessLogic {
 }
 
 protocol MonthTableDataStore {
-  //var name: String { get set }
+    
 }
 
-class MonthTableInteractor: MonthTableBusinessLogic, MonthTableDataStore {
+final class MonthTableInteractor: MonthTableBusinessLogic, MonthTableDataStore {
+    
+  //MARK: - Properties
+    
   var presenter: MonthTablePresentationLogic?
   var worker: MonthTableWorker?
   var data: ZeekrModel?
   
-  // MARK: Do something
+  // MARK: Methods
   
-    func loadData() {
+  func loadData() {
         guard let url = URL(string: "https://api.muftyat.kz/prayer-times/2022/51.133333/71.433333?format=json") else { fatalError("Invalid URL") }
         
         NetworkManager.shared.getRequest(fromURL: url) { (result: Result<ZeekrModel, Error>) in
