@@ -105,6 +105,14 @@
 		C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BDB0A02A868559009B9D5D /* AppImage.swift */; };
 		C8BDB0A32A8685BB009B9D5D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BDB0A22A8685BB009B9D5D /* AppColor.swift */; };
 		C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BDB0A52A868692009B9D5D /* Colors.xcassets */; };
+		C8C7FB322AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB312AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift */; };
+		C8C7FB342AE50D4B0071C4D9 /* MainMenuPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB332AE50D4B0071C4D9 /* MainMenuPopUpTableViewCell.swift */; };
+		C8C7FB362AE50D750071C4D9 /* MainMenuPopUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB352AE50D750071C4D9 /* MainMenuPopUpModel.swift */; };
+		C8C7FB382AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB372AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift */; };
+		C8C7FB3A2AE50DA80071C4D9 /* MainMenuPopUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB392AE50DA80071C4D9 /* MainMenuPopUpPresenter.swift */; };
+		C8C7FB3C2AE50DBD0071C4D9 /* MainMenuPopUPInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB3B2AE50DBD0071C4D9 /* MainMenuPopUPInteractor.swift */; };
+		C8C7FB3E2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7FB3D2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift */; };
+		C8C7FB412AE50DFD0071C4D9 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = C8C7FB402AE50DFD0071C4D9 /* PanModal */; };
 		E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F93F2A8B4F3E00D90F3B /* SettingsRouter.swift */; };
 		E437F9442A8B4F8F00D90F3B /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9432A8B4F8F00D90F3B /* SettingsCellViewModel.swift */; };
 		E437F9472A8B4FDD00D90F3B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E437F9462A8B4FDD00D90F3B /* SettingsPresenter.swift */; };
@@ -267,6 +275,13 @@
 		C8BDB0A02A868559009B9D5D /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
 		C8BDB0A22A8685BB009B9D5D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C8BDB0A52A868692009B9D5D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C8C7FB312AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUPViewController.swift; sourceTree = "<group>"; };
+		C8C7FB332AE50D4B0071C4D9 /* MainMenuPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUpTableViewCell.swift; sourceTree = "<group>"; };
+		C8C7FB352AE50D750071C4D9 /* MainMenuPopUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUpModel.swift; sourceTree = "<group>"; };
+		C8C7FB372AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUpWorker.swift; sourceTree = "<group>"; };
+		C8C7FB392AE50DA80071C4D9 /* MainMenuPopUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUpPresenter.swift; sourceTree = "<group>"; };
+		C8C7FB3B2AE50DBD0071C4D9 /* MainMenuPopUPInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUPInteractor.swift; sourceTree = "<group>"; };
+		C8C7FB3D2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUPConfigurator.swift; sourceTree = "<group>"; };
 		D5F6C7C00DB5514B8CBF708D /* Pods-ajwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.release.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.release.xcconfig"; sourceTree = "<group>"; };
 		E437F93F2A8B4F3E00D90F3B /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		E437F9432A8B4F8F00D90F3B /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
@@ -316,6 +331,7 @@
 				E4F176142A8269300022628A /* Wormholy in Frameworks */,
 				B2E133912A88B53E008A46E0 /* CHIOTPField in Frameworks */,
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
+				C8C7FB412AE50DFD0071C4D9 /* PanModal in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
 				3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */,
 				13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */,
@@ -586,6 +602,7 @@
 		B2E133852A88AED5008A46E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C86663272AE3C9F500A9B5B7 /* PopUps */,
 				68D8F7A02AA867CB00CA5B5F /* IslamicHolidays */,
 				E4AF15132A9C7693004E31C8 /* StudyNamaz */,
 				9F2E97B62AA6244D00AD1FC6 /* MonthTable */,
@@ -646,6 +663,20 @@
 				C8B48CFB2A8A567C00EDBCB6 /* SFProDisplay-Semibold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C86663272AE3C9F500A9B5B7 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				C8C7FB312AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift */,
+				C8C7FB332AE50D4B0071C4D9 /* MainMenuPopUpTableViewCell.swift */,
+				C8C7FB352AE50D750071C4D9 /* MainMenuPopUpModel.swift */,
+				C8C7FB372AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift */,
+				C8C7FB392AE50DA80071C4D9 /* MainMenuPopUpPresenter.swift */,
+				C8C7FB3B2AE50DBD0071C4D9 /* MainMenuPopUPInteractor.swift */,
+				C8C7FB3D2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift */,
+			);
+			path = PopUps;
 			sourceTree = "<group>";
 		};
 		C8BDB0A42A868673009B9D5D /* Resources */ = {
@@ -807,6 +838,7 @@
 				E4F176132A8269300022628A /* Wormholy */,
 				B2187AF72A83E65400C0FB82 /* Kingfisher */,
 				B2E133902A88B53E008A46E0 /* CHIOTPField */,
+				C8C7FB402AE50DFD0071C4D9 /* PanModal */,
 			);
 			productName = ajwa;
 			productReference = 9FBC53792A80F9CE00CE8ED7 /* ajwa.app */;
@@ -891,6 +923,7 @@
 				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B2E1338F2A88B53E008A46E0 /* XCRemoteSwiftPackageReference "CHIOTPField" */,
 				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen" */,
+				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -1042,6 +1075,7 @@
 				8C4763FE2AD681150075A3AE /* PrayerTimeRouter.swift in Sources */,
 				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
 				8C4764022AD681150075A3AE /* PrayerTimeConfigurator.swift in Sources */,
+				C8C7FB3E2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift in Sources */,
 				E437F95C2A8B515C00D90F3B /* FooterCell.swift in Sources */,
 				E437F9642A8B524300D90F3B /* NotificationAndSoundCell.swift in Sources */,
 				E437F9562A8B510A00D90F3B /* ShareAndRateCell.swift in Sources */,
@@ -1086,6 +1120,7 @@
 				9F2E97CD2AA6244D00AD1FC6 /* MonthTableInteractor.swift in Sources */,
 				07C3A5DD2A92257800CB64BD /* NameEntryScenePresenter.swift in Sources */,
 				E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */,
+				C8C7FB362AE50D750071C4D9 /* MainMenuPopUpModel.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
 				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
 				68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */,
@@ -1093,6 +1128,7 @@
 				9F2E97CC2AA6244D00AD1FC6 /* MonthTableRouter.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
 				E4AF15212A9C7786004E31C8 /* NamazConfigurator.swift in Sources */,
+				C8C7FB342AE50D4B0071C4D9 /* MainMenuPopUpTableViewCell.swift in Sources */,
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				8C4763FD2AD681150075A3AE /* PrayerTimeWorker.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
@@ -1115,9 +1151,11 @@
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */,
+				C8C7FB322AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift in Sources */,
 				9F2E97D02AA6244D00AD1FC6 /* MonthTableViewController.swift in Sources */,
 				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
 				68D8F7AC2AA867EF00CA5B5F /* HolidaysViewController.swift in Sources */,
+				C8C7FB382AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift in Sources */,
 				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
@@ -1125,7 +1163,9 @@
 				E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */,
 				9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */,
 				E437F9542A8B50EA00D90F3B /* ProfileCell.swift in Sources */,
+				C8C7FB3A2AE50DA80071C4D9 /* MainMenuPopUpPresenter.swift in Sources */,
 				E48993922A8D14BD002274C9 /* LanguagesPresenter.swift in Sources */,
+				C8C7FB3C2AE50DBD0071C4D9 /* MainMenuPopUPInteractor.swift in Sources */,
 				9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */,
 				68D8F7AB2AA867EF00CA5B5F /* HolidaysModels.swift in Sources */,
 				E48993972A8D14BD002274C9 /* LanguagesInteractor.swift in Sources */,
@@ -1538,6 +1578,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.7;
+			};
+		};
 		E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tadelv/Wormholy";
@@ -1568,6 +1616,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B2E1338F2A88B53E008A46E0 /* XCRemoteSwiftPackageReference "CHIOTPField" */;
 			productName = CHIOTPField;
+		};
+		C8C7FB402AE50DFD0071C4D9 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
 		};
 		E4F176132A8269300022628A /* Wormholy */ = {
 			isa = XCSwiftPackageProductDependency;
