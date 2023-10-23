@@ -24,7 +24,7 @@
 		07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */; };
 		09ECE9EE3CABB547D38E728F /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */; };
 		13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2430F9D284DB6DFF041872F /* Pods_ajwa.framework */; };
-		3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		3E2EF13F3D3716C515C6E0A3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		601420C52AE306A600A8519A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 601420C72AE306A600A8519A /* Localizable.strings */; };
 		601420CE2AE30AB400A8519A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420CD2AE30AB300A8519A /* Strings.swift */; };
 		681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDBF2A91E97E00382F1B /* MainPresenter.swift */; };
@@ -333,7 +333,7 @@
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				C8C7FB412AE50DFD0071C4D9 /* PanModal in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
-				3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */,
+				3E2EF13F3D3716C515C6E0A3 /* BuildFile in Frameworks */,
 				13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,8 +821,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FBC53A62A80F9D100CE8ED7 /* Build configuration list for PBXNativeTarget "ajwa" */;
 			buildPhases = (
-				601420C12AE302EE00A8519A /* SwiftGen */,
 				6657FC919CE07AB51125E425 /* [CP] Check Pods Manifest.lock */,
+				601420C12AE302EE00A8519A /* SwiftGen */,
 				9FBC53752A80F9CE00CE8ED7 /* Sources */,
 				9FBC53762A80F9CE00CE8ED7 /* Frameworks */,
 				9FBC53772A80F9CE00CE8ED7 /* Resources */,
@@ -920,10 +920,10 @@
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */,
-				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
 				B2E1338F2A88B53E008A46E0 /* XCRemoteSwiftPackageReference "CHIOTPField" */,
-				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen" */,
-				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */,
+				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */,
+				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -1546,7 +1546,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen" */ = {
+		601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:SwiftGen/SwiftGen.git";
 			requirement = {
@@ -1562,7 +1562,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1578,7 +1578,7 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -1609,7 +1609,7 @@
 		};
 		B2187AF72A83E65400C0FB82 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		B2E133902A88B53E008A46E0 /* CHIOTPField */ = {
@@ -1619,7 +1619,7 @@
 		};
 		C8C7FB402AE50DFD0071C4D9 /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */;
+			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */;
 			productName = PanModal;
 		};
 		E4F176132A8269300022628A /* Wormholy */ = {
