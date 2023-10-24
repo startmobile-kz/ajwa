@@ -333,7 +333,7 @@
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				C8C7FB412AE50DFD0071C4D9 /* PanModal in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
-				3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */,
+				3E2EF13F3D3716C515C6E0A3 /* BuildFile in Frameworks */,
 				13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +396,14 @@
 				6C1BFA310958F9E9295CBC9E /* Pods-ajwaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		601420CC2AE3094300A8519A /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				601420CD2AE30AB300A8519A /* Strings.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 		681ECDBE2A91E93D00382F1B /* Main */ = {
@@ -677,8 +685,10 @@
 		C8BDB0A42A868673009B9D5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				601420CC2AE3094300A8519A /* generated */,
 				9FBC53882A80F9D100CE8ED7 /* Assets.xcassets */,
 				C8BDB0A52A868692009B9D5D /* Colors.xcassets */,
+				601420C72AE306A600A8519A /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -815,6 +825,7 @@
 			buildConfigurationList = 9FBC53A62A80F9D100CE8ED7 /* Build configuration list for PBXNativeTarget "ajwa" */;
 			buildPhases = (
 				6657FC919CE07AB51125E425 /* [CP] Check Pods Manifest.lock */,
+				601420C12AE302EE00A8519A /* SwiftGen */,
 				9FBC53752A80F9CE00CE8ED7 /* Sources */,
 				9FBC53762A80F9CE00CE8ED7 /* Frameworks */,
 				9FBC53772A80F9CE00CE8ED7 /* Resources */,
@@ -904,15 +915,18 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				kk,
 			);
 			mainGroup = 9FBC53702A80F9CE00CE8ED7;
 			packageReferences = (
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */,
-				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
 				B2E1338F2A88B53E008A46E0 /* XCRemoteSwiftPackageReference "CHIOTPField" */,
-				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */,
+				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */,
+				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -935,6 +949,7 @@
 				9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */,
 				9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */,
 				C8B48CFC2A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */,
+				601420C52AE306A600A8519A /* Localizable.strings in Resources */,
 				C8B48CFD2A8A567C00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */,
 				C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */,
 			);
@@ -978,6 +993,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		601420C12AE302EE00A8519A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Build Phase  - Begin SwiftGen\"\n./runSwiftGen.sh\necho \"Build Phase - End SwiftGen\"\n";
 		};
 		6657FC919CE07AB51125E425 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1191,6 +1224,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		601420C72AE306A600A8519A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				601420C62AE306A600A8519A /* en */,
+				601420CB2AE307E600A8519A /* ru */,
+				601420D12AE3132200A8519A /* kk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9FBC538A2A80F9D100CE8ED7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1206,6 +1249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1267,6 +1311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1506,6 +1551,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SwiftGen/SwiftGen.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.2;
+			};
+		};
 		9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -1514,7 +1567,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1530,7 +1583,7 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -1561,7 +1614,7 @@
 		};
 		B2187AF72A83E65400C0FB82 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		B2E133902A88B53E008A46E0 /* CHIOTPField */ = {
@@ -1571,7 +1624,7 @@
 		};
 		C8C7FB402AE50DFD0071C4D9 /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */;
+			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */;
 			productName = PanModal;
 		};
 		E4F176132A8269300022628A /* Wormholy */ = {
