@@ -19,13 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController(rootViewController: LocationViewController())
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            navigationController.pushViewController(LocationViewController(), animated: true)
-        }
-        guard let _ = (scene as? UIWindowScene) else { return }
+        let holidaysViewController = MainMenuPopUPViewController()
+        
+        let navigationController = UINavigationController(rootViewController: holidaysViewController)
+        setupNavBar(navigationController)
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    func setupNavBar(_ navigationController: UINavigationController) {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = AppColor.white.uiColor
+        appearance.shadowColor = .clear
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
     }
 
 }

@@ -49,4 +49,7 @@ enum AppImage: String, AppImageProtocol {
     case ellipsis
     case search
     case expand
+    case calendar
+    case star
+    case paintedOverSettings
 }
