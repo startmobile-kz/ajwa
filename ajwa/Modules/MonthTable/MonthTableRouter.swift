@@ -12,49 +12,21 @@
 
 import UIKit
 
-@objc protocol MonthTableRoutingLogic
-{
+@objc protocol MonthTableRoutingLogic {
+    
   //func routeToSomewhere(segue: UIStoryboardSegue?)
+    
 }
 
-protocol MonthTableDataPassing
-{
+protocol MonthTableDataPassing {
+    
   var dataStore: MonthTableDataStore? { get }
+    
 }
 
-class MonthTableRouter: NSObject, MonthTableRoutingLogic, MonthTableDataPassing
-{
+class MonthTableRouter: NSObject, MonthTableRoutingLogic, MonthTableDataPassing {
+    
   weak var viewController: MonthTableViewController?
   var dataStore: MonthTableDataStore?
   
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: MonthTableViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: MonthTableDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
 }

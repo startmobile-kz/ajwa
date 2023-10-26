@@ -12,20 +12,66 @@
 
 import UIKit
 
-protocol MonthTablePresentationLogic
-{
-  func presentSomething(response: MonthTable.Something.Response)
+enum MonthSection {
+    case january
+    case february
+    case march
+    case april
+    case may
+    case june
+    case july
+    case august
+    case september
+    case october
+    case november
+    case december
 }
 
-class MonthTablePresenter: MonthTablePresentationLogic
-{
-  weak var viewController: MonthTableDisplayLogic?
+protocol MonthTablePresentationLogic {
+    func transformData(data: ZeekrModel?)
+}
+
+final class MonthTablePresenter: MonthTablePresentationLogic {
+    
+    //MARK: - Properties
+    
+    weak var viewController: MonthTableDisplayLogic?
+    var filteredData: [MonthSection: [ResultModel]] = [:]
+    let currentMonth = Date.getCurrentMonth()
   
-  // MARK: Do something
+    //MARK: - Methods
   
-  func presentSomething(response: MonthTable.Something.Response)
-  {
-    let viewModel = MonthTable.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    func transformData(data: ZeekrModel?) {
+        if let data = data {
+            let _ = data.result.map { model in
+                let date = model.date.split(separator: "-")[1]
+                if date == "01" {
+                    filteredData[.january, default: []].append(model)
+                } else if date == "02" {
+                    filteredData[.february, default: []].append(model)
+                } else if date == "03" {
+                    filteredData[.march, default: []].append(model)
+                } else if date == "04" {
+                    filteredData[.april, default: []].append(model)
+                } else if date == "05" {
+                    filteredData[.may, default: []].append(model)
+                } else if date == "06" {
+                    filteredData[.june, default: []].append(model)
+                } else if date == "07" {
+                    filteredData[.july, default: []].append(model)
+                } else if date == "08" {
+                    filteredData[.august, default: []].append(model)
+                } else if date == "09" {
+                    filteredData[.september, default: []].append(model)
+                } else if date == "10" {
+                    filteredData[.october, default: []].append(model)
+                } else if date == "11" {
+                    filteredData[.november, default: []].append(model)
+                } else if date == "12" {
+                    filteredData[.december, default: []].append(model)
+                }
+            }
+        }
+        viewController?.updateInterface(data: filteredData)
+    }
 }
