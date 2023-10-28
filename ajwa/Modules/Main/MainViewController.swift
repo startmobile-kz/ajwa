@@ -21,7 +21,8 @@ enum MainPageFigmaSizes {
     static let mosqueImageViewFigmaWidth: CGFloat = 141
     static let particularNamazViewFigmaWidth: CGFloat = 170
     static let remainingTimeViewFigmaWidth: CGFloat = 170
-    static let allPrayersViewFigmaWidth: CGFloat = 168
+    static let allPrayersViewFigmaWidth: CGFloat = 350
+    static let allPrayersViewFigmaHeight: CGFloat = 347
 }
 
 final class MainViewController: UIViewController, MainDisplayLogic {
@@ -92,7 +93,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     private func setupConstraints() {
         let mosqueImageAdaptivePercentage: CGFloat = MainPageFigmaSizes.mosqueImageViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
         let prayerInfoViewsAdaptivePercentage: CGFloat = MainPageFigmaSizes.particularNamazViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
-        let allPrayersViewAdaptivePercentage: CGFloat = MainPageFigmaSizes.allPrayersViewFigmaWidth / MainPageFigmaSizes.figmaScreenWidth
+        let allPrayersViewAdaptivePercentage: CGFloat = MainPageFigmaSizes.allPrayersViewFigmaHeight / MainPageFigmaSizes.figmaScreenWidth
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -141,8 +142,9 @@ final class MainViewController: UIViewController, MainDisplayLogic {
         
         allPrayersView.snp.makeConstraints { make in
             make.top.equalTo(particularNamazView.snp.bottom).offset(16)
-            make.leading.trailing.equalTo(headerView)
-            make.height.equalTo(347)
+            make.leading.equalTo(headerView)
+            make.trailing.equalTo(headerView)
+            make.height.equalTo(allPrayersViewAdaptivePercentage * view.frame.width)
         }
         
         bottomView.snp.makeConstraints { make in

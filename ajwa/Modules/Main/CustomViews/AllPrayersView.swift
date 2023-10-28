@@ -15,16 +15,18 @@ final class AllPrayersView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 43
+        stackView.spacing = 32
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
         return stackView
     }()
-    
-    private lazy var fajrPrayerView = PrayerSoundView(prayerName: .fajr)
-    private lazy var zuhrPrayerView = PrayerSoundView(prayerName: .zuhr)
-    private lazy var asrPrayerView = PrayerSoundView(prayerName: .asr)
-    private lazy var maghribPrayerView = PrayerSoundView(prayerName: .maghrib)
-    private lazy var ishaPrayerView = PrayerSoundView(prayerName: .isha)
-    
+
+    private lazy var fajrPrayerView = PrayerTimeSoundView(prayer: .fajr)
+    private lazy var zuhrPrayerView = PrayerTimeSoundView(prayer: .zuhr)
+    private lazy var asrPrayerView = PrayerTimeSoundView(prayer: .asr)
+    private lazy var maghribPrayerView = PrayerTimeSoundView(prayer: .maghrib)
+    private lazy var ishaPrayerView = PrayerTimeSoundView(prayer: .isha)
+//
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -48,11 +50,7 @@ final class AllPrayersView: UIView {
     private func setupViews() {
         backgroundColor = AppColor.white.uiColor
         
-        [fajrPrayerView,
-         zuhrPrayerView,
-         asrPrayerView,
-         maghribPrayerView,
-         ishaPrayerView].forEach {
+        [fajrPrayerView, zuhrPrayerView, asrPrayerView, maghribPrayerView, ishaPrayerView].forEach {
             stackView.addArrangedSubview($0)
         }
         
@@ -62,26 +60,16 @@ final class AllPrayersView: UIView {
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
-        [fajrPrayerView,
-         zuhrPrayerView,
-         asrPrayerView,
-         maghribPrayerView,
-         ishaPrayerView].forEach {
-            $0.snp.makeConstraints { make in
-                make.height.equalTo(24)
-            }
-        }
-        
         stackView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(24)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.bottom.equalToSuperview().offset(-24)
+            make.bottom.equalToSuperview().offset(-12)
         }
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 168, height: 340)
+        return CGSize(width: 350, height: 347)
     }
     
 }
