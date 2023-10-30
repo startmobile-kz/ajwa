@@ -24,7 +24,6 @@ enum Main {
             
         }
         struct ViewModel {
-            
         }
     }
 }

@@ -23,6 +23,14 @@ final class PrayerSoundView: UIView {
         label.numberOfLines = 0
         return label
     }()
+
+    private lazy var prayerTimeLabel: UILabel = {
+        let label = UILabel()
+        label.font = AppFont.semibold.s16()
+        label.textColor = AppColor.blue.uiColor
+        label.numberOfLines = 0
+        return label
+    }()
     
     private lazy var speakerButton: UIButton = {
         let button = UIButton()
@@ -48,11 +56,12 @@ final class PrayerSoundView: UIView {
     // MARK: - SetupViews
     
     private func setupViews() {
-        [prayerNameLabel, speakerButton].forEach {
+        [prayerNameLabel, prayerTimeLabel, speakerButton].forEach {
             addSubview($0)
         }
         
         setupName()
+        setupTime()
     }
     
     // MARK: - SetupConstraints
@@ -70,6 +79,9 @@ final class PrayerSoundView: UIView {
             make.leading.equalToSuperview()
             make.trailing.lessThanOrEqualTo(speakerButton.snp.leading).offset(-10)
         }
+
+        prayerTimeLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()        }
     }
     
     private func setupName() {
@@ -84,6 +96,21 @@ final class PrayerSoundView: UIView {
             prayerNameLabel.text = "Ақшам"
         case .isha:
             prayerNameLabel.text = "Құптан"
+        }
+    }
+
+    private func setupTime() {
+        switch prayerName {
+        case .fajr:
+            prayerTimeLabel.text = "00:00"
+        case .zuhr:
+            prayerTimeLabel.text = "00:01"
+        case .asr:
+            prayerTimeLabel.text = "00:02"
+        case .maghrib:
+            prayerTimeLabel.text = "00:02"
+        case .isha:
+            prayerTimeLabel.text = "00:02"
         }
     }
     

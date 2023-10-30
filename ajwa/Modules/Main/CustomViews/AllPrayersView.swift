@@ -15,8 +15,18 @@ final class AllPrayersView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 43
+//        stackView.spacing = 43
+        stackView.distribution = .equalSpacing
         return stackView
+    }()
+    
+    private lazy var namazTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Время намазов"
+        label.font = AppFont.semibold.s20()
+        label.textColor = AppColor.black.uiColor
+        label.textAlignment = .center
+        return label
     }()
     
     private lazy var fajrPrayerView = PrayerSoundView(prayerName: .fajr)
@@ -48,7 +58,8 @@ final class AllPrayersView: UIView {
     private func setupViews() {
         backgroundColor = AppColor.white.uiColor
         
-        [fajrPrayerView,
+        [namazTimeLabel,
+         fajrPrayerView,
          zuhrPrayerView,
          asrPrayerView,
          maghribPrayerView,
@@ -62,6 +73,10 @@ final class AllPrayersView: UIView {
     // MARK: - SetupConstraints
     
     private func setupConstraints() {
+        namazTimeLabel.snp.makeConstraints { make in
+            make.height.equalTo(30)
+        }
+        
         [fajrPrayerView,
          zuhrPrayerView,
          asrPrayerView,
