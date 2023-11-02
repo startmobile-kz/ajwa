@@ -24,9 +24,17 @@
 		07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */; };
 		09ECE9EE3CABB547D38E728F /* Pods_ajwa_ajwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */; };
 		13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2430F9D284DB6DFF041872F /* Pods_ajwa.framework */; };
-		3E2EF13F3D3716C515C6E0A3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		601420C52AE306A600A8519A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 601420C72AE306A600A8519A /* Localizable.strings */; };
-		601420CE2AE30AB400A8519A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420CD2AE30AB300A8519A /* Strings.swift */; };
+		3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		601420D92AE4534700A8519A /* ZeekrPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D22AE4534700A8519A /* ZeekrPresenter.swift */; };
+		601420DA2AE4534700A8519A /* ZeekrWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D32AE4534700A8519A /* ZeekrWorker.swift */; };
+		601420DB2AE4534700A8519A /* ZeekrRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D42AE4534700A8519A /* ZeekrRouter.swift */; };
+		601420DC2AE4534700A8519A /* ZeekrModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D52AE4534700A8519A /* ZeekrModels.swift */; };
+		601420DD2AE4534700A8519A /* ZeekrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D62AE4534700A8519A /* ZeekrViewController.swift */; };
+		601420DE2AE4534700A8519A /* ZeekrInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D72AE4534700A8519A /* ZeekrInteractor.swift */; };
+		601420DF2AE4534700A8519A /* ZeekrConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420D82AE4534700A8519A /* ZeekrConfigurator.swift */; };
+		601420E22AE4555200A8519A /* ZeekrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420E12AE4555200A8519A /* ZeekrView.swift */; };
+		601420E42AE45E3D00A8519A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420E32AE45E3D00A8519A /* NetworkManager.swift */; };
+		601420E62AE51A9200A8519A /* ZeekrsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601420E52AE51A9200A8519A /* ZeekrsTableViewCell.swift */; };
 		681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDBF2A91E97E00382F1B /* MainPresenter.swift */; };
 		681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC02A91E97E00382F1B /* MainWorker.swift */; };
 		681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDC12A91E97E00382F1B /* MainRouter.swift */; };
@@ -66,13 +74,6 @@
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
 		9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F0722A89FC1A00E33F51 /* UILabel+Extension.swift */; };
 		9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133922A88BC9A008A46E0 /* Int+Extension.swift */; };
-		9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */; };
-		9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */; };
-		9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */; };
-		9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */; };
-		9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */; };
-		9F2E97C62AA6244D00AD1FC6 /* ZeekrsSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */; };
-		9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */; };
 		9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B72AA6244D00AD1FC6 /* MonthTableViewCell.swift */; };
 		9F2E97C92AA6244D00AD1FC6 /* MonthTableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B82AA6244D00AD1FC6 /* MonthTableWorker.swift */; };
 		9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E97B92AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift */; };
@@ -199,10 +200,16 @@
 		07C3A5DC2A92257800CB64BD /* NameEntrySceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEntrySceneConfigurator.swift; sourceTree = "<group>"; };
 		1A7DF254EB3F3358A3320519 /* Pods-ajwa-ajwaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.release.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		50DC7B7AC84EE6C5F946E7E7 /* Pods-ajwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa.debug.xcconfig"; path = "Target Support Files/Pods-ajwa/Pods-ajwa.debug.xcconfig"; sourceTree = "<group>"; };
-		601420C62AE306A600A8519A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		601420CB2AE307E600A8519A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		601420CD2AE30AB300A8519A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		601420D12AE3132200A8519A /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		601420D22AE4534700A8519A /* ZeekrPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrPresenter.swift; sourceTree = "<group>"; };
+		601420D32AE4534700A8519A /* ZeekrWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrWorker.swift; sourceTree = "<group>"; };
+		601420D42AE4534700A8519A /* ZeekrRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrRouter.swift; sourceTree = "<group>"; };
+		601420D52AE4534700A8519A /* ZeekrModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrModels.swift; sourceTree = "<group>"; };
+		601420D62AE4534700A8519A /* ZeekrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrViewController.swift; sourceTree = "<group>"; };
+		601420D72AE4534700A8519A /* ZeekrInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrInteractor.swift; sourceTree = "<group>"; };
+		601420D82AE4534700A8519A /* ZeekrConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrConfigurator.swift; sourceTree = "<group>"; };
+		601420E12AE4555200A8519A /* ZeekrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeekrView.swift; sourceTree = "<group>"; };
+		601420E32AE45E3D00A8519A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		601420E52AE51A9200A8519A /* ZeekrsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsTableViewCell.swift; sourceTree = "<group>"; };
 		681ECDBF2A91E97E00382F1B /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		681ECDC02A91E97E00382F1B /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		681ECDC12A91E97E00382F1B /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -241,13 +248,6 @@
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsTableViewCell.swift; sourceTree = "<group>"; };
-		9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
-		9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsViewController.swift; sourceTree = "<group>"; };
-		9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsScenePresenter.swift; sourceTree = "<group>"; };
-		9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneRouter.swift; sourceTree = "<group>"; };
-		9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneModels.swift; sourceTree = "<group>"; };
-		9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeekrsSceneInteractor.swift; sourceTree = "<group>"; };
 		9F2E97B72AA6244D00AD1FC6 /* MonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableViewCell.swift; sourceTree = "<group>"; };
 		9F2E97B82AA6244D00AD1FC6 /* MonthTableWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableWorker.swift; sourceTree = "<group>"; };
 		9F2E97B92AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesMonthTableViewCell.swift; sourceTree = "<group>"; };
@@ -528,13 +528,16 @@
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
 			isa = PBXGroup;
 			children = (
-				9F2E97AF2AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift */,
-				9F2E97B02AA6244D00AD1FC6 /* NetworkWorker.swift */,
-				9F2E97B12AA6244D00AD1FC6 /* ZeekrsViewController.swift */,
-				9F2E97B22AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift */,
-				9F2E97B32AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift */,
-				9F2E97B42AA6244D00AD1FC6 /* ZeekrsSceneModels.swift */,
-				9F2E97B52AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift */,
+				601420D22AE4534700A8519A /* ZeekrPresenter.swift */,
+				601420D32AE4534700A8519A /* ZeekrWorker.swift */,
+				601420D42AE4534700A8519A /* ZeekrRouter.swift */,
+				601420D52AE4534700A8519A /* ZeekrModels.swift */,
+				601420D62AE4534700A8519A /* ZeekrViewController.swift */,
+				601420E52AE51A9200A8519A /* ZeekrsTableViewCell.swift */,
+				601420D72AE4534700A8519A /* ZeekrInteractor.swift */,
+				601420D82AE4534700A8519A /* ZeekrConfigurator.swift */,
+				601420E12AE4555200A8519A /* ZeekrView.swift */,
+				601420E32AE45E3D00A8519A /* NetworkManager.swift */,
 			);
 			path = ZeekrsScene;
 			sourceTree = "<group>";
@@ -1106,6 +1109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */,
+				601420DA2AE4534700A8519A /* ZeekrWorker.swift in Sources */,
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
 				8C4763FC2AD681150075A3AE /* PrayerTimePresenter.swift in Sources */,
 				9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */,
@@ -1118,9 +1122,9 @@
 				E4AE5F132A962DF5007F4140 /* LocationModels.swift in Sources */,
 				68D8F7AE2AA867EF00CA5B5F /* HolidaysConfigurator.swift in Sources */,
 				E437F9402A8B4F3E00D90F3B /* SettingsRouter.swift in Sources */,
-				9F2E97C42AA6244D00AD1FC6 /* ZeekrsScenePresenter.swift in Sources */,
 				8C4763FE2AD681150075A3AE /* PrayerTimeRouter.swift in Sources */,
 				E48993952A8D14BD002274C9 /* LanguagesModels.swift in Sources */,
+				601420DF2AE4534700A8519A /* ZeekrConfigurator.swift in Sources */,
 				E4AE5F152A962DF5007F4140 /* LocationInteractor.swift in Sources */,
 				8C4764022AD681150075A3AE /* PrayerTimeConfigurator.swift in Sources */,
 				C8C7FB3E2AE50DD50071C4D9 /* MainMenuPopUPConfigurator.swift in Sources */,
@@ -1131,12 +1135,10 @@
 				E437F95A2A8B514000D90F3B /* HeaderCell.swift in Sources */,
 				E437F9582A8B512700D90F3B /* LocationCell.swift in Sources */,
 				9F2E97AC2AA6233E00AD1FC6 /* UILabel+Extension.swift in Sources */,
-				601420CE2AE30AB400A8519A /* Strings.swift in Sources */,
-				9F2E97C62AA6244D00AD1FC6 /* ZeekrsSceneModels.swift in Sources */,
 				C81BE4722A81600400E77EEC /* AppFont.swift in Sources */,
 				8C4764012AD681150075A3AE /* PrayerTimeInteractor.swift in Sources */,
 				9FBC53812A80F9CE00CE8ED7 /* ViewController.swift in Sources */,
-				9F2E97C32AA6244D00AD1FC6 /* ZeekrsViewController.swift in Sources */,
+				601420DD2AE4534700A8519A /* ZeekrViewController.swift in Sources */,
 				681ECDC92A91E97E00382F1B /* MainModels.swift in Sources */,
 				681ECDCB2A91E97E00382F1B /* MainInteractor.swift in Sources */,
 				E4AF151B2A9C7786004E31C8 /* NamazPresenter.swift in Sources */,
@@ -1159,6 +1161,7 @@
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
 				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				601420DC2AE4534700A8519A /* ZeekrModels.swift in Sources */,
 				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				68D8F7A82AA867EF00CA5B5F /* HolidaysPresenter.swift in Sources */,
 				681ECDC62A91E97E00382F1B /* MainPresenter.swift in Sources */,
@@ -1182,11 +1185,10 @@
 				074E7B522A90BAC500D9F4C6 /* RegistrationSceneViewController.swift in Sources */,
 				8C4763FD2AD681150075A3AE /* PrayerTimeWorker.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
+				601420E62AE51A9200A8519A /* ZeekrsTableViewCell.swift in Sources */,
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
-				9F2E97C72AA6244D00AD1FC6 /* ZeekrsSceneInteractor.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
 				8C4763FF2AD681150075A3AE /* PrayerTimeModels.swift in Sources */,
-				9F2E97C22AA6244D00AD1FC6 /* NetworkWorker.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
 				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
@@ -1197,6 +1199,7 @@
 				681ECDC72A91E97E00382F1B /* MainWorker.swift in Sources */,
 				68D8F7B42AA8A62300CA5B5F /* MonthSectionHeader.swift in Sources */,
 				681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */,
+				601420DB2AE4534700A8519A /* ZeekrRouter.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
@@ -1207,6 +1210,7 @@
 				68D8F7AC2AA867EF00CA5B5F /* HolidaysViewController.swift in Sources */,
 				C8C7FB382AE50D8B0071C4D9 /* MainMenuPopUpWorker.swift in Sources */,
 				E4AE5EF22A921703007F4140 /* SettingsViewController + TableViewDelegate.swift in Sources */,
+				601420DE2AE4534700A8519A /* ZeekrInteractor.swift in Sources */,
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
@@ -1231,12 +1235,15 @@
 				E4AE5F112A962DF5007F4140 /* LocationWorker.swift in Sources */,
 				E437F94F2A8B507800D90F3B /* SettingsViewContoller + TableViewDataSource.swift in Sources */,
 				E489939A2A8F7AAC002274C9 /* LanguageTypeCell.swift in Sources */,
+				601420E22AE4555200A8519A /* ZeekrView.swift in Sources */,
 				9F2E97D32AA6248800AD1FC6 /* Date + Extension.swift in Sources */,
 				9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */,
+				601420D92AE4534700A8519A /* ZeekrPresenter.swift in Sources */,
 				68D8F7B12AA86C9100CA5B5F /* HolidayCell.swift in Sources */,
 				E48993942A8D14BD002274C9 /* LanguagesRouter.swift in Sources */,
 				9F2E97C82AA6244D00AD1FC6 /* MonthTableViewCell.swift in Sources */,
 				E48993932A8D14BD002274C9 /* LanguagesWorker.swift in Sources */,
+				601420E42AE45E3D00A8519A /* NetworkManager.swift in Sources */,
 				07C3A5E22A92257800CB64BD /* NameEntrySceneInteractor.swift in Sources */,
 				074E7B4E2A90BAC500D9F4C6 /* RegistrationScenePresenter.swift in Sources */,
 				074E7B512A90BAC500D9F4C6 /* RegistrationSceneModels.swift in Sources */,

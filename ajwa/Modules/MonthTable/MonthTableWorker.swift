@@ -12,9 +12,9 @@
 
 import UIKit
 
-class MonthTableWorker
-{
-  func doSomeWork()
-  {
+class MonthTableWorker {
+    
+  func doSomeWork() {
+      
   }
 }
