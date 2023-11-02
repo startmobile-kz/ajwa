@@ -11,13 +11,11 @@ import SnapKit
 class CityCell: UITableViewCell {
     static let identifier = String.init(describing: CityCell.self)
     
-    
-    var locationLabel: UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
         label.font = AppFont.regular.s14()
         return label
     }()
-    
     
     var utcTimeLabel: UILabel = {
         let label = UILabel()
@@ -27,12 +25,15 @@ class CityCell: UITableViewCell {
         return label
     }()
     
-    var disclosureImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.tintColor = .black
-        return imageView
-    }()
+    private let checkImageView = UIImageView()
     
+    private var isChecked: Bool = false {
+        didSet {
+            let checkImage = UIImage(named: "img-check")
+            let uncheckImage = UIImage(named: "img-uncheck")
+            self.checkImageView.image = isChecked ? checkImage : uncheckImage
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -44,38 +45,31 @@ class CityCell: UITableViewCell {
         fatalError()
     }
     
-//    public func configureHeader(with model: Location.ModelType.ViewModel) {
-//                if model.isExpanded {
-//            countryLabel.text = model.countryName
-//            disclosureImageView.image = (model.isExpanded ? UIImage(named: "") : AppImage.expand.uiImage)?.withRenderingMode(.alwaysTemplate) }
-//
-//        else {
-//
-//            countryLabel.text = model.citiesName.first
-//        }
-//    }
-//
+    public func configure(with model: Languages.ModelType.ViewModel) {
+        label.text = model.languageTitle
+        isChecked = model.isSelected
+    }
     
     private func setupHierarchy() {
-        contentView.addSubview(locationLabel)
+        contentView.addSubview(label)
         contentView.addSubview(utcTimeLabel)
-        contentView.addSubview(disclosureImageView)
+        contentView.addSubview(checkImageView)
         contentView.clipsToBounds = true
     }
     
     private func setupLayout() {
-        locationLabel.snp.makeConstraints{ make in
+        label.snp.makeConstraints{ make in
             make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()
         }
         
-        utcTimeLabel.snp.makeConstraints{ make in
-            make.trailing.equalTo(disclosureImageView.snp.leading).offset(-12)
+        checkImageView.snp.makeConstraints{make in
+            make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
         }
         
-        disclosureImageView.snp.makeConstraints{ make in
-            make.trailing.equalToSuperview().offset(-12)
+        utcTimeLabel.snp.makeConstraints { make in
+            make.trailing.equalTo(checkImageView.snp.leading).offset(-8)
             make.centerY.equalToSuperview()
         }
     }
