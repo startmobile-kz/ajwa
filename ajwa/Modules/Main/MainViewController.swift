@@ -81,7 +81,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     private lazy var startButton: UIButton = {
         let button = UIButton()
-        button.setTitle(L10n.MainScreen.Start.title, for: .normal)
+//        button.setTitle(L10n.MainScreen.Start.title, for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = AppFont.regular.s14()
         button.backgroundColor = AppColor.gray208.uiColor

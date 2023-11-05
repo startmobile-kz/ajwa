@@ -10,45 +10,28 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+enum Location {
 
-protocol LocationType {
-    var states: [String] { get set }
-
-}
-
-struct Country: LocationType {
-    var states: [String]
-}
-
-struct City: LocationType, Decodable {
-    var states: [String]
-    var utcTimezone: String
-
-}
-
-enum Location
-{
-  // MARK: Use cases
-  
-  enum ModelType
-  {
-    struct Request
-    {
-    }
-    struct Response
-    {
-    }
-      struct ViewModel: Decodable
-    {
-//        let countries: [String]
-//        var isExpanded: Bool
+    enum ModelType {
         
-        let country: String
-        let states: [String]
-        var isExpanded: Bool
+        struct Request { }
+        
+        struct Response: Decodable {
+            struct City: Decodable {
+                let title: String
+                let timezone: String
+            }
 
-      
+            let count: Int
+            var next: String?
+            var previous: String?
+            var results: [City]
+        }
+
+        struct ViewModel: Decodable {
+            var isSelected = false
+            let cityTitle: String
+            var utcTimezone: String
+        }
     }
-  }
 }

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         let holidaysViewController = MainMenuPopUPViewController()
         
-        let navigationController = UINavigationController(rootViewController: monthViewController)
+        let navigationController = UINavigationController(rootViewController: SettingsViewController())
         setupNavBar(navigationController)
         
         window?.rootViewController = navigationController

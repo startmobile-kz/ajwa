@@ -17,13 +17,11 @@ import UIKit
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol LocationDataPassing
-{
+protocol LocationDataPassing {
   var dataStore: LocationDataStore? { get }
 }
 
-class LocationRouter: NSObject, LocationRoutingLogic, LocationDataPassing
-{
+class LocationRouter: NSObject, LocationRoutingLogic, LocationDataPassing {
   weak var viewController: LocationViewController?
   var dataStore: LocationDataStore?
   

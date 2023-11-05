@@ -12,70 +12,93 @@
 
 import UIKit
 
-protocol LocationDisplayLogic: AnyObject
-{
+protocol LocationDisplayLogic: AnyObject {
   func displayLocation(viewModel: [Location.ModelType.ViewModel])
 }
 
-class LocationViewController: UIViewController, LocationDisplayLogic
-{
-  var interactor: LocationBusinessLogic?
-  var router: (NSObjectProtocol & LocationRoutingLogic & LocationDataPassing)?
+final class LocationViewController: UIViewController, LocationDisplayLogic {
+    
+    var interactor: LocationBusinessLogic?
+    var router: (NSObjectProtocol & LocationRoutingLogic & LocationDataPassing)?
     var location = [Location.ModelType.ViewModel]()
-    
-    private lazy var tableView: UITableView = {
-            let tableView = UITableView(frame: .zero, style: .insetGrouped)
-            tableView.register(CountryCell.self, forCellReuseIdentifier: CountryCell.identifier)
-        tableView.register(CityCell.self, forCellReuseIdentifier: CityCell.identifier)
-            tableView.dataSource = self
-            tableView.delegate = self
-            return tableView
-        }()
-        
-  // MARK: View lifecycle
-  
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
-            super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-            LocationConfigurator.shared.configure(viewController: self)
-        }
-    
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-            LocationConfigurator.shared.configure(viewController: self)
-        }
-    
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            title = "Настройки"
+    var previouslySelectedIndexPath: IndexPath?
+    var onLocationChange: ((Location.ModelType.ViewModel) -> Void)?
 
-            setupHierarchy()
-            setupLayout()
-            getLocationData()
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(CityCell.self, forCellReuseIdentifier: CityCell.identifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        return tableView
+    }()
+    
+    lazy var saveCityButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 12
+        button.setTitle("Сохранить", for: .normal)
+        button.titleLabel?.font = AppFont.semibold.s16()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = AppColor.blue.uiColor
+        button.addTarget(self, action: #selector(exit), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func exit () {
+            dismiss(animated: true, completion: nil)
         }
     
-        private func setupHierarchy() {
-            view.addSubview(tableView)
-        }
+    // MARK: View lifecycle
     
-        private func setupLayout() {
-            tableView.snp.makeConstraints { make in
-                make.edges.equalTo(view)
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        LocationConfigurator.shared.configure(viewController: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        LocationConfigurator.shared.configure(viewController: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor  = UIColor.systemGroupedBackground
+        setupHierarchy()
+        setupLayout()
+        getLocationData()
+    }
+    
+    private func setupHierarchy() {
+        view.addSubview(tableView)
+        view.addSubview(saveCityButton)
+    }
+    
+    private func setupLayout() {
+        tableView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(700)
+        }
+        
+        saveCityButton.snp.makeConstraints { make in
+            make.top.equalTo(tableView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(24)
+            make.height.equalTo(52)
+        }
+    }
+    
+    // MARK: Do something
+        
+    func getLocationData() {
+        interactor?.getNextBatchOfCities()
+    }
+
+    func displayLocation(viewModel: [Location.ModelType.ViewModel]) {
+        viewModel.enumerated().forEach { iterator in
+            if iterator.element.isSelected {
+                previouslySelectedIndexPath = IndexPath(row: 0, section: iterator.offset)
             }
         }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func getLocationData()
-  {
-      interactor?.getLocation()
-  }
-  
-  func displayLocation(viewModel: [Location.ModelType.ViewModel])
-  {
-      location.append(contentsOf: viewModel)
-      tableView.reloadData()
-  }
+        location = viewModel
+        tableView.reloadData()
+    }
 }
 

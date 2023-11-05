@@ -12,19 +12,16 @@
 
 import UIKit
 
-protocol LocationPresentationLogic
-{
+protocol LocationPresentationLogic {
   func presentLocation(response: [Location.ModelType.ViewModel])
 }
 
-class LocationPresenter: LocationPresentationLogic
-{
-  weak var viewController: LocationDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentLocation(response: [Location.ModelType.ViewModel])
-  {
-    viewController?.displayLocation(viewModel: response)
-  }
+final class LocationPresenter: LocationPresentationLogic {
+    weak var viewController: LocationDisplayLogic?
+
+    // MARK: Do something
+
+    func presentLocation(response: [Location.ModelType.ViewModel]) {
+        viewController?.displayLocation(viewModel: response)
+    }
 }

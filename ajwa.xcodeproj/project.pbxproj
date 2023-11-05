@@ -149,7 +149,6 @@
 		E4AE5F142A962DF5007F4140 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */; };
 		E4AE5F152A962DF5007F4140 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */; };
 		E4AE5F162A962DF5007F4140 /* LocationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */; };
-		E4AE5F182A96322B007F4140 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F172A96322B007F4140 /* CountryCell.swift */; };
 		E4AE5F1A2A96333A007F4140 /* LocationViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */; };
 		E4AE5F1C2A963392007F4140 /* LocationViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */; };
 		E4AF15102A9B5032004E31C8 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF150F2A9B5032004E31C8 /* CityCell.swift */; };
@@ -330,7 +329,6 @@
 		E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
 		E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfigurator.swift; sourceTree = "<group>"; };
-		E4AE5F172A96322B007F4140 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		E4AF150F2A9B5032004E31C8 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
@@ -357,7 +355,7 @@
 				9FBC53B12A8100C300CE8ED7 /* SnapKit in Frameworks */,
 				C8C7FB412AE50DFD0071C4D9 /* PanModal in Frameworks */,
 				078888962A8178DD006E0FE0 /* Alamofire in Frameworks */,
-				3E2EF13F3D3716C515C6E0A3 /* BuildFile in Frameworks */,
+				3E2EF13F3D3716C515C6E0A3 /* (null) in Frameworks */,
 				13206CB5E7688597B6337231 /* Pods_ajwa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +423,6 @@
 		601420CC2AE3094300A8519A /* generated */ = {
 			isa = PBXGroup;
 			children = (
-				601420CD2AE30AB300A8519A /* Strings.swift */,
 			);
 			path = generated;
 			sourceTree = "<group>";
@@ -836,7 +833,6 @@
 				E4AE5F0D2A962DF5007F4140 /* LocationViewController.swift */,
 				E4AE5F0E2A962DF5007F4140 /* LocationInteractor.swift */,
 				E4AE5F0F2A962DF5007F4140 /* LocationConfigurator.swift */,
-				E4AE5F172A96322B007F4140 /* CountryCell.swift */,
 				E4AF150F2A9B5032004E31C8 /* CityCell.swift */,
 				E4AE5F192A96333A007F4140 /* LocationViewController + TableViewDataSource.swift */,
 				E4AE5F1B2A963392007F4140 /* LocationViewController + TableViewDelegate.swift */,
@@ -967,10 +963,10 @@
 				9FBC53AF2A8100C300CE8ED7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				078888942A8178DD006E0FE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4F176122A8269300022628A /* XCRemoteSwiftPackageReference "Wormholy" */,
-				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B2E1338F2A88B53E008A46E0 /* XCRemoteSwiftPackageReference "CHIOTPField" */,
-				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */,
-				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */,
+				601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen" */,
+				C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 9FBC537A2A80F9CE00CE8ED7 /* Products */;
 			projectDirPath = "";
@@ -993,7 +989,6 @@
 				9FBC538C2A80F9D100CE8ED7 /* LaunchScreen.storyboard in Resources */,
 				9FBC53892A80F9D100CE8ED7 /* Assets.xcassets in Resources */,
 				C8B48CFC2A8A567C00EDBCB6 /* SFProDisplay-Bold.ttf in Resources */,
-				601420C52AE306A600A8519A /* Localizable.strings in Resources */,
 				C8B48CFD2A8A567C00EDBCB6 /* SFProDisplay-Regular.ttf in Resources */,
 				E4AF15122A9BA82D004E31C8 /* states.json in Resources */,
 				C8BDB0A62A868692009B9D5D /* Colors.xcassets in Resources */,
@@ -1214,7 +1209,6 @@
 				E489939C2A8F8C01002274C9 /* LanguagesViewController + TableViewDataSource.swift in Sources */,
 				E437F9602A8B51A200D90F3B /* LanguageCell.swift in Sources */,
 				E437F95E2A8B518400D90F3B /* PrayTimeCell.swift in Sources */,
-				E4AE5F182A96322B007F4140 /* CountryCell.swift in Sources */,
 				E4AE5EF42A939F0D007F4140 /* LanguageViewController + TableViewDelegate.swift in Sources */,
 				E4AE5F122A962DF5007F4140 /* LocationRouter.swift in Sources */,
 				9F2E97AD2AA6234100AD1FC6 /* Int+Extension.swift in Sources */,
@@ -1265,8 +1259,6 @@
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				074E7B542A90BAC500D9F4C6 /* RegistrationSceneConfigurator.swift in Sources */,
-				9F2E97C52AA6244D00AD1FC6 /* ZeekrsSceneRouter.swift in Sources */,
-				9F2E97C12AA6244D00AD1FC6 /* ZeekrsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1306,9 +1298,6 @@
 		601420C72AE306A600A8519A /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				601420C62AE306A600A8519A /* en */,
-				601420CB2AE307E600A8519A /* ru */,
-				601420D12AE3132200A8519A /* kk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1630,7 +1619,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen.git" */ = {
+		601420C02AE3010800A8519A /* XCRemoteSwiftPackageReference "SwiftGen" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:SwiftGen/SwiftGen.git";
 			requirement = {
@@ -1646,7 +1635,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1662,7 +1651,7 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
+		C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -1693,7 +1682,7 @@
 		};
 		B2187AF72A83E65400C0FB82 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = B2187AF62A83E65300C0FB82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		B2E133902A88B53E008A46E0 /* CHIOTPField */ = {
@@ -1703,7 +1692,7 @@
 		};
 		C8C7FB402AE50DFD0071C4D9 /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal.git" */;
+			package = C8C7FB3F2AE50DFD0071C4D9 /* XCRemoteSwiftPackageReference "PanModal" */;
 			productName = PanModal;
 		};
 		E4F176132A8269300022628A /* Wormholy */ = {

@@ -9,57 +9,24 @@ import UIKit
 
 extension LocationViewController: UITableViewDataSource{
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        48
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if location.count > 141 {
+            print("FAIL - \(location.count)")
+        }
+        return location.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-//        let section = location[section]
-//
-//        if section.isExpanded {
-//            return section.countries.count
-//        } else {
-//            return 1
-//        }
-        
         return 1
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        location.count }
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        let model = location[indexPath.section].countries
-//
-//
-//
-//        switch model.self {
-//        case is Country:
-//            let cell: CountryCell = tableView.dequeueReusableCell()
-//            cell.locationLabel.text = location[indexPath.section].countries[indexPath.row]
-//            if location[indexPath.section].isExpanded {
-//                cell.disclosureImageView.image = UIImage(named: "")
-//            } else {
-//                cell.disclosureImageView.image = AppImage.expand.uiImage
-//            }
-//            return cell
-//
-//        case is City:
-//            let cell: CityCell = tableView.dequeueReusableCell()
-//            cell.locationLabel.text = location[indexPath.section].countries[indexPath.row]
-//            cell.utcTimeLabel.text = "UTC +6:00"
-//            if location[indexPath.section].isExpanded {
-//                cell.disclosureImageView.image = UIImage(named: "")
-//            } else {
-//                cell.disclosureImageView.image = AppImage.expand.uiImage
-//            }
-//            return cell
-//        default:
-            return UITableViewCell()
-        }
+        let model = location[indexPath.section]
+        let cell: CityCell = tableView.dequeueReusableCell()
+        cell.configure(with: model)
+        cell.selectionStyle = .none
+        cell.layer.cornerRadius = 26
+        cell.clipsToBounds = true
+        return cell
     }
-//}
+}

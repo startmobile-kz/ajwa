@@ -19,7 +19,6 @@ class CityCell: UITableViewCell {
     
     var utcTimeLabel: UILabel = {
         let label = UILabel()
-        label.text = "UTC +6:00"
         label.font = AppFont.regular.s12()
         label.textColor = .gray
         return label
@@ -45,8 +44,9 @@ class CityCell: UITableViewCell {
         fatalError()
     }
     
-    public func configure(with model: Languages.ModelType.ViewModel) {
-        label.text = model.languageTitle
+    public func configure(with model: Location.ModelType.ViewModel) {
+        label.text = model.cityTitle
+        utcTimeLabel.text = model.utcTimezone
         isChecked = model.isSelected
     }
     
@@ -74,4 +74,3 @@ class CityCell: UITableViewCell {
         }
     }
 }
-

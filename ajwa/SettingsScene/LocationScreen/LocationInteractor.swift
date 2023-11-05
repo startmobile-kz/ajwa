@@ -12,27 +12,44 @@
 
 import UIKit
 
-protocol LocationBusinessLogic
-{
-  func getLocation()
+protocol LocationBusinessLogic {
+    var isLoading: Bool { get }
+
+    func getNextBatchOfCities()
 }
 
-protocol LocationDataStore
-{
-}
+protocol LocationDataStore {}
 
-class LocationInteractor: LocationBusinessLogic, LocationDataStore
-{
-  var presenter: LocationPresentationLogic?
-  var worker: LocationWorker?
-  var location = [Location.ModelType.ViewModel]()
-  
-  // MARK: Do something
-  
-  func getLocation()
-  {
-    worker = LocationWorker()
+final class LocationInteractor: LocationBusinessLogic, LocationDataStore {
     
-      self.presenter?.presentLocation(response: worker?.fetchLocation() ?? [])
-  }
+    var presenter: LocationPresentationLogic?
+    var citiesViewModels = [Location.ModelType.ViewModel]()
+    var currentPage: Int = 0
+    var isLoading: Bool = false
+    let worker = CitiesWorker()
+    
+    // MARK: - Public methods
+
+    func getNextBatchOfCities() {
+        currentPage += 1
+        fetchCities(currentPage)
+    }
+
+    // MARK: - Private methods
+
+    private func fetchCities(_ page: Int) {
+        isLoading = true
+
+        worker.fetchCities(for: currentPage) { [weak self] response in
+            guard let self = self else { return }
+
+            self.isLoading = false
+
+            let nextBatchOfCitiesViewModels = response.results.map {
+                Location.ModelType.ViewModel(cityTitle: $0.title, utcTimezone: "UTC +0\($0.timezone):00")
+            }
+            self.citiesViewModels.append(contentsOf: nextBatchOfCitiesViewModels)
+            self.presenter?.presentLocation(response: citiesViewModels)
+        }
+    }
 }

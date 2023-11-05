@@ -7,11 +7,11 @@
 
 import UIKit
 
-extension SettingsViewController: UITableViewDelegate{
+extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let type = settings[indexPath.section].options[indexPath.row]        
+        let type = settings[indexPath.section].options[indexPath.row]
         
         switch type.self {
         case .headerCell:
@@ -22,12 +22,21 @@ extension SettingsViewController: UITableViewDelegate{
             break
         case .locationCell:
             let locationViewController = LocationViewController()
-            locationViewController.modalPresentationStyle = .formSheet
-            let sheet = locationViewController.sheetPresentationController
-            let fraction = UISheetPresentationController.Detent.custom { context in
-                290
+            locationViewController.onLocationChange = { [weak self] location in
+                self?.settings[indexPath.section].options[indexPath.row] = SettingsCellType.locationCell(
+                    model: RegularCellSettings(
+                        title: location.cityTitle,
+                        subTitle: location.utcTimezone
+                    )
+                )
+                tableView.reloadData()
             }
-            sheet?.detents = [fraction]
+            locationViewController.modalPresentationStyle = .formSheet
+//            let sheet = locationViewController.sheetPresentationController
+//            let fraction = UISheetPresentationController.Detent.custom { context in
+//                290
+//            }
+//            sheet?.detents = [fraction]
             navigationController?.present(locationViewController, animated: true)
         case .shareAndRateCell:
             break
