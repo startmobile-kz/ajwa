@@ -8,7 +8,7 @@
 import UIKit
 
 struct Settings {
-    let options : [SettingsCellType]
+    var options : [SettingsCellType]
 }
 
 enum SettingsCellType {
