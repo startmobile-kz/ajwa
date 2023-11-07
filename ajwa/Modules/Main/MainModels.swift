@@ -27,3 +27,96 @@ enum Main {
         }
     }
 }
+
+struct NamazDetail: Codable {
+    let city: String
+    let result: [NamazDetailResult]
+    let success: Bool
+    let year: Int
+    let latitude: String
+    let longitude: String
+}
+
+struct NamazDetailResult: Codable {
+    let asr, date, maghrib, midnight: String
+    let fajr, sunrise, sunset, isha: String
+    let imsak, dhuhr: String
+
+    enum CodingKeys: String, CodingKey {
+        case asr
+        case date = "Date"
+        case maghrib, midnight, fajr, sunrise, sunset, isha, imsak, dhuhr
+    }
+
+    func getListOfNamaz() -> [Namaz: String] {
+        return [.fajr: fajr, .dhuhr: dhuhr, .asr: asr, .maghrib: maghrib, .isha: isha]
+    }
+
+    enum Namaz {
+        case fajr
+        case dhuhr
+        case asr
+        case maghrib
+        case isha
+    }
+
+    func getCurrentTime() -> String {
+        let todayDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let result = formatter.string(from: todayDate)
+        return result
+    }
+
+    func getCurrentNamaz() -> Namaz {
+        let array = getListOfNamaz().sorted { $0.value < $1.value }
+        let currentTime = getCurrentTime()
+        var result: Namaz?
+        for namaz in array {
+            if currentTime > namaz.value {
+                result = namaz.key
+                continue
+            }
+        }
+        return result ?? .fajr
+    }
+
+    func calculateDifference() -> String {
+        let nextNamazTime = getNextNamazTime()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let time = dateFormatter.date(from: nextNamazTime)
+        let calendar = Calendar.current
+        guard let timeDate = time else { return "88:88" }
+        let timeComponents = calendar.dateComponents([.hour, .minute], from: timeDate)
+        let nowComponents = calendar.dateComponents([.hour, .minute], from: Date())
+        let minutes = calendar.dateComponents([.minute], from: timeComponents, to: nowComponents).minute!
+
+        return formatDuration(abs(minutes + 1))
+    }
+
+    func formatDuration(_ durationInMinutes: Int) -> String {
+        let (hours, minutes) = divmod(durationInMinutes, 60)
+        return String(format: "%02d:%02d", hours, minutes)
+    }
+    func divmod(_ numerator: Int, _ denominator: Int) -> (quotient: Int, remainder: Int) {
+        let quotient = numerator / denominator
+        let remainder = numerator % denominator
+        return (quotient, remainder)
+    }
+
+    func getNextNamazTime() -> String {
+        switch getCurrentNamaz() {
+        case .fajr:
+            return dhuhr
+        case .dhuhr:
+            return asr
+        case .asr:
+            return maghrib
+        case .maghrib:
+            return isha
+        case .isha:
+            return fajr
+        }
+    }
+}
