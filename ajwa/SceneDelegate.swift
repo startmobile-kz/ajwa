@@ -19,10 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let holidaysViewController = MainMenuPopUPViewController()
+        let holidaysViewController = MainViewController()
         
-        let navigationController = UINavigationController(rootViewController: SettingsViewController())
-        setupNavBar(navigationController)
+        let navigationController = UINavigationController(rootViewController: holidaysViewController)
+//        setupNavBar(navigationController)
+
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

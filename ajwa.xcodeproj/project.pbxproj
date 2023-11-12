@@ -45,7 +45,6 @@
 		681ECDCF2A91EAB700382F1B /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */; };
 		681ECDD12A92585000382F1B /* ParticularNamazView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD02A92585000382F1B /* ParticularNamazView.swift */; };
 		681ECDD32A92664000382F1B /* RemainingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681ECDD22A92664000382F1B /* RemainingTimeView.swift */; };
-		68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */; };
 		68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B102A9C8DC200D57C96 /* MainPageControl.swift */; };
 		68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C79B122A9CAEA200D57C96 /* MainBottomView.swift */; };
 		68D8F7A82AA867EF00CA5B5F /* HolidaysPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7A12AA867EF00CA5B5F /* HolidaysPresenter.swift */; };
@@ -59,8 +58,6 @@
 		68D8F7B42AA8A62300CA5B5F /* MonthSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F7B32AA8A62300CA5B5F /* MonthSectionHeader.swift */; };
 		68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FAF2A99F59500970025 /* CustomSwitch.swift */; };
 		68F62FB22A9A0B3400970025 /* AllPrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB12A9A0B3400970025 /* AllPrayersView.swift */; };
-		68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */; };
-		68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F62FB52A9A1FE400970025 /* PrayerNames.swift */; };
 		8C4763FC2AD681150075A3AE /* PrayerTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4763F52AD681150075A3AE /* PrayerTimePresenter.swift */; };
 		8C4763FD2AD681150075A3AE /* PrayerTimeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4763F62AD681150075A3AE /* PrayerTimeWorker.swift */; };
 		8C4763FE2AD681150075A3AE /* PrayerTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4763F72AD681150075A3AE /* PrayerTimeRouter.swift */; };
@@ -69,6 +66,11 @@
 		8C4764012AD681150075A3AE /* PrayerTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4763FA2AD681150075A3AE /* PrayerTimeInteractor.swift */; };
 		8C4764022AD681150075A3AE /* PrayerTimeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4763FB2AD681150075A3AE /* PrayerTimeConfigurator.swift */; };
 		8C4764052AD681930075A3AE /* PrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4764042AD681930075A3AE /* PrayerTimeCell.swift */; };
+		8C70917D2AFA1A6D00E44CCE /* FajrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C70917C2AFA1A6D00E44CCE /* FajrView.swift */; };
+		8C70917F2AFA1A9C00E44CCE /* DhuhrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C70917E2AFA1A9C00E44CCE /* DhuhrView.swift */; };
+		8C7091812AFA1AB500E44CCE /* AsrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7091802AFA1AB500E44CCE /* AsrView.swift */; };
+		8C7091832AFA1ACC00E44CCE /* MaghribView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7091822AFA1ACC00E44CCE /* MaghribView.swift */; };
+		8C7091852AFA1AE500E44CCE /* IshaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7091842AFA1AE500E44CCE /* IshaView.swift */; };
 		9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E133862A88AF07008A46E0 /* RegisterVerificationViewController.swift */; };
 		9F2E97AA2AA6231E00AD1FC6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06D2A89374900E33F51 /* OTPTextField.swift */; };
 		9F2E97AB2AA6232000AD1FC6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9F06F2A8938C300E33F51 /* OTPStackView.swift */; };
@@ -219,7 +221,6 @@
 		681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		681ECDD02A92585000382F1B /* ParticularNamazView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularNamazView.swift; sourceTree = "<group>"; };
 		681ECDD22A92664000382F1B /* RemainingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeView.swift; sourceTree = "<group>"; };
-		68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacredEventCell.swift; sourceTree = "<group>"; };
 		68C79B102A9C8DC200D57C96 /* MainPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageControl.swift; sourceTree = "<group>"; };
 		68C79B122A9CAEA200D57C96 /* MainBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomView.swift; sourceTree = "<group>"; };
 		68D8F7A12AA867EF00CA5B5F /* HolidaysPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysPresenter.swift; sourceTree = "<group>"; };
@@ -233,8 +234,6 @@
 		68D8F7B32AA8A62300CA5B5F /* MonthSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSectionHeader.swift; sourceTree = "<group>"; };
 		68F62FAF2A99F59500970025 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		68F62FB12A9A0B3400970025 /* AllPrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPrayersView.swift; sourceTree = "<group>"; };
-		68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSoundView.swift; sourceTree = "<group>"; };
-		68F62FB52A9A1FE400970025 /* PrayerNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerNames.swift; sourceTree = "<group>"; };
 		6C1BFA310958F9E9295CBC9E /* Pods-ajwaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.release.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C4763F52AD681150075A3AE /* PrayerTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimePresenter.swift; sourceTree = "<group>"; };
 		8C4763F62AD681150075A3AE /* PrayerTimeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeWorker.swift; sourceTree = "<group>"; };
@@ -244,6 +243,11 @@
 		8C4763FA2AD681150075A3AE /* PrayerTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeInteractor.swift; sourceTree = "<group>"; };
 		8C4763FB2AD681150075A3AE /* PrayerTimeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeConfigurator.swift; sourceTree = "<group>"; };
 		8C4764042AD681930075A3AE /* PrayerTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeCell.swift; sourceTree = "<group>"; };
+		8C70917C2AFA1A6D00E44CCE /* FajrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FajrView.swift; sourceTree = "<group>"; };
+		8C70917E2AFA1A9C00E44CCE /* DhuhrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhuhrView.swift; sourceTree = "<group>"; };
+		8C7091802AFA1AB500E44CCE /* AsrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsrView.swift; sourceTree = "<group>"; };
+		8C7091822AFA1ACC00E44CCE /* MaghribView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaghribView.swift; sourceTree = "<group>"; };
+		8C7091842AFA1AE500E44CCE /* IshaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IshaView.swift; sourceTree = "<group>"; };
 		8FAB9E08A976F806A3043375 /* Pods-ajwa-ajwaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwa-ajwaUITests.debug.xcconfig"; path = "Target Support Files/Pods-ajwa-ajwaUITests/Pods-ajwa-ajwaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FCC97192E1A306C2FECCACE /* Pods_ajwa_ajwaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ajwa_ajwaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0CCB4186115E6722879564 /* Pods-ajwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajwaTests.debug.xcconfig"; path = "Target Support Files/Pods-ajwaTests/Pods-ajwaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -430,7 +434,6 @@
 		681ECDBE2A91E93D00382F1B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				68C79B0D2A9C7D1600D57C96 /* Cells */,
 				681ECDCD2A91EAA300382F1B /* CustomViews */,
 				681ECDBF2A91E97E00382F1B /* MainPresenter.swift */,
 				681ECDC02A91E97E00382F1B /* MainWorker.swift */,
@@ -439,7 +442,6 @@
 				681ECDC32A91E97E00382F1B /* MainViewController.swift */,
 				681ECDC42A91E97E00382F1B /* MainInteractor.swift */,
 				681ECDC52A91E97E00382F1B /* MainConfigurator.swift */,
-				68F62FB52A9A1FE400970025 /* PrayerNames.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -447,24 +449,16 @@
 		681ECDCD2A91EAA300382F1B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8C70917B2AFA1A6400E44CCE /* NamazViews */,
 				681ECDCE2A91EAB700382F1B /* MainHeaderView.swift */,
 				681ECDD02A92585000382F1B /* ParticularNamazView.swift */,
 				681ECDD22A92664000382F1B /* RemainingTimeView.swift */,
 				68F62FAF2A99F59500970025 /* CustomSwitch.swift */,
 				68F62FB12A9A0B3400970025 /* AllPrayersView.swift */,
-				68F62FB32A9A1BE500970025 /* PrayerSoundView.swift */,
 				68C79B102A9C8DC200D57C96 /* MainPageControl.swift */,
 				68C79B122A9CAEA200D57C96 /* MainBottomView.swift */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		68C79B0D2A9C7D1600D57C96 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				68C79B0E2A9C7D6F00D57C96 /* SacredEventCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		68D8F7A02AA867CB00CA5B5F /* IslamicHolidays */ = {
@@ -520,6 +514,18 @@
 				8C4764042AD681930075A3AE /* PrayerTimeCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8C70917B2AFA1A6400E44CCE /* NamazViews */ = {
+			isa = PBXGroup;
+			children = (
+				8C70917C2AFA1A6D00E44CCE /* FajrView.swift */,
+				8C70917E2AFA1A9C00E44CCE /* DhuhrView.swift */,
+				8C7091802AFA1AB500E44CCE /* AsrView.swift */,
+				8C7091822AFA1ACC00E44CCE /* MaghribView.swift */,
+				8C7091842AFA1AE500E44CCE /* IshaView.swift */,
+			);
+			path = NamazViews;
 			sourceTree = "<group>";
 		};
 		9F2E97AE2AA6244D00AD1FC6 /* ZeekrsScene */ = {
@@ -1107,6 +1113,7 @@
 				601420DA2AE4534700A8519A /* ZeekrWorker.swift in Sources */,
 				E48993982A8D14BD002274C9 /* LanguagesConfigurator.swift in Sources */,
 				8C4763FC2AD681150075A3AE /* PrayerTimePresenter.swift in Sources */,
+				8C70917F2AFA1A9C00E44CCE /* DhuhrView.swift in Sources */,
 				9F2E97CA2AA6244D00AD1FC6 /* DatesMonthTableViewCell.swift in Sources */,
 				9F2E97A92AA6231000AD1FC6 /* RegisterVerificationViewController.swift in Sources */,
 				9FBC53872A80F9CE00CE8ED7 /* ajwa.xcdatamodeld in Sources */,
@@ -1156,6 +1163,7 @@
 				681ECDC82A91E97E00382F1B /* MainRouter.swift in Sources */,
 				681ECDCA2A91E97E00382F1B /* MainViewController.swift in Sources */,
 				9FBC537D2A80F9CE00CE8ED7 /* AppDelegate.swift in Sources */,
+				8C7091812AFA1AB500E44CCE /* AsrView.swift in Sources */,
 				601420DC2AE4534700A8519A /* ZeekrModels.swift in Sources */,
 				9F2E97CF2AA6244D00AD1FC6 /* MonthTableConfigurator.swift in Sources */,
 				68D8F7A82AA867EF00CA5B5F /* HolidaysPresenter.swift in Sources */,
@@ -1170,8 +1178,8 @@
 				E4AF151D2A9C7786004E31C8 /* NamazRouter.swift in Sources */,
 				C8C7FB362AE50D750071C4D9 /* MainMenuPopUpModel.swift in Sources */,
 				074E7B502A90BAC500D9F4C6 /* RegistrationSceneRouter.swift in Sources */,
-				68C79B0F2A9C7D6F00D57C96 /* SacredEventCell.swift in Sources */,
 				68C79B112A9C8DC200D57C96 /* MainPageControl.swift in Sources */,
+				8C7091832AFA1ACC00E44CCE /* MaghribView.swift in Sources */,
 				8C4764002AD681150075A3AE /* PrayerTimeViewController.swift in Sources */,
 				9F2E97CC2AA6244D00AD1FC6 /* MonthTableRouter.swift in Sources */,
 				07C3A5E32A92257800CB64BD /* NameEntrySceneConfigurator.swift in Sources */,
@@ -1181,13 +1189,12 @@
 				8C4763FD2AD681150075A3AE /* PrayerTimeWorker.swift in Sources */,
 				07C3A5DE2A92257800CB64BD /* NameEntrySceneWorker.swift in Sources */,
 				601420E62AE51A9200A8519A /* ZeekrsTableViewCell.swift in Sources */,
+				8C70917D2AFA1A6D00E44CCE /* FajrView.swift in Sources */,
 				9F2E97D12AA6244D00AD1FC6 /* TopView.swift in Sources */,
 				9F2E97CB2AA6244D00AD1FC6 /* MonthTablePresenter.swift in Sources */,
 				8C4763FF2AD681150075A3AE /* PrayerTimeModels.swift in Sources */,
 				07C3A5E02A92257800CB64BD /* NameEntrySceneModels.swift in Sources */,
-				68F62FB62A9A1FE400970025 /* PrayerNames.swift in Sources */,
 				07C3A5E12A92257800CB64BD /* NameEntrySceneViewController.swift in Sources */,
-				68F62FB42A9A1BE500970025 /* PrayerSoundView.swift in Sources */,
 				68C79B132A9CAEA200D57C96 /* MainBottomView.swift in Sources */,
 				9FBC537F2A80F9CE00CE8ED7 /* SceneDelegate.swift in Sources */,
 				681ECDCC2A91E97E00382F1B /* MainConfigurator.swift in Sources */,
@@ -1197,6 +1204,7 @@
 				601420DB2AE4534700A8519A /* ZeekrRouter.swift in Sources */,
 				074E7B4F2A90BAC500D9F4C6 /* RegistrationSceneWorker.swift in Sources */,
 				07C3A5DF2A92257800CB64BD /* NameEntrySceneRouter.swift in Sources */,
+				8C7091852AFA1AE500E44CCE /* IshaView.swift in Sources */,
 				C8BDB0A12A868559009B9D5D /* AppImage.swift in Sources */,
 				68F62FB02A99F59500970025 /* CustomSwitch.swift in Sources */,
 				C8C7FB322AE50D0B0071C4D9 /* MainMenuPopUPViewController.swift in Sources */,
